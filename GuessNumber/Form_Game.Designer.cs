@@ -30,6 +30,7 @@
         {
             this.game_name = new System.Windows.Forms.Label();
             this.Start_Button = new System.Windows.Forms.Button();
+            this.game_pamel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // game_name
@@ -54,14 +55,24 @@
             this.Start_Button.UseVisualStyleBackColor = true;
             this.Start_Button.Click += new System.EventHandler(this.Start_Button_Click);
             // 
-            // Form1
+            // game_pamel
+            // 
+            this.game_pamel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.game_pamel.Location = new System.Drawing.Point(0, 0);
+            this.game_pamel.Name = "game_pamel";
+            this.game_pamel.Size = new System.Drawing.Size(600, 400);
+            this.game_pamel.TabIndex = 2;
+            this.game_pamel.Visible = false;
+            // 
+            // Form_Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 400);
+            this.Controls.Add(this.game_pamel);
             this.Controls.Add(this.Start_Button);
             this.Controls.Add(this.game_name);
-            this.Name = "Form1";
+            this.Name = "Form_Game";
             this.Text = "Guess Number";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -73,6 +84,7 @@
 
         private System.Windows.Forms.Label game_name;
         private System.Windows.Forms.Button Start_Button;
+        private System.Windows.Forms.Panel game_pamel;
     }
 }
 

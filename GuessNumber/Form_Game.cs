@@ -31,9 +31,9 @@ namespace GuessNumber
         //triggered event
         private void Start_Button_Click(object sender, EventArgs e)
         {
-            Form_Game game_form = new Form_Game();
-            game_form.Show();
-            Hide();
+            game_pamel.Visible = true;    
         }
+
+
     }
 }
