@@ -16,5 +16,22 @@ namespace GuessNumber
         {
             InitializeComponent();
         }
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void game_name_Click(object sender, EventArgs e)
+        {
+        }
+
+
+        //triggered event
+        private void Start_Button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
