@@ -4,10 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Guess_Number
+namespace GuessNumber
 {
     class Game_Controller
     {
+        //產生一個亂數(四個位數不能重複)
+        public static void randget(ref int[] gnum)
+        {
+            int[] cut = new int[4];
+            Random rand = new Random();
+
+            do
+            {
+                int i = 0;
+                for (i = 0; i < 4; i++)
+                {
+                    cut[i] = rand.Next() % 10;
+                }
+            } while (cut[0] == cut[1] || cut[0] == cut[2] || cut[0] == cut[3] 
+                || cut[1] == cut[2] || cut[1] == cut[3] || cut[2] == cut[3]);
+            gnum = cut;
+        }
+
         //get the result of a and b
         public static void get_ab(int[] firstnum, int[] secondnum, ref int a, ref int b)
         {

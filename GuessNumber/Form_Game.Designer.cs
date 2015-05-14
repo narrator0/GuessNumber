@@ -31,9 +31,8 @@
             this.game_name = new System.Windows.Forms.Label();
             this.Start_Button = new System.Windows.Forms.Button();
             this.game_pamel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.confirm = new System.Windows.Forms.Button();
+            this.commend = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -42,7 +41,11 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.button0 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.confirm = new System.Windows.Forms.Button();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.button_reset = new System.Windows.Forms.Button();
             this.game_pamel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +73,10 @@
             // 
             // game_pamel
             // 
+            this.game_pamel.Controls.Add(this.button_reset);
+            this.game_pamel.Controls.Add(this.richTextBox2);
+            this.game_pamel.Controls.Add(this.commend);
+            this.game_pamel.Controls.Add(this.richTextBox1);
             this.game_pamel.Controls.Add(this.button2);
             this.game_pamel.Controls.Add(this.button3);
             this.game_pamel.Controls.Add(this.button4);
@@ -78,9 +85,8 @@
             this.game_pamel.Controls.Add(this.button7);
             this.game_pamel.Controls.Add(this.button8);
             this.game_pamel.Controls.Add(this.button9);
-            this.game_pamel.Controls.Add(this.button10);
+            this.game_pamel.Controls.Add(this.button0);
             this.game_pamel.Controls.Add(this.button1);
-            this.game_pamel.Controls.Add(this.label1);
             this.game_pamel.Controls.Add(this.confirm);
             this.game_pamel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.game_pamel.Location = new System.Drawing.Point(0, 0);
@@ -89,37 +95,27 @@
             this.game_pamel.TabIndex = 2;
             this.game_pamel.Visible = false;
             // 
-            // button1
+            // commend
             // 
-            this.button1.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(54, 212);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.commend.AutoSize = true;
+            this.commend.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.commend.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.commend.ForeColor = System.Drawing.Color.Red;
+            this.commend.Location = new System.Drawing.Point(315, 80);
+            this.commend.Name = "commend";
+            this.commend.Size = new System.Drawing.Size(170, 18);
+            this.commend.TabIndex = 14;
+            this.commend.Text = "由你先猜，請輸入數字";
             // 
-            // label1
+            // richTextBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("新細明體", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(29, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 37);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "guess number";
-            // 
-            // confirm
-            // 
-            this.confirm.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.confirm.Location = new System.Drawing.Point(100, 258);
-            this.confirm.Name = "confirm";
-            this.confirm.Size = new System.Drawing.Size(86, 40);
-            this.confirm.TabIndex = 1;
-            this.confirm.Text = "Confirm";
-            this.confirm.UseVisualStyleBackColor = true;
+            this.richTextBox1.Enabled = false;
+            this.richTextBox1.Location = new System.Drawing.Point(255, 124);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(303, 173);
+            this.richTextBox1.TabIndex = 13;
+            this.richTextBox1.Text = "haha";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // button2
             // 
@@ -130,6 +126,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -140,6 +137,7 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -150,6 +148,7 @@
             this.button4.TabIndex = 6;
             this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -160,6 +159,7 @@
             this.button5.TabIndex = 7;
             this.button5.Text = "5";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -170,6 +170,7 @@
             this.button6.TabIndex = 8;
             this.button6.Text = "6";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -180,6 +181,7 @@
             this.button7.TabIndex = 9;
             this.button7.Text = "7";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -190,6 +192,7 @@
             this.button8.TabIndex = 10;
             this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -200,16 +203,66 @@
             this.button9.TabIndex = 11;
             this.button9.Text = "9";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button10
+            // button0
             // 
-            this.button10.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button10.Location = new System.Drawing.Point(54, 258);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(40, 40);
-            this.button10.TabIndex = 12;
-            this.button10.Text = "0";
-            this.button10.UseVisualStyleBackColor = true;
+            this.button0.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button0.Location = new System.Drawing.Point(54, 258);
+            this.button0.Name = "button0";
+            this.button0.Size = new System.Drawing.Size(40, 40);
+            this.button0.TabIndex = 12;
+            this.button0.Text = "0";
+            this.button0.UseVisualStyleBackColor = true;
+            this.button0.Click += new System.EventHandler(this.button0_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button1.Location = new System.Drawing.Point(54, 212);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // confirm
+            // 
+            this.confirm.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.confirm.Location = new System.Drawing.Point(100, 258);
+            this.confirm.Name = "confirm";
+            this.confirm.Size = new System.Drawing.Size(86, 40);
+            this.confirm.TabIndex = 1;
+            this.confirm.Text = "Confirm";
+            this.confirm.UseVisualStyleBackColor = true;
+            this.confirm.Click += new System.EventHandler(this.confirm_Click);
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richTextBox2.Enabled = false;
+            this.richTextBox2.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.richTextBox2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.richTextBox2.Location = new System.Drawing.Point(54, 75);
+            this.richTextBox2.Multiline = false;
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.richTextBox2.Size = new System.Drawing.Size(132, 40);
+            this.richTextBox2.TabIndex = 15;
+            this.richTextBox2.Text = "Guess Number";
+            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
+            // 
+            // button_reset
+            // 
+            this.button_reset.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_reset.Location = new System.Drawing.Point(54, 304);
+            this.button_reset.Name = "button_reset";
+            this.button_reset.Size = new System.Drawing.Size(132, 23);
+            this.button_reset.TabIndex = 16;
+            this.button_reset.Text = "Reset";
+            this.button_reset.UseVisualStyleBackColor = true;
+            this.button_reset.Click += new System.EventHandler(this.button_reset_Click);
             // 
             // Form_Game
             // 
@@ -220,7 +273,7 @@
             this.Controls.Add(this.Start_Button);
             this.Controls.Add(this.game_name);
             this.Name = "Form_Game";
-            this.Text = "Guess Number";
+            this.Text = " Guess Number";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.game_pamel.ResumeLayout(false);
             this.game_pamel.PerformLayout();
@@ -235,7 +288,6 @@
         private System.Windows.Forms.Button Start_Button;
         private System.Windows.Forms.Panel game_pamel;
         private System.Windows.Forms.Button confirm;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -245,7 +297,11 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button0;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label commend;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.Button button_reset;
     }
 }
 
