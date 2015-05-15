@@ -43,7 +43,7 @@ namespace GuessNumber
         }
 
         //set the search array
-        private bool[, , ,] search = new bool[10, 10, 10, 10];
+        private static bool[, , ,] search = new bool[10, 10, 10, 10];
 
         //set getter and setter
         public bool[, , ,] Search
@@ -52,7 +52,7 @@ namespace GuessNumber
         }
 
         //初始化設定 將有沒有重複數字的設置為true
-        public Game_Controller()
+        public static void set_search()
         {
             int a = 0, b = 0, c = 0, d = 0;
             for (a = 0; a < 10; a++)
@@ -67,7 +67,7 @@ namespace GuessNumber
         }
 
         //設定猜測
-        public void setbotguess(int[] guessnum, int aresult, int bresult, ref int[] botguess)
+        public static void setbotguess(int[] guessnum, int aresult, int bresult, ref int[] botguess)
         {
             botguess = new int[4];
             bool get_answer = false;

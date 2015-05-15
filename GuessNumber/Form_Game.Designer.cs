@@ -31,8 +31,11 @@
             this.game_name = new System.Windows.Forms.Label();
             this.Start_Button = new System.Windows.Forms.Button();
             this.game_pamel = new System.Windows.Forms.Panel();
+            this.computer_result_box = new System.Windows.Forms.RichTextBox();
+            this.button_reset = new System.Windows.Forms.Button();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.commend = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.man_result_box = new System.Windows.Forms.RichTextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -44,8 +47,7 @@
             this.button0 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.confirm = new System.Windows.Forms.Button();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.button_reset = new System.Windows.Forms.Button();
+            this.quit_button = new System.Windows.Forms.Button();
             this.game_pamel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,10 +75,12 @@
             // 
             // game_pamel
             // 
+            this.game_pamel.Controls.Add(this.quit_button);
+            this.game_pamel.Controls.Add(this.computer_result_box);
             this.game_pamel.Controls.Add(this.button_reset);
             this.game_pamel.Controls.Add(this.richTextBox2);
             this.game_pamel.Controls.Add(this.commend);
-            this.game_pamel.Controls.Add(this.richTextBox1);
+            this.game_pamel.Controls.Add(this.man_result_box);
             this.game_pamel.Controls.Add(this.button2);
             this.game_pamel.Controls.Add(this.button3);
             this.game_pamel.Controls.Add(this.button4);
@@ -95,27 +99,61 @@
             this.game_pamel.TabIndex = 2;
             this.game_pamel.Visible = false;
             // 
+            // computer_result_box
+            // 
+            this.computer_result_box.Enabled = false;
+            this.computer_result_box.Location = new System.Drawing.Point(399, 124);
+            this.computer_result_box.Name = "computer_result_box";
+            this.computer_result_box.Size = new System.Drawing.Size(138, 173);
+            this.computer_result_box.TabIndex = 17;
+            this.computer_result_box.Text = "";
+            // 
+            // button_reset
+            // 
+            this.button_reset.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_reset.Location = new System.Drawing.Point(54, 304);
+            this.button_reset.Name = "button_reset";
+            this.button_reset.Size = new System.Drawing.Size(132, 23);
+            this.button_reset.TabIndex = 16;
+            this.button_reset.Text = "Reset";
+            this.button_reset.UseVisualStyleBackColor = true;
+            this.button_reset.Click += new System.EventHandler(this.button_reset_Click);
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richTextBox2.Enabled = false;
+            this.richTextBox2.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.richTextBox2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.richTextBox2.Location = new System.Drawing.Point(54, 90);
+            this.richTextBox2.Multiline = false;
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.richTextBox2.Size = new System.Drawing.Size(132, 25);
+            this.richTextBox2.TabIndex = 15;
+            this.richTextBox2.Text = "Guess Number";
+            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
+            // 
             // commend
             // 
             this.commend.AutoSize = true;
             this.commend.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.commend.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.commend.ForeColor = System.Drawing.Color.Red;
-            this.commend.Location = new System.Drawing.Point(315, 80);
+            this.commend.Location = new System.Drawing.Point(305, 82);
             this.commend.Name = "commend";
             this.commend.Size = new System.Drawing.Size(170, 18);
             this.commend.TabIndex = 14;
             this.commend.Text = "由你先猜，請輸入數字";
             // 
-            // richTextBox1
+            // man_result_box
             // 
-            this.richTextBox1.Enabled = false;
-            this.richTextBox1.Location = new System.Drawing.Point(255, 124);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(303, 173);
-            this.richTextBox1.TabIndex = 13;
-            this.richTextBox1.Text = "haha";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            this.man_result_box.Enabled = false;
+            this.man_result_box.Location = new System.Drawing.Point(255, 124);
+            this.man_result_box.Name = "man_result_box";
+            this.man_result_box.Size = new System.Drawing.Size(138, 173);
+            this.man_result_box.TabIndex = 13;
+            this.man_result_box.Text = "";
             // 
             // button2
             // 
@@ -238,31 +276,15 @@
             this.confirm.UseVisualStyleBackColor = true;
             this.confirm.Click += new System.EventHandler(this.confirm_Click);
             // 
-            // richTextBox2
+            // quit_button
             // 
-            this.richTextBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.richTextBox2.Enabled = false;
-            this.richTextBox2.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.richTextBox2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.richTextBox2.Location = new System.Drawing.Point(54, 75);
-            this.richTextBox2.Multiline = false;
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.richTextBox2.Size = new System.Drawing.Size(132, 40);
-            this.richTextBox2.TabIndex = 15;
-            this.richTextBox2.Text = "Guess Number";
-            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
-            // 
-            // button_reset
-            // 
-            this.button_reset.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_reset.Location = new System.Drawing.Point(54, 304);
-            this.button_reset.Name = "button_reset";
-            this.button_reset.Size = new System.Drawing.Size(132, 23);
-            this.button_reset.TabIndex = 16;
-            this.button_reset.Text = "Reset";
-            this.button_reset.UseVisualStyleBackColor = true;
-            this.button_reset.Click += new System.EventHandler(this.button_reset_Click);
+            this.quit_button.Location = new System.Drawing.Point(399, 318);
+            this.quit_button.Name = "quit_button";
+            this.quit_button.Size = new System.Drawing.Size(138, 35);
+            this.quit_button.TabIndex = 18;
+            this.quit_button.Text = "QUIT";
+            this.quit_button.UseVisualStyleBackColor = true;
+            this.quit_button.Click += new System.EventHandler(this.quit_button_Click);
             // 
             // Form_Game
             // 
@@ -298,10 +320,12 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button0;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox man_result_box;
         private System.Windows.Forms.Label commend;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.Button button_reset;
+        private System.Windows.Forms.RichTextBox computer_result_box;
+        private System.Windows.Forms.Button quit_button;
     }
 }
 
