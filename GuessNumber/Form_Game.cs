@@ -271,6 +271,8 @@ namespace GuessNumber
             }
 
             text_computer_result_box += " =>" + show_guess_result[1] + "A" + show_guess_result[0] + "B\n";
+
+            computer.add_count();
         }
          
 
@@ -289,12 +291,13 @@ namespace GuessNumber
             }
             else
             {
+                confirm_computer_guessing();
+
                 if (player.A == 4)
                     creat_computer_geuss();
 
-                confirm_computer_guessing();
-
-                commend.Text = "又輪到你了";
+                if (player.A != 4)
+                    commend.Text = "又輪到你了";
             }
     
             if (!one_is_over)
@@ -346,6 +349,12 @@ namespace GuessNumber
             ShowNum();
         }
 
+        //show rule page
+        private void button_rule_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void quit_button_Click(object sender, EventArgs e)
         {
             lose_panel.Visible = true; 
@@ -353,24 +362,17 @@ namespace GuessNumber
 
         private void button_restart_Click(object sender, EventArgs e)
         {
-            //reset all
-            player = new Player();
-            computer = new Player();
-            reset();
-
-            lose_panel.Visible = false;
+            reset_all();
         }
 
         private void button_restart1_Click(object sender, EventArgs e)
         {
-            //reset all
-            player = new Player();
-            computer = new Player();
-            reset();
-
-            win_panel.Visible = false;
+            reset_all();
         }
 
+        //
+        //save record (last version)
+        //
         private void button_save_Click(object sender, EventArgs e)
         {
 
@@ -378,13 +380,31 @@ namespace GuessNumber
 
         private void button_restart2_Click(object sender, EventArgs e)
         {
+            reset_all();
+        }
+
+
+        private void reset_all()
+        {
+            manguessing = true;
             //reset all
             player = new Player();
             computer = new Player();
-            reset();
+            text_computer_result_box = "";
+            text_man_result_box = "";
+            commend.Text = "由你先猜，請輸入數字";
 
-            same_panel.Visible = false;
+            //無法將 computer.Number 傳遞，所以只能這樣做
+            int[] temp = new int[4];
+            Game_Controller.randget(ref temp);
+            Array.Copy(temp, computer.Number, 4);
+
+            //set search
+            Game_Controller.set_search();
+
+            reset();       
+            
+            lose_panel.Visible = false;
         }
-
     }
 }
