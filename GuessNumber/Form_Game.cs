@@ -315,6 +315,7 @@ namespace GuessNumber
 
         private void confirm_Click(object sender, EventArgs e)
         {
+
             if (test_input(show_guess_num))
             {
                 MessageBox.Show("輸入有誤，請重新輸入!");
@@ -334,6 +335,14 @@ namespace GuessNumber
                     manguessing = !manguessing;
                 if (player.A == 4 || computer.A == 4)
                     one_is_over = true;
+
+                //wrong a b
+                int test = computer.Guess[0] + computer.Guess[1] + computer.Guess[2] + computer.Guess[3];
+                if (test == 0)
+                {
+                    MessageBox.Show("你給的A與B有誤，所以你輸了!!");
+                    lose_panel.Visible = true;
+                }
 
                 //game over 
                 if (player.A == 4 && computer.A == 4)
