@@ -209,15 +209,8 @@ namespace GuessNumber
 
 
         //things to do when confirm in man guess mode
-        private void confirm_man_guessing(string origin)
+        private void confirm_man_guessing()
         {
-            //pass in man guess
-            char[] origin_char = origin.ToCharArray(1, 4);
-            for (int k = 0; k < 4; k++)
-            {
-                player.Guess[k] = (int)char.GetNumericValue(origin_char[k]);
-            }
-
             //get a and b
             int[] temp = new int[4];
             Array.Copy(player.Guess, temp, 4);
@@ -230,6 +223,13 @@ namespace GuessNumber
             text_man_result_box += (show_guess_num + " =>" + player.A + "A" + player.B + "B\n");
 
             player.add_count();
+
+            if (computer.A != 4)
+            {
+                creat_computer_geuss();
+
+                commend.Text = "電腦猜了，請回應";
+            }          
         }
 
         //creat computer guess
@@ -273,52 +273,83 @@ namespace GuessNumber
             text_computer_result_box += " =>" + show_guess_result[1] + "A" + show_guess_result[0] + "B\n";
 
             computer.add_count();
-        }
-         
 
-        private void confirm_Click(object sender, EventArgs e)
+            if (player.A == 4)
+                creat_computer_geuss();
+
+            if (player.A != 4)
+                commend.Text = "又輪到你了";
+        }
+       
+        //test input
+        private bool test_input(string origin)
         {
+            bool is_wrong;
             if (manguessing)
             {
-                confirm_man_guessing(show_guess_num);
+                if (count_num != 4)
+                    return true;
 
-                if (computer.A != 4)
+                //pass in man guess
+                char[] origin_char = origin.ToCharArray(1, 4);
+                for (int k = 0; k < 4; k++)
                 {
-                    creat_computer_geuss();
+                    player.Guess[k] = (int)char.GetNumericValue(origin_char[k]);
+                }
+                int manguess = 1000 * player.Guess[0] + 100 * player.Guess[1] + 10 * player.Guess[2] + player.Guess[3];
 
-                    commend.Text = "電腦猜了，請回應";
-                }          
+                is_wrong = (manguess < 0 || manguess > 9999 || player.Guess[0] == player.Guess[1]
+                || player.Guess[1] == player.Guess[2] || player.Guess[1] == player.Guess[3]
+                || player.Guess[2] == player.Guess[3]);
             }
             else
             {
-                confirm_computer_guessing();
+                int a_plus_b = (int)char.GetNumericValue(char.Parse(show_guess_result[0])) + (int)char.GetNumericValue(char.Parse(show_guess_result[1]));
 
-                if (player.A == 4)
-                    creat_computer_geuss();
-
-                if (player.A != 4)
-                    commend.Text = "又輪到你了";
+                is_wrong = (a_plus_b > 4);
             }
-    
-            if (!one_is_over)
-                manguessing = !manguessing;
-            if (player.A == 4 || computer.A == 4)
-                one_is_over = true;
+        
+            return is_wrong;
+        }
 
-            reset();
 
-            //game over 
-            if (player.A == 4 && computer.A == 4)
+        private void confirm_Click(object sender, EventArgs e)
+        {
+            if (test_input(show_guess_num))
             {
-                Thread.Sleep(3000);
-
-                if (computer.count > player.count)
-                    win_panel.Visible = true;
-                else if (computer.count < player.count)
-                    lose_panel.Visible = true;
-                else if (computer.count == player.count)
-                    same_panel.Visible = true;
+                MessageBox.Show("輸入有誤，請重新輸入!");
             }
+            else
+            {
+                if (manguessing)
+                {
+                    confirm_man_guessing();
+                }
+                else
+                {
+                    confirm_computer_guessing();
+                }
+
+                if (!one_is_over)
+                    manguessing = !manguessing;
+                if (player.A == 4 || computer.A == 4)
+                    one_is_over = true;
+
+                //game over 
+                if (player.A == 4 && computer.A == 4)
+                {
+                    Thread.Sleep(3000);
+
+                    if (computer.count > player.count)
+                        win_panel.Visible = true;
+                    else if (computer.count < player.count)
+                        lose_panel.Visible = true;
+                    else if (computer.count == player.count)
+                        same_panel.Visible = true;
+                }
+            }
+ 
+            reset();           
         }
 
         private void richTextBox2_TextChanged(object sender, EventArgs e)
