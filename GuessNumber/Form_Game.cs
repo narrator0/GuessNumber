@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 
 namespace GuessNumber
@@ -14,7 +15,7 @@ namespace GuessNumber
     public partial class Form_Game : Form
     {
         private Player computer = new Player(), player = new Player();
-        private bool manguessing = true;
+        private bool manguessing = true, one_is_over = false;
         private string show_guess_num;
         private List<string> show_guess_result;
         private int count_num = 0;
@@ -44,15 +45,11 @@ namespace GuessNumber
             computer_result_box.Text = text_computer_result_box;
         }
 
-        private void game_name_Click(object sender, EventArgs e)
-        {
-        }
-
         //go to game mode
         private void Start_Button_Click(object sender, EventArgs e)
         {
             //change to game mode
-            game_pamel.Visible = true;    
+            game_panel.Visible = true;    
         }
 
         private void ShowNum()
@@ -215,7 +212,7 @@ namespace GuessNumber
         private void confirm_man_guessing(string origin)
         {
             //pass in man guess
-            char[] origin_char = origin.ToCharArray(0, 4);
+            char[] origin_char = origin.ToCharArray(1, 4);
             for (int k = 0; k < 4; k++)
             {
                 player.Guess[k] = (int)char.GetNumericValue(origin_char[k]);
@@ -229,8 +226,17 @@ namespace GuessNumber
             player.A = a;
             player.B = b;
 
+            //set rich box
+            text_man_result_box += (show_guess_num + " =>" + player.A + "A" + player.B + "B\n");
+
+            player.add_count();
+        }
+
+        //creat computer guess
+        private void creat_computer_geuss()
+        {
             //create computer guess
-            if (player.count == 0)
+            if (player.count == 1)
             {
                 computer.randget();
             }
@@ -242,13 +248,10 @@ namespace GuessNumber
             }
 
             //set rich box
-            text_man_result_box += (show_guess_num + " =>" + player.A + "A" + player.B + "B\n");
             for (int i = 0; i < 4; i++)
             {
                 text_computer_result_box += computer.Guess[i];
             }
-
-            player.add_count();
         }
 
         //things to do when confirm in computer guess mode
@@ -277,18 +280,42 @@ namespace GuessNumber
             {
                 confirm_man_guessing(show_guess_num);
 
-                commend.Text = "電腦猜了，請回應";
+                if (computer.A != 4)
+                {
+                    creat_computer_geuss();
+
+                    commend.Text = "電腦猜了，請回應";
+                }          
             }
             else
             {
+                if (player.A == 4)
+                    creat_computer_geuss();
+
                 confirm_computer_guessing();
 
                 commend.Text = "又輪到你了";
             }
+    
+            if (!one_is_over)
+                manguessing = !manguessing;
+            if (player.A == 4 || computer.A == 4)
+                one_is_over = true;
 
-            manguessing = !manguessing;
             reset();
-            
+
+            //game over 
+            if (player.A == 4 && computer.A == 4)
+            {
+                Thread.Sleep(3000);
+
+                if (computer.count > player.count)
+                    win_panel.Visible = true;
+                else if (computer.count < player.count)
+                    lose_panel.Visible = true;
+                else if (computer.count == player.count)
+                    same_panel.Visible = true;
+            }
         }
 
         private void richTextBox2_TextChanged(object sender, EventArgs e)
@@ -321,7 +348,43 @@ namespace GuessNumber
 
         private void quit_button_Click(object sender, EventArgs e)
         {
+            lose_panel.Visible = true; 
+        }
+
+        private void button_restart_Click(object sender, EventArgs e)
+        {
+            //reset all
+            player = new Player();
+            computer = new Player();
+            reset();
+
+            lose_panel.Visible = false;
+        }
+
+        private void button_restart1_Click(object sender, EventArgs e)
+        {
+            //reset all
+            player = new Player();
+            computer = new Player();
+            reset();
+
+            win_panel.Visible = false;
+        }
+
+        private void button_save_Click(object sender, EventArgs e)
+        {
 
         }
+
+        private void button_restart2_Click(object sender, EventArgs e)
+        {
+            //reset all
+            player = new Player();
+            computer = new Player();
+            reset();
+
+            same_panel.Visible = false;
+        }
+
     }
 }

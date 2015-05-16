@@ -30,7 +30,8 @@
         {
             this.game_name = new System.Windows.Forms.Label();
             this.Start_Button = new System.Windows.Forms.Button();
-            this.game_pamel = new System.Windows.Forms.Panel();
+            this.game_panel = new System.Windows.Forms.Panel();
+            this.quit_button = new System.Windows.Forms.Button();
             this.computer_result_box = new System.Windows.Forms.RichTextBox();
             this.button_reset = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
@@ -47,8 +48,20 @@
             this.button0 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.confirm = new System.Windows.Forms.Button();
-            this.quit_button = new System.Windows.Forms.Button();
-            this.game_pamel.SuspendLayout();
+            this.label_lose = new System.Windows.Forms.Label();
+            this.button_restart = new System.Windows.Forms.Button();
+            this.lose_panel = new System.Windows.Forms.Panel();
+            this.win_panel = new System.Windows.Forms.Panel();
+            this.label_win = new System.Windows.Forms.Label();
+            this.button_restart1 = new System.Windows.Forms.Button();
+            this.button_save = new System.Windows.Forms.Button();
+            this.same_panel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button_restart2 = new System.Windows.Forms.Button();
+            this.game_panel.SuspendLayout();
+            this.lose_panel.SuspendLayout();
+            this.win_panel.SuspendLayout();
+            this.same_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // game_name
@@ -60,7 +73,6 @@
             this.game_name.Size = new System.Drawing.Size(149, 31);
             this.game_name.TabIndex = 0;
             this.game_name.Text = "猜數字遊戲";
-            this.game_name.Click += new System.EventHandler(this.game_name_Click);
             // 
             // Start_Button
             // 
@@ -73,31 +85,42 @@
             this.Start_Button.UseVisualStyleBackColor = true;
             this.Start_Button.Click += new System.EventHandler(this.Start_Button_Click);
             // 
-            // game_pamel
+            // game_panel
             // 
-            this.game_pamel.Controls.Add(this.quit_button);
-            this.game_pamel.Controls.Add(this.computer_result_box);
-            this.game_pamel.Controls.Add(this.button_reset);
-            this.game_pamel.Controls.Add(this.richTextBox2);
-            this.game_pamel.Controls.Add(this.commend);
-            this.game_pamel.Controls.Add(this.man_result_box);
-            this.game_pamel.Controls.Add(this.button2);
-            this.game_pamel.Controls.Add(this.button3);
-            this.game_pamel.Controls.Add(this.button4);
-            this.game_pamel.Controls.Add(this.button5);
-            this.game_pamel.Controls.Add(this.button6);
-            this.game_pamel.Controls.Add(this.button7);
-            this.game_pamel.Controls.Add(this.button8);
-            this.game_pamel.Controls.Add(this.button9);
-            this.game_pamel.Controls.Add(this.button0);
-            this.game_pamel.Controls.Add(this.button1);
-            this.game_pamel.Controls.Add(this.confirm);
-            this.game_pamel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.game_pamel.Location = new System.Drawing.Point(0, 0);
-            this.game_pamel.Name = "game_pamel";
-            this.game_pamel.Size = new System.Drawing.Size(600, 400);
-            this.game_pamel.TabIndex = 2;
-            this.game_pamel.Visible = false;
+            this.game_panel.Controls.Add(this.lose_panel);
+            this.game_panel.Controls.Add(this.quit_button);
+            this.game_panel.Controls.Add(this.computer_result_box);
+            this.game_panel.Controls.Add(this.button_reset);
+            this.game_panel.Controls.Add(this.richTextBox2);
+            this.game_panel.Controls.Add(this.commend);
+            this.game_panel.Controls.Add(this.man_result_box);
+            this.game_panel.Controls.Add(this.button2);
+            this.game_panel.Controls.Add(this.button3);
+            this.game_panel.Controls.Add(this.button4);
+            this.game_panel.Controls.Add(this.button5);
+            this.game_panel.Controls.Add(this.button6);
+            this.game_panel.Controls.Add(this.button7);
+            this.game_panel.Controls.Add(this.button8);
+            this.game_panel.Controls.Add(this.button9);
+            this.game_panel.Controls.Add(this.button0);
+            this.game_panel.Controls.Add(this.button1);
+            this.game_panel.Controls.Add(this.confirm);
+            this.game_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.game_panel.Location = new System.Drawing.Point(0, 0);
+            this.game_panel.Name = "game_panel";
+            this.game_panel.Size = new System.Drawing.Size(600, 400);
+            this.game_panel.TabIndex = 2;
+            this.game_panel.Visible = false;
+            // 
+            // quit_button
+            // 
+            this.quit_button.Location = new System.Drawing.Point(399, 318);
+            this.quit_button.Name = "quit_button";
+            this.quit_button.Size = new System.Drawing.Size(138, 35);
+            this.quit_button.TabIndex = 18;
+            this.quit_button.Text = "QUIT";
+            this.quit_button.UseVisualStyleBackColor = true;
+            this.quit_button.Click += new System.EventHandler(this.quit_button_Click);
             // 
             // computer_result_box
             // 
@@ -276,29 +299,140 @@
             this.confirm.UseVisualStyleBackColor = true;
             this.confirm.Click += new System.EventHandler(this.confirm_Click);
             // 
-            // quit_button
+            // label_lose
             // 
-            this.quit_button.Location = new System.Drawing.Point(399, 318);
-            this.quit_button.Name = "quit_button";
-            this.quit_button.Size = new System.Drawing.Size(138, 35);
-            this.quit_button.TabIndex = 18;
-            this.quit_button.Text = "QUIT";
-            this.quit_button.UseVisualStyleBackColor = true;
-            this.quit_button.Click += new System.EventHandler(this.quit_button_Click);
+            this.label_lose.AutoSize = true;
+            this.label_lose.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label_lose.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label_lose.Location = new System.Drawing.Point(219, 81);
+            this.label_lose.Name = "label_lose";
+            this.label_lose.Size = new System.Drawing.Size(157, 40);
+            this.label_lose.TabIndex = 0;
+            this.label_lose.Text = "You Lose";
+            // 
+            // button_restart
+            // 
+            this.button_restart.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_restart.Location = new System.Drawing.Point(255, 152);
+            this.button_restart.Name = "button_restart";
+            this.button_restart.Size = new System.Drawing.Size(88, 35);
+            this.button_restart.TabIndex = 1;
+            this.button_restart.Text = "Restart";
+            this.button_restart.UseVisualStyleBackColor = true;
+            this.button_restart.Click += new System.EventHandler(this.button_restart_Click);
+            // 
+            // lose_panel
+            // 
+            this.lose_panel.Controls.Add(this.win_panel);
+            this.lose_panel.Controls.Add(this.button_restart);
+            this.lose_panel.Controls.Add(this.label_lose);
+            this.lose_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lose_panel.Location = new System.Drawing.Point(0, 0);
+            this.lose_panel.Name = "lose_panel";
+            this.lose_panel.Size = new System.Drawing.Size(600, 400);
+            this.lose_panel.TabIndex = 19;
+            this.lose_panel.TabStop = true;
+            this.lose_panel.Visible = false;
+            // 
+            // win_panel
+            // 
+            this.win_panel.Controls.Add(this.same_panel);
+            this.win_panel.Controls.Add(this.button_save);
+            this.win_panel.Controls.Add(this.button_restart1);
+            this.win_panel.Controls.Add(this.label_win);
+            this.win_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.win_panel.Location = new System.Drawing.Point(0, 0);
+            this.win_panel.Name = "win_panel";
+            this.win_panel.Size = new System.Drawing.Size(600, 400);
+            this.win_panel.TabIndex = 2;
+            this.win_panel.Visible = false;
+            // 
+            // label_win
+            // 
+            this.label_win.AutoSize = true;
+            this.label_win.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label_win.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label_win.Location = new System.Drawing.Point(239, 85);
+            this.label_win.Name = "label_win";
+            this.label_win.Size = new System.Drawing.Size(86, 40);
+            this.label_win.TabIndex = 0;
+            this.label_win.Text = "WIN";
+            // 
+            // button_restart1
+            // 
+            this.button_restart1.Font = new System.Drawing.Font("微軟正黑體", 16F, System.Drawing.FontStyle.Bold);
+            this.button_restart1.Location = new System.Drawing.Point(226, 166);
+            this.button_restart1.Name = "button_restart1";
+            this.button_restart1.Size = new System.Drawing.Size(102, 38);
+            this.button_restart1.TabIndex = 1;
+            this.button_restart1.Text = "Restart";
+            this.button_restart1.UseVisualStyleBackColor = true;
+            this.button_restart1.Click += new System.EventHandler(this.button_restart1_Click);
+            // 
+            // button_save
+            // 
+            this.button_save.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_save.Location = new System.Drawing.Point(226, 210);
+            this.button_save.Name = "button_save";
+            this.button_save.Size = new System.Drawing.Size(102, 38);
+            this.button_save.TabIndex = 2;
+            this.button_save.Text = "Save";
+            this.button_save.UseVisualStyleBackColor = true;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            // 
+            // same_panel
+            // 
+            this.same_panel.Controls.Add(this.button_restart2);
+            this.same_panel.Controls.Add(this.label1);
+            this.same_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.same_panel.Location = new System.Drawing.Point(0, 0);
+            this.same_panel.Name = "same_panel";
+            this.same_panel.Size = new System.Drawing.Size(600, 400);
+            this.same_panel.TabIndex = 3;
+            this.same_panel.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label1.Location = new System.Drawing.Point(235, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 35);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "平手";
+            // 
+            // button_restart2
+            // 
+            this.button_restart2.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_restart2.ForeColor = System.Drawing.Color.Black;
+            this.button_restart2.Location = new System.Drawing.Point(226, 134);
+            this.button_restart2.Name = "button_restart2";
+            this.button_restart2.Size = new System.Drawing.Size(96, 32);
+            this.button_restart2.TabIndex = 1;
+            this.button_restart2.Text = "Restart";
+            this.button_restart2.UseVisualStyleBackColor = true;
+            this.button_restart2.Click += new System.EventHandler(this.button_restart2_Click);
             // 
             // Form_Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 400);
-            this.Controls.Add(this.game_pamel);
+            this.Controls.Add(this.game_panel);
             this.Controls.Add(this.Start_Button);
             this.Controls.Add(this.game_name);
             this.Name = "Form_Game";
             this.Text = " Guess Number";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.game_pamel.ResumeLayout(false);
-            this.game_pamel.PerformLayout();
+            this.game_panel.ResumeLayout(false);
+            this.game_panel.PerformLayout();
+            this.lose_panel.ResumeLayout(false);
+            this.lose_panel.PerformLayout();
+            this.win_panel.ResumeLayout(false);
+            this.win_panel.PerformLayout();
+            this.same_panel.ResumeLayout(false);
+            this.same_panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,7 +442,7 @@
 
         private System.Windows.Forms.Label game_name;
         private System.Windows.Forms.Button Start_Button;
-        private System.Windows.Forms.Panel game_pamel;
+        private System.Windows.Forms.Panel game_panel;
         private System.Windows.Forms.Button confirm;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -326,6 +460,16 @@
         private System.Windows.Forms.Button button_reset;
         private System.Windows.Forms.RichTextBox computer_result_box;
         private System.Windows.Forms.Button quit_button;
+        private System.Windows.Forms.Panel lose_panel;
+        private System.Windows.Forms.Button button_restart;
+        private System.Windows.Forms.Label label_lose;
+        private System.Windows.Forms.Panel win_panel;
+        private System.Windows.Forms.Label label_win;
+        private System.Windows.Forms.Button button_save;
+        private System.Windows.Forms.Button button_restart1;
+        private System.Windows.Forms.Panel same_panel;
+        private System.Windows.Forms.Button button_restart2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
