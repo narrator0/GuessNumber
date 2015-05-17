@@ -349,6 +349,7 @@ namespace GuessNumber
                 {
                     Thread.Sleep(3000);
 
+                    game_panel.Visible = false;
                     if (computer.count > player.count)
                         win_panel.Visible = true;
                     else if (computer.count < player.count)
@@ -360,7 +361,8 @@ namespace GuessNumber
  
             reset();           
         }
-
+        
+        //text align = center
         private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
             richTextBox2.SelectionAlignment = HorizontalAlignment.Center;
@@ -389,25 +391,24 @@ namespace GuessNumber
             ShowNum();
         }
 
-        //show rule page
-        private void button_rule_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void quit_button_Click(object sender, EventArgs e)
         {
+            game_panel.Visible = false;
             lose_panel.Visible = true; 
         }
 
         private void button_restart_Click(object sender, EventArgs e)
         {
             reset_all();
+            lose_panel.Visible = false;
+            game_panel.Visible = true;
         }
 
         private void button_restart1_Click(object sender, EventArgs e)
         {
             reset_all();
+            win_panel.Visible = false;
+            game_panel.Visible = true;
         }
 
         //
@@ -421,6 +422,8 @@ namespace GuessNumber
         private void button_restart2_Click(object sender, EventArgs e)
         {
             reset_all();
+            same_panel.Visible = false;
+            game_panel.Visible = true;
         }
 
 
@@ -430,8 +433,8 @@ namespace GuessNumber
             //reset all
             player = new Player();
             computer = new Player();
-            text_computer_result_box = "";
-            text_man_result_box = "";
+            text_computer_result_box = "電腦\n";
+            text_man_result_box = "玩家\n";
             commend.Text = "由你先猜，請輸入數字";
 
             //無法將 computer.Number 傳遞，所以只能這樣做
@@ -443,8 +446,12 @@ namespace GuessNumber
             Game_Controller.set_search();
 
             reset();       
-            
-            lose_panel.Visible = false;
+           
+        }
+
+        private void button_rule_Click(object sender, EventArgs e)
+        {  
+            panel_rule.Visible = true;
         }
     }
 }
