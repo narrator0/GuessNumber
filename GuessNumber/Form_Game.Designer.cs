@@ -61,6 +61,7 @@
             this.panel_rule = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.rule_title = new System.Windows.Forms.TextBox();
+            this.button_goback = new System.Windows.Forms.Button();
             this.button_rule = new System.Windows.Forms.Button();
             this.game_panel.SuspendLayout();
             this.lose_panel.SuspendLayout();
@@ -419,6 +420,7 @@
             this.panel_rule.BackColor = System.Drawing.SystemColors.Control;
             this.panel_rule.Controls.Add(this.richTextBox1);
             this.panel_rule.Controls.Add(this.rule_title);
+            this.panel_rule.Controls.Add(this.button_goback);
             this.panel_rule.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_rule.Location = new System.Drawing.Point(0, 0);
             this.panel_rule.Name = "panel_rule";
@@ -430,10 +432,13 @@
             // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Enabled = false;
             this.richTextBox1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.richTextBox1.ForeColor = System.Drawing.Color.Red;
             this.richTextBox1.Location = new System.Drawing.Point(42, 101);
             this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.richTextBox1.Size = new System.Drawing.Size(481, 151);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "玩家與電腦互相在心中設定0~9的四個數字，且四個數字不能重複，然後互相猜測對方的數字。若猜測的數字中有一個數字相同且位置也正確的話就回答1A，若只有數字相同則回答" +
@@ -443,6 +448,7 @@
             // 
             this.rule_title.BackColor = System.Drawing.SystemColors.Control;
             this.rule_title.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rule_title.Enabled = false;
             this.rule_title.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.rule_title.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.rule_title.Location = new System.Drawing.Point(222, 56);
@@ -451,6 +457,17 @@
             this.rule_title.TabIndex = 1;
             this.rule_title.Text = "規則說明";
             this.rule_title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button_goback
+            // 
+            this.button_goback.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_goback.Location = new System.Drawing.Point(380, 318);
+            this.button_goback.Name = "button_goback";
+            this.button_goback.Size = new System.Drawing.Size(138, 35);
+            this.button_goback.TabIndex = 1;
+            this.button_goback.Text = "BACK";
+            this.button_goback.UseVisualStyleBackColor = true;
+            this.button_goback.Click += new System.EventHandler(this.botton_goback_Click);
             // 
             // button_rule
             // 
@@ -530,6 +547,7 @@
         private System.Windows.Forms.Panel panel_rule;
         private System.Windows.Forms.TextBox rule_title;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button button_goback;
     }
 }
 

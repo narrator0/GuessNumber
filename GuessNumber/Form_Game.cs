@@ -374,6 +374,12 @@ namespace GuessNumber
             ShowNum();       
         }
 
+        //button_goback
+        private void botton_goback_Click(object sender, EventArgs e)
+        {
+            panel_rule.Visible = false;
+        }
+
         //reset
         private void reset()
         {
@@ -436,6 +442,7 @@ namespace GuessNumber
             text_computer_result_box = "電腦\n";
             text_man_result_box = "玩家\n";
             commend.Text = "由你先猜，請輸入數字";
+            one_is_over = false;
 
             //無法將 computer.Number 傳遞，所以只能這樣做
             int[] temp = new int[4];
