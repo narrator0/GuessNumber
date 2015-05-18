@@ -8,6 +8,8 @@ namespace GuessNumber
 {
     class Player
     {
+        #region properties
+
         public int a, b, count = 0;
         private int[] guess = new int[4];
         private int[] number = new int[4];
@@ -35,6 +37,9 @@ namespace GuessNumber
         {
             get { return number; }
         }
+
+        #endregion
+
 
         //add count
         public void add_count()

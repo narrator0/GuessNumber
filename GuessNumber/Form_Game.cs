@@ -14,6 +14,8 @@ namespace GuessNumber
 {
     public partial class Form_Game : Form
     {
+        #region properties
+
         private Player computer = new Player(), player = new Player();
         private bool manguessing = true, one_is_over = false;
         private string show_guess_num;
@@ -23,11 +25,12 @@ namespace GuessNumber
         private string text_man_result_box = "玩家\n";
         private string text_computer_result_box = "電腦\n";
 
-        public Form_Game()
-        {
-            InitializeComponent();
-        }
+        #endregion
 
+
+        #region main_form
+
+        //load
         private void Form1_Load(object sender, EventArgs e)
         {
             //無法將 computer.Number 傳遞，所以只能這樣做
@@ -45,48 +48,56 @@ namespace GuessNumber
             computer_result_box.Text = text_computer_result_box;
         }
 
-        //go to game mode
+        //initialize
+        public Form_Game()
+        {
+            InitializeComponent();
+        }
+
+        //go to game mode(start button)
         private void Start_Button_Click(object sender, EventArgs e)
         {
             //change to game mode
-            game_panel.Visible = true;    
+            game_panel.Visible = true;
         }
 
-        private void ShowNum()
+        //go to rule page
+        private void button_rule_Click(object sender, EventArgs e)
         {
-            if (manguessing)
-                richTextBox2.Text = show_guess_num;
-            else
-            {
-                if(count_num != 0)
-                    show_guess_result.Remove("?");
-
-                if (count_num == 2)
-                    show_guess_result.Reverse();
-                richTextBox2.Text = show_guess_result[1] + "A" + show_guess_result[0] + "B";   
-            }
-
-            man_result_box.Text = text_man_result_box;
-            computer_result_box.Text = text_computer_result_box;
+            panel_rule.Visible = true;
         }
 
-        //
-        //number buttons
-        //
+        //button_goback (from panel_rule)
+        private void botton_goback_Click(object sender, EventArgs e)
+        {
+            panel_rule.Visible = false;
+        }
+
+        #endregion
+
+        
+        #region game_panel
+
+        /// <summary>
+        ///buttons
+        /// </summary>
+
+        #region number buttons
+
         private void button0_Click(object sender, EventArgs e)
         {
             if (count_num != 4 && manguessing)
             {
                 show_guess_num += "0";
-                count_num ++;
+                count_num++;
                 ShowNum();
             }
             else if (count_num != 2 && !manguessing)
             {
                 show_guess_result.Add("0");
-                count_num ++;
+                count_num++;
                 ShowNum();
-            } 
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -102,7 +113,7 @@ namespace GuessNumber
                 show_guess_result.Add("1");
                 count_num++;
                 ShowNum();
-            } 
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -118,7 +129,7 @@ namespace GuessNumber
                 show_guess_result.Add("2");
                 count_num++;
                 ShowNum();
-            } 
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -134,7 +145,7 @@ namespace GuessNumber
                 show_guess_result.Add("3");
                 count_num++;
                 ShowNum();
-            }     
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -150,7 +161,7 @@ namespace GuessNumber
                 show_guess_result.Add("4");
                 count_num++;
                 ShowNum();
-            } 
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -171,7 +182,7 @@ namespace GuessNumber
                 count_num++;
                 ShowNum();
             }
-           
+
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -182,7 +193,7 @@ namespace GuessNumber
                 count_num++;
                 ShowNum();
             }
-            
+
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -193,7 +204,7 @@ namespace GuessNumber
                 count_num++;
                 ShowNum();
             }
-            
+
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -204,115 +215,12 @@ namespace GuessNumber
                 count_num++;
                 ShowNum();
             }
-            
+
         }
 
+        #endregion
 
-        //things to do when confirm in man guess mode
-        private void confirm_man_guessing()
-        {
-            //get a and b
-            int[] temp = new int[4];
-            Array.Copy(player.Guess, temp, 4);
-            int a = 0, b = 0;
-            Game_Controller.get_ab(temp, computer.Number, ref a, ref b);
-            player.A = a;
-            player.B = b;
-
-            //set rich box
-            text_man_result_box += (show_guess_num + " =>" + player.A + "A" + player.B + "B\n");
-
-            player.add_count();
-
-            if (computer.A != 4)
-            {
-                creat_computer_geuss();
-
-                commend.Text = "電腦猜了，請回應";
-            }          
-        }
-
-        //creat computer guess
-        private void creat_computer_geuss()
-        {
-            //create computer guess
-            if (player.count == 1)
-            {
-                computer.randget();
-            }
-            else
-            {
-                int[] bot_guess = new int[4];
-                Game_Controller.setbotguess(computer.Guess, computer.A, computer.B, ref bot_guess);
-                Array.Copy(bot_guess, computer.Guess, 4);
-            }
-
-            //set rich box
-            for (int i = 0; i < 4; i++)
-            {
-                text_computer_result_box += computer.Guess[i];
-            }
-        }
-
-        //things to do when confirm in computer guess mode
-        private void confirm_computer_guessing()
-        {
-            //pass in result
-            computer.A = int.Parse(show_guess_result[1]);
-            computer.B = int.Parse(show_guess_result[0]);
-
-            //set guess
-            int[] bot_guess = new int[4];
-            Game_Controller.setbotguess(computer.Guess, computer.A, computer.B,ref bot_guess);
-
-            for (int k = 0; k < 4; k++)
-            {
-                player.Guess[k] = bot_guess[k];
-            }
-
-            text_computer_result_box += " =>" + show_guess_result[1] + "A" + show_guess_result[0] + "B\n";
-
-            computer.add_count();
-
-            if (player.A == 4)
-                creat_computer_geuss();
-
-            if (player.A != 4)
-                commend.Text = "又輪到你了";
-        }
-       
-        //test input
-        private bool test_input(string origin)
-        {
-            bool is_wrong;
-            if (manguessing)
-            {
-                if (count_num != 4)
-                    return true;
-
-                //pass in man guess
-                char[] origin_char = origin.ToCharArray(1, 4);
-                for (int k = 0; k < 4; k++)
-                {
-                    player.Guess[k] = (int)char.GetNumericValue(origin_char[k]);
-                }
-                int manguess = 1000 * player.Guess[0] + 100 * player.Guess[1] + 10 * player.Guess[2] + player.Guess[3];
-
-                is_wrong = (manguess < 0 || manguess > 9999 || player.Guess[0] == player.Guess[1]
-                || player.Guess[1] == player.Guess[2] || player.Guess[1] == player.Guess[3]
-                || player.Guess[2] == player.Guess[3]);
-            }
-            else
-            {
-                int a_plus_b = (int)char.GetNumericValue(char.Parse(show_guess_result[0])) + (int)char.GetNumericValue(char.Parse(show_guess_result[1]));
-
-                is_wrong = (a_plus_b > 4);
-            }
-        
-            return is_wrong;
-        }
-
-
+        //confirm button
         private void confirm_Click(object sender, EventArgs e)
         {
 
@@ -358,26 +266,154 @@ namespace GuessNumber
                         same_panel.Visible = true;
                 }
             }
- 
-            reset();           
+
+            reset();
         }
-        
-        //text align = center
+
+        //quit button
+        private void quit_button_Click(object sender, EventArgs e)
+        {
+            game_panel.Visible = false;
+            lose_panel.Visible = true;
+        }
+
+        //reset button
+        private void button_reset_Click(object sender, EventArgs e)
+        {
+            reset();
+            ShowNum();
+        }
+
+        ///<summary>
+        ///methods and logic
+        ///</summary>>
+        //richtextbox2 text align = center
         private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
             richTextBox2.SelectionAlignment = HorizontalAlignment.Center;
         }
 
-        private void button_reset_Click(object sender, EventArgs e)
+        //show richtextbox2, man_result_box and computer_result_box
+        private void ShowNum()
         {
-            reset();
-            ShowNum();       
+            if (manguessing)
+                richTextBox2.Text = show_guess_num;
+            else
+            {
+                if (count_num != 0)
+                    show_guess_result.Remove("?");
+
+                if (count_num == 2)
+                    show_guess_result.Reverse();
+                richTextBox2.Text = show_guess_result[1] + "A" + show_guess_result[0] + "B";
+            }
+
+            man_result_box.Text = text_man_result_box;
+            computer_result_box.Text = text_computer_result_box;
         }
 
-        //button_goback
-        private void botton_goback_Click(object sender, EventArgs e)
+        //things to do when confirm in man guess mode
+        private void confirm_man_guessing()
         {
-            panel_rule.Visible = false;
+            //get a and b
+            int[] temp = new int[4];
+            Array.Copy(player.Guess, temp, 4);
+            int a = 0, b = 0;
+            Game_Controller.get_ab(temp, computer.Number, ref a, ref b);
+            player.A = a;
+            player.B = b;
+
+            //set rich box
+            text_man_result_box += (show_guess_num + " =>" + player.A + "A" + player.B + "B\n");
+
+            player.add_count();
+
+            if (computer.A != 4)
+            {
+                creat_computer_geuss();
+
+                commend.Text = "電腦猜了，請回應";
+            }
+        }
+
+        //creat computer guess
+        private void creat_computer_geuss()
+        {
+            //create computer guess
+            if (player.count == 1)
+            {
+                computer.randget();
+            }
+            else
+            {
+                int[] bot_guess = new int[4];
+                Game_Controller.setbotguess(computer.Guess, computer.A, computer.B, ref bot_guess);
+                Array.Copy(bot_guess, computer.Guess, 4);
+            }
+
+            //set rich box
+            for (int i = 0; i < 4; i++)
+            {
+                text_computer_result_box += computer.Guess[i];
+            }
+        }
+
+        //things to do when confirm in computer guess mode
+        private void confirm_computer_guessing()
+        {
+            //pass in result
+            computer.A = int.Parse(show_guess_result[1]);
+            computer.B = int.Parse(show_guess_result[0]);
+
+            //set guess
+            int[] bot_guess = new int[4];
+            Game_Controller.setbotguess(computer.Guess, computer.A, computer.B, ref bot_guess);
+
+            for (int k = 0; k < 4; k++)
+            {
+                player.Guess[k] = bot_guess[k];
+            }
+
+            text_computer_result_box += " =>" + show_guess_result[1] + "A" + show_guess_result[0] + "B\n";
+
+            computer.add_count();
+
+            if (player.A == 4)
+                creat_computer_geuss();
+
+            if (player.A != 4)
+                commend.Text = "又輪到你了";
+        }
+
+        //test input when confirm
+        private bool test_input(string origin)
+        {
+            bool is_wrong;
+            if (manguessing)
+            {
+                if (count_num != 4)
+                    return true;
+
+                //pass in man guess
+                char[] origin_char = origin.ToCharArray(1, 4);
+                for (int k = 0; k < 4; k++)
+                {
+                    player.Guess[k] = (int)char.GetNumericValue(origin_char[k]);
+                }
+                int manguess = 1000 * player.Guess[0] + 100 * player.Guess[1] + 10 * player.Guess[2] + player.Guess[3];
+
+                is_wrong = (manguess < 0 || manguess > 9999 || player.Guess[0] == player.Guess[1]
+                || player.Guess[1] == player.Guess[2] || player.Guess[1] == player.Guess[3]
+                || player.Guess[2] == player.Guess[3]);
+            }
+            else
+            {
+                int a_plus_b = (int)char.GetNumericValue(char.Parse(show_guess_result[0])) + (int)char.GetNumericValue(char.Parse(show_guess_result[1]));
+
+                is_wrong = (a_plus_b > 4);
+            }
+
+            return is_wrong;
         }
 
         //reset
@@ -397,11 +433,10 @@ namespace GuessNumber
             ShowNum();
         }
 
-        private void quit_button_Click(object sender, EventArgs e)
-        {
-            game_panel.Visible = false;
-            lose_panel.Visible = true; 
-        }
+        #endregion
+
+        
+        #region restart_button
 
         private void button_restart_Click(object sender, EventArgs e)
         {
@@ -417,21 +452,12 @@ namespace GuessNumber
             game_panel.Visible = true;
         }
 
-        //
-        //save record (last version)
-        //
-        private void button_save_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_restart2_Click(object sender, EventArgs e)
         {
             reset_all();
             same_panel.Visible = false;
             game_panel.Visible = true;
         }
-
 
         private void reset_all()
         {
@@ -452,13 +478,19 @@ namespace GuessNumber
             //set search
             Game_Controller.set_search();
 
-            reset();       
-           
+            reset();
+
         }
 
-        private void button_rule_Click(object sender, EventArgs e)
-        {  
-            panel_rule.Visible = true;
-        }
+        #endregion
+
+
+        //
+        //save record (last version)
+        //
+        private void button_save_Click(object sender, EventArgs e)
+        {
+
+        }   
     }
 }
