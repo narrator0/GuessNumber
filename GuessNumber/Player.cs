@@ -13,6 +13,7 @@ namespace GuessNumber
         public int a, b, count = 0;
         private int[] guess = new int[4];
         private int[] number = new int[4];
+        private bool guess_right = false;
 
         //set getter and setter
         public int A
@@ -36,6 +37,11 @@ namespace GuessNumber
         public int[] Number
         {
             get { return number; }
+        }
+        public bool Guess_right
+        {
+            set { guess_right = value; }
+            get { return guess_right; }
         }
 
         #endregion

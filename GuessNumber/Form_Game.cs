@@ -17,13 +17,14 @@ namespace GuessNumber
         #region properties
 
         private Player computer = new Player(), player = new Player();
-        private bool manguessing = true, one_is_over = false;
+        private bool manguessing = true;
         private string show_guess_num;
         private List<string> show_guess_result;
         private int count_num = 0;
         private int[] man_guess = new int[4];
         private string text_man_result_box = "玩家\n";
         private string text_computer_result_box = "電腦\n";
+        private bool man_win = false;
 
         #endregion
 
@@ -238,12 +239,9 @@ namespace GuessNumber
                 {
                     confirm_computer_guessing();
                 }
-
-                if (!one_is_over)
-                    manguessing = !manguessing;
-                if (player.A == 4 || computer.A == 4)
-                    one_is_over = true;
-
+               
+                manguessing = !manguessing;
+                
                 //wrong a b
                 int test = computer.Guess[0] + computer.Guess[1] + computer.Guess[2] + computer.Guess[3];
                 if (test == 0)
@@ -252,17 +250,23 @@ namespace GuessNumber
                     lose_panel.Visible = true;
                 }
 
-                //game over 
-                if (player.A == 4 && computer.A == 4)
-                {
-                    Thread.Sleep(3000);
+                //record win (避免玩家先猜到且電腦也在同次猜到但會宣告玩家贏的bug)
+                if (computer.A == 4)
+                    computer.Guess_right = true;
+                if (player.A == 4)
+                    player.Guess_right = true;
+                if (player.Guess_right && computer.A != 4 && manguessing)
+                    man_win = true;
 
+                //game over 
+                if (computer.Guess_right || man_win)
+                {
                     game_panel.Visible = false;
-                    if (computer.count > player.count)
+                    if (man_win)
                         win_panel.Visible = true;
-                    else if (computer.count < player.count)
+                    else if (computer.Guess_right && !player.Guess_right)
                         lose_panel.Visible = true;
-                    else if (computer.count == player.count)
+                    else if (computer.Guess_right && player.Guess_right)
                         same_panel.Visible = true;
                 }
             }
@@ -468,7 +472,9 @@ namespace GuessNumber
             text_computer_result_box = "電腦\n";
             text_man_result_box = "玩家\n";
             commend.Text = "由你先猜，請輸入數字";
-            one_is_over = false;
+            computer.Guess_right = false;
+            player.Guess_right = false;
+            man_win = false;
 
             //無法將 computer.Number 傳遞，所以只能這樣做
             int[] temp = new int[4];
