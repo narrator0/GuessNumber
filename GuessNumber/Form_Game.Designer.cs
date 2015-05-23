@@ -57,7 +57,7 @@
             this.label_win = new System.Windows.Forms.Label();
             this.same_panel = new System.Windows.Forms.Panel();
             this.button_restart2 = new System.Windows.Forms.Button();
-            this.label_same = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel_rule = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.rule_title = new System.Windows.Forms.TextBox();
@@ -316,10 +316,10 @@
             // 
             // button_restart
             // 
-            this.button_restart.Font = new System.Drawing.Font("微軟正黑體", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_restart.Location = new System.Drawing.Point(245, 152);
+            this.button_restart.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_restart.Location = new System.Drawing.Point(255, 152);
             this.button_restart.Name = "button_restart";
-            this.button_restart.Size = new System.Drawing.Size(95, 35);
+            this.button_restart.Size = new System.Drawing.Size(88, 35);
             this.button_restart.TabIndex = 0;
             this.button_restart.Text = "Restart";
             this.button_restart.UseVisualStyleBackColor = true;
@@ -351,9 +351,9 @@
             // button_save
             // 
             this.button_save.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_save.Location = new System.Drawing.Point(245, 210);
+            this.button_save.Location = new System.Drawing.Point(226, 210);
             this.button_save.Name = "button_save";
-            this.button_save.Size = new System.Drawing.Size(95, 35);
+            this.button_save.Size = new System.Drawing.Size(102, 38);
             this.button_save.TabIndex = 0;
             this.button_save.Text = "Save";
             this.button_save.UseVisualStyleBackColor = true;
@@ -361,10 +361,10 @@
             // 
             // button_restart1
             // 
-            this.button_restart1.Font = new System.Drawing.Font("微軟正黑體", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_restart1.Location = new System.Drawing.Point(245, 152);
+            this.button_restart1.Font = new System.Drawing.Font("微軟正黑體", 16F, System.Drawing.FontStyle.Bold);
+            this.button_restart1.Location = new System.Drawing.Point(226, 166);
             this.button_restart1.Name = "button_restart1";
-            this.button_restart1.Size = new System.Drawing.Size(95, 35);
+            this.button_restart1.Size = new System.Drawing.Size(102, 38);
             this.button_restart1.TabIndex = 0;
             this.button_restart1.Text = "Restart";
             this.button_restart1.UseVisualStyleBackColor = true;
@@ -374,17 +374,17 @@
             // 
             this.label_win.AutoSize = true;
             this.label_win.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_win.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label_win.Location = new System.Drawing.Point(250, 81);
+            this.label_win.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label_win.Location = new System.Drawing.Point(239, 85);
             this.label_win.Name = "label_win";
-            this.label_win.Size = new System.Drawing.Size(180, 40);
+            this.label_win.Size = new System.Drawing.Size(86, 40);
             this.label_win.TabIndex = 0;
             this.label_win.Text = "WIN";
             // 
             // same_panel
             // 
             this.same_panel.Controls.Add(this.button_restart2);
-            this.same_panel.Controls.Add(this.label_same);
+            this.same_panel.Controls.Add(this.label1);
             this.same_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.same_panel.Location = new System.Drawing.Point(0, 0);
             this.same_panel.Name = "same_panel";
@@ -394,25 +394,26 @@
             // 
             // button_restart2
             // 
-            this.button_restart2.Font = new System.Drawing.Font("微軟正黑體", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_restart2.Location = new System.Drawing.Point(245, 152);
+            this.button_restart2.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_restart2.ForeColor = System.Drawing.Color.Black;
+            this.button_restart2.Location = new System.Drawing.Point(226, 134);
             this.button_restart2.Name = "button_restart2";
-            this.button_restart2.Size = new System.Drawing.Size(95, 35);
+            this.button_restart2.Size = new System.Drawing.Size(96, 32);
             this.button_restart2.TabIndex = 0;
             this.button_restart2.Text = "Restart";
             this.button_restart2.UseVisualStyleBackColor = true;
             this.button_restart2.Click += new System.EventHandler(this.button_restart2_Click);
             // 
-            // label_same
+            // label1
             // 
-            this.label_same.AutoSize = true;
-            this.label_same.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_same.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label_same.Location = new System.Drawing.Point(252, 81);
-            this.label_same.Name = "label1";
-            this.label_same.Size = new System.Drawing.Size(175, 40);
-            this.label_same.TabIndex = 0;
-            this.label_same.Text = "平手";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label1.Location = new System.Drawing.Point(235, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 35);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "平手";
             // 
             // panel_rule
             // 
@@ -540,7 +541,7 @@
         private System.Windows.Forms.Button button_save;
         private System.Windows.Forms.Button button_restart1;
         private System.Windows.Forms.Button button_restart2;
-        private System.Windows.Forms.Label label_same;
+        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Panel same_panel;
         private System.Windows.Forms.Button button_rule;
         private System.Windows.Forms.Panel panel_rule;
