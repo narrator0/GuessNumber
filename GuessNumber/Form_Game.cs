@@ -233,6 +233,14 @@ namespace GuessNumber
                 if (manguessing)
                 {
                     confirm_man_guessing();
+                    if (player.count == 1)
+                        creat_computer_geuss();
+
+                    //set rich box
+                    for (int i = 0; i < 4; i++)
+                    {
+                        text_computer_result_box += computer.Guess[i];
+                    }
                 }
                 else
                 {
@@ -241,9 +249,9 @@ namespace GuessNumber
                
                 if ( !computer.Guess_right && !player.Guess_right)
                     manguessing = !manguessing;
-                
-                int test = computer.Guess[0] + computer.Guess[1] + computer.Guess[2] + computer.Guess[3];
-                if (test == 0 && player.count != 1)
+
+                bool test = (computer.Guess[0] == 0 && computer.Guess[1] == 0 && computer.Guess[2] == 0 && computer.Guess[3] == 0);
+                if (test && (manguessing || player.A == 4))
                 {
                     MessageBox.Show("你給的A與B有誤，所以你輸了!!");
                     game_panel.Visible = false;
@@ -260,11 +268,11 @@ namespace GuessNumber
                 if (computer.Guess_right || (computer.Guess_right && player.Guess_right))
                 {
                     game_panel.Visible = false;
-                    if ( player.Guess_right && !computer.Guess_right)
+                    if (player.count < computer.count)
                         win_panel.Visible = true;
-                    else if (computer.Guess_right && !player.Guess_right)
+                    else if (computer.A == 4 && player.A != 4)
                         lose_panel.Visible = true;
-                    else if (computer.Guess_right && player.Guess_right)
+                    else
                         same_panel.Visible = true;
                 }
 
@@ -332,10 +340,7 @@ namespace GuessNumber
             player.add_count();
 
             if (computer.A != 4)
-            {
-                creat_computer_geuss();
                 commend.Text = "電腦猜了，請回應";
-            }
                 
         }
 
@@ -343,7 +348,7 @@ namespace GuessNumber
         private void creat_computer_geuss()
         {
             //create computer guess
-            if (player.count == 1)
+            if (player.count == 1 && computer.count == 0)
             {
                 computer.randget();
             }
@@ -354,11 +359,7 @@ namespace GuessNumber
                 Array.Copy(bot_guess, computer.Guess, 4);
             }
 
-            //set rich box
-            for (int i = 0; i < 4; i++)
-            {
-                text_computer_result_box += computer.Guess[i];
-            }
+            
         }
 
         //things to do when confirm in computer guess mode
@@ -367,19 +368,13 @@ namespace GuessNumber
             //pass in result
             computer.A = int.Parse(show_guess_result[1]);
             computer.B = int.Parse(show_guess_result[0]);
-
-            //set guess
-            int[] bot_guess = new int[4];
-            Game_Controller.setbotguess(computer.Guess, computer.A, computer.B, ref bot_guess);
-
-            for (int k = 0; k < 4; k++)
-            {
-                player.Guess[k] = bot_guess[k];
-            }
-
+            
             text_computer_result_box += " =>" + show_guess_result[1] + "A" + show_guess_result[0] + "B\n";
 
             computer.add_count();
+
+            //set guess
+            creat_computer_geuss();
 
             if (player.A != 4)
                 commend.Text = "又輪到你了";
