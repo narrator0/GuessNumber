@@ -245,6 +245,14 @@ namespace GuessNumber
                 else
                 {
                     confirm_computer_guessing();
+                    if (player.A == 4)
+                    {
+                        //set rich box
+                        for (int i = 0; i < 4; i++)
+                        {
+                            text_computer_result_box += computer.Guess[i];
+                        }
+                    }
                 }
                
                 if ( !computer.Guess_right && !player.Guess_right)
