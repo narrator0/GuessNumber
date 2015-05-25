@@ -24,6 +24,11 @@ namespace GuessNumber
         private int[] man_guess = new int[4];
         private string text_man_result_box = "玩家\n";
         private string text_computer_result_box = "電腦\n";
+        enum gamestate
+        {
+            unknown, lose, win, same
+        };
+        private gamestate state = gamestate.unknown;
 
         #endregion
 
@@ -81,7 +86,6 @@ namespace GuessNumber
         /// <summary>
         ///buttons
         /// </summary>
-
         #region number buttons
 
         private void button0_Click(object sender, EventArgs e)
@@ -263,7 +267,7 @@ namespace GuessNumber
                 {
                     MessageBox.Show("你給的A與B有誤，所以你輸了!!");
                     game_panel.Visible = false;
-                    lose_panel.Visible = true;
+                    result_panel.Visible = true;
                 }
 
                 //record win (避免玩家先猜到且電腦也在同次猜到但會宣告玩家贏的bug)
@@ -275,13 +279,14 @@ namespace GuessNumber
                 //game over 
                 if (computer.Guess_right || (computer.Guess_right && player.Guess_right))
                 {
-                    game_panel.Visible = false;
                     if (player.count < computer.count)
-                        win_panel.Visible = true;
+                        state = gamestate.win;
                     else if (computer.A == 4 && player.A != 4)
-                        lose_panel.Visible = true;
+                        state = gamestate.lose;
                     else
-                        same_panel.Visible = true;
+                        state = gamestate.same;
+
+                    show_result_panel();
                 }
 
             }
@@ -293,7 +298,7 @@ namespace GuessNumber
         private void quit_button_Click(object sender, EventArgs e)
         {
             game_panel.Visible = false;
-            lose_panel.Visible = true;
+            result_panel.Visible = true;
         }
 
         //reset button
@@ -436,6 +441,29 @@ namespace GuessNumber
             ShowNum();
         }
 
+        //show result_panel
+        private void show_result_panel()
+        {
+            game_panel.Visible = false;
+
+            switch (state)
+            {
+                case gamestate.unknown:
+                    break;
+                case gamestate.lose:
+                    result_textbox.Text = "LOSE";
+                    break;
+                case gamestate.same:
+                    result_textbox.Text = "平手";
+                    break;
+                case gamestate.win:
+                    result_textbox.Text = "WIN";
+                    break;
+            }
+
+            result_panel.Visible = true;
+        }
+
         #endregion
 
         
@@ -444,23 +472,10 @@ namespace GuessNumber
         private void button_restart_Click(object sender, EventArgs e)
         {
             reset_all();
-            lose_panel.Visible = false;
+            result_panel.Visible = false;
             game_panel.Visible = true;
         }
 
-        private void button_restart1_Click(object sender, EventArgs e)
-        {
-            reset_all();
-            win_panel.Visible = false;
-            game_panel.Visible = true;
-        }
-
-        private void button_restart2_Click(object sender, EventArgs e)
-        {
-            reset_all();
-            same_panel.Visible = false;
-            game_panel.Visible = true;
-        }
 
         private void reset_all()
         {
@@ -473,6 +488,7 @@ namespace GuessNumber
             commend.Text = "由你先猜，請輸入數字";
             computer.Guess_right = false;
             player.Guess_right = false;
+            state = gamestate.unknown;
 
             //無法將 computer.Number 傳遞，所以只能這樣做
             int[] temp = new int[4];
