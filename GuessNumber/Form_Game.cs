@@ -82,12 +82,12 @@ namespace GuessNumber
 
         
         #region game_panel
+        
 
+        #region buttons
         /// <summary>
         ///buttons
         /// </summary>
-        #region number buttons
-
         private void button0_Click(object sender, EventArgs e)
         {
             if (count_num != 4 && manguessing)
@@ -222,8 +222,6 @@ namespace GuessNumber
 
         }
 
-        #endregion
-
         //confirm button
         private void confirm_Click(object sender, EventArgs e)
         {
@@ -307,6 +305,11 @@ namespace GuessNumber
             reset();
             ShowNum();
         }
+
+        #endregion
+
+
+        #region methods and logic
 
         ///<summary>
         ///methods and logic
@@ -463,19 +466,21 @@ namespace GuessNumber
 
             result_panel.Visible = true;
         }
+        #endregion
+
 
         #endregion
 
-        
-        #region restart_button
 
+        #region result_panel
+
+        //restart button
         private void button_restart_Click(object sender, EventArgs e)
         {
             reset_all();
             result_panel.Visible = false;
             game_panel.Visible = true;
         }
-
 
         private void reset_all()
         {
@@ -502,7 +507,6 @@ namespace GuessNumber
 
         }
 
-        #endregion
 
 
         //
@@ -511,6 +515,9 @@ namespace GuessNumber
         private void button_save_Click(object sender, EventArgs e)
         {
 
-        }   
+        }
+
+        #endregion
+
     }
 }

@@ -49,6 +49,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.confirm = new System.Windows.Forms.Button();
             this.result_panel = new System.Windows.Forms.Panel();
+            this.result_textbox = new System.Windows.Forms.TextBox();
             this.button_save = new System.Windows.Forms.Button();
             this.button_restart = new System.Windows.Forms.Button();
             this.panel_rule = new System.Windows.Forms.Panel();
@@ -56,7 +57,6 @@
             this.rule_title = new System.Windows.Forms.TextBox();
             this.button_goback = new System.Windows.Forms.Button();
             this.button_rule = new System.Windows.Forms.Button();
-            this.result_textbox = new System.Windows.Forms.TextBox();
             this.game_panel.SuspendLayout();
             this.result_panel.SuspendLayout();
             this.panel_rule.SuspendLayout();
@@ -309,6 +309,20 @@
             this.result_panel.TabStop = true;
             this.result_panel.Visible = false;
             // 
+            // result_textbox
+            // 
+            this.result_textbox.BackColor = System.Drawing.SystemColors.Control;
+            this.result_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.result_textbox.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.result_textbox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.result_textbox.Location = new System.Drawing.Point(250, 104);
+            this.result_textbox.Multiline = true;
+            this.result_textbox.Name = "result_textbox";
+            this.result_textbox.Size = new System.Drawing.Size(100, 27);
+            this.result_textbox.TabIndex = 1;
+            this.result_textbox.Text = "LOSE";
+            this.result_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // button_save
             // 
             this.button_save.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -396,31 +410,17 @@
             this.button_rule.UseVisualStyleBackColor = true;
             this.button_rule.Click += new System.EventHandler(this.button_rule_Click);
             // 
-            // result_textbox
-            // 
-            this.result_textbox.BackColor = System.Drawing.SystemColors.Control;
-            this.result_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.result_textbox.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.result_textbox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.result_textbox.Location = new System.Drawing.Point(250, 104);
-            this.result_textbox.Multiline = true;
-            this.result_textbox.Name = "result_textbox";
-            this.result_textbox.Size = new System.Drawing.Size(100, 27);
-            this.result_textbox.TabIndex = 1;
-            this.result_textbox.Text = "LOSE";
-            this.result_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // Form_Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 400);
+            this.Controls.Add(this.panel_rule);
             this.Controls.Add(this.result_panel);
             this.Controls.Add(this.game_panel);
             this.Controls.Add(this.Start_Button);
             this.Controls.Add(this.button_rule);
             this.Controls.Add(this.game_name);
-            this.Controls.Add(this.panel_rule);
             this.Name = "Form_Game";
             this.Text = " Guess Number";
             this.Load += new System.EventHandler(this.Form1_Load);

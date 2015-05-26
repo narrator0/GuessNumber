@@ -8,6 +8,7 @@ namespace GuessNumber
 {
     class Game_Controller
     {
+
         //產生一個亂數(四個位數不能重複)
         public static void randget(ref int[] gnum)
         {
