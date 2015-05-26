@@ -264,8 +264,9 @@ namespace GuessNumber
                 if (test && (manguessing || player.A == 4))
                 {
                     MessageBox.Show("你給的A與B有誤，所以你輸了!!");
-                    game_panel.Visible = false;
-                    result_panel.Visible = true;
+
+                    state = gamestate.lose;
+                    show_result_panel();
                 }
 
                 //record win (避免玩家先猜到且電腦也在同次猜到但會宣告玩家贏的bug)
@@ -295,8 +296,8 @@ namespace GuessNumber
         //quit button
         private void quit_button_Click(object sender, EventArgs e)
         {
-            game_panel.Visible = false;
-            result_panel.Visible = true;
+            state = gamestate.lose;
+            show_result_panel();
         }
 
         //reset button
