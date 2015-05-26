@@ -422,7 +422,7 @@ namespace GuessNumber
             {
                 int a_plus_b = (int)char.GetNumericValue(char.Parse(show_guess_result[0])) + (int)char.GetNumericValue(char.Parse(show_guess_result[1]));
 
-                is_wrong = (a_plus_b > 4);
+                is_wrong = (a_plus_b > 4 || a_plus_b < 0);
             }
 
             return is_wrong;
