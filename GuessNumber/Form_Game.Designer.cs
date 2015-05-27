@@ -347,7 +347,7 @@
             // 
             // panel_rule
             // 
-            this.panel_rule.BackColor = System.Drawing.SystemColors.Control;
+            this.panel_rule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel_rule.Controls.Add(this.richTextBox1);
             this.panel_rule.Controls.Add(this.rule_title);
             this.panel_rule.Controls.Add(this.button_goback);
