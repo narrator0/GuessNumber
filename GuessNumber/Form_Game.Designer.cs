@@ -347,7 +347,7 @@
             // 
             // panel_rule
             // 
-            this.panel_rule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel_rule.BackColor = System.Drawing.SystemColors.Control;
             this.panel_rule.Controls.Add(this.richTextBox1);
             this.panel_rule.Controls.Add(this.rule_title);
             this.panel_rule.Controls.Add(this.button_goback);
@@ -415,9 +415,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 400);
-            this.Controls.Add(this.panel_rule);
             this.Controls.Add(this.result_panel);
             this.Controls.Add(this.game_panel);
+            this.Controls.Add(this.panel_rule);
             this.Controls.Add(this.Start_Button);
             this.Controls.Add(this.button_rule);
             this.Controls.Add(this.game_name);
