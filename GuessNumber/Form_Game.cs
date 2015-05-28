@@ -475,19 +475,19 @@ namespace GuessNumber
             //數字才要反應
             if (e.KeyChar >= 48 && e.KeyChar <= 57)
             {
-                if (manguessing && count_num <= 4)
+                if (manguessing && count_num < 4)
                 {
                     show_guess_num += e.KeyChar.ToString();
                     count_num++;
+                    ShowNum();
                 }
-                else if (e.KeyChar >= 48 && e.KeyChar <= 52 && count_num <= 2)
+                else if (e.KeyChar >= 48 && e.KeyChar <= 52 && count_num < 2)
                 {
                     show_guess_result.Add(e.KeyChar);
                     count_num++;
+                    ShowNum();
                 }
             }
-
-            ShowNum();
 
             //不能直接顯示打的字
             e.Handled = true;
