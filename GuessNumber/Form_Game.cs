@@ -78,6 +78,12 @@ namespace GuessNumber
             panel_rule.Visible = false;
         }
 
+        //go to settings
+        private void button_setting_Click(object sender, EventArgs e)
+        {
+            panel_setting.Visible = true;
+        }
+
         #endregion
 
         
@@ -548,6 +554,8 @@ namespace GuessNumber
         }
 
         #endregion
+
+       
 
     }
 }

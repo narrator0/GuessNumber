@@ -57,9 +57,13 @@
             this.rule_title = new System.Windows.Forms.TextBox();
             this.button_goback = new System.Windows.Forms.Button();
             this.button_rule = new System.Windows.Forms.Button();
+            this.panel_setting = new System.Windows.Forms.Panel();
+            this.button_setting = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.game_panel.SuspendLayout();
             this.result_panel.SuspendLayout();
             this.panel_rule.SuspendLayout();
+            this.panel_setting.SuspendLayout();
             this.SuspendLayout();
             // 
             // game_name
@@ -410,16 +414,50 @@
             this.button_rule.UseVisualStyleBackColor = true;
             this.button_rule.Click += new System.EventHandler(this.button_rule_Click);
             // 
+            // panel_setting
+            // 
+            this.panel_setting.Controls.Add(this.radioButton1);
+            this.panel_setting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_setting.Location = new System.Drawing.Point(0, 0);
+            this.panel_setting.Name = "panel_setting";
+            this.panel_setting.Size = new System.Drawing.Size(600, 400);
+            this.panel_setting.TabIndex = 4;
+            this.panel_setting.Visible = false;
+            // 
+            // button_setting
+            // 
+            this.button_setting.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_setting.Location = new System.Drawing.Point(241, 257);
+            this.button_setting.Name = "button_setting";
+            this.button_setting.Size = new System.Drawing.Size(102, 33);
+            this.button_setting.TabIndex = 0;
+            this.button_setting.Text = "Setting";
+            this.button_setting.UseVisualStyleBackColor = true;
+            this.button_setting.Click += new System.EventHandler(this.button_setting_Click);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(226, 90);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(85, 16);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // Form_Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 400);
-            this.Controls.Add(this.game_panel);
-            this.Controls.Add(this.result_panel);
+            this.Controls.Add(this.panel_setting);
             this.Controls.Add(this.panel_rule);
+            this.Controls.Add(this.result_panel);
+            this.Controls.Add(this.game_panel);
             this.Controls.Add(this.Start_Button);
             this.Controls.Add(this.button_rule);
+            this.Controls.Add(this.button_setting);
             this.Controls.Add(this.game_name);
             this.Name = "Form_Game";
             this.Text = " Guess Number";
@@ -430,6 +468,8 @@
             this.result_panel.PerformLayout();
             this.panel_rule.ResumeLayout(false);
             this.panel_rule.PerformLayout();
+            this.panel_setting.ResumeLayout(false);
+            this.panel_setting.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,6 +506,9 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button_goback;
         private System.Windows.Forms.TextBox result_textbox;
+        private System.Windows.Forms.Panel panel_setting;
+        private System.Windows.Forms.Button button_setting;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
 
