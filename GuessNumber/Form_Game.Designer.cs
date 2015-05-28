@@ -143,7 +143,6 @@
             // richTextBox2
             // 
             this.richTextBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.richTextBox2.Enabled = false;
             this.richTextBox2.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.richTextBox2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.richTextBox2.Location = new System.Drawing.Point(54, 90);
@@ -154,6 +153,7 @@
             this.richTextBox2.TabIndex = 1;
             this.richTextBox2.Text = "Guess Number";
             this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
+            this.richTextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBox2_KeyPress);
             // 
             // commend
             // 
@@ -415,8 +415,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 400);
-            this.Controls.Add(this.result_panel);
             this.Controls.Add(this.game_panel);
+            this.Controls.Add(this.result_panel);
             this.Controls.Add(this.panel_rule);
             this.Controls.Add(this.Start_Button);
             this.Controls.Add(this.button_rule);

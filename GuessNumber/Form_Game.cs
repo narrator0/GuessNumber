@@ -19,7 +19,7 @@ namespace GuessNumber
         private Player computer = new Player(), player = new Player();
         private bool manguessing = true;
         private string show_guess_num;
-        private List<string> show_guess_result;
+        private List<char> show_guess_result;
         private int count_num = 0;
         private int[] man_guess = new int[4];
         private string text_man_result_box = "玩家\n";
@@ -98,7 +98,7 @@ namespace GuessNumber
             }
             else if (count_num != 2 && !manguessing)
             {
-                show_guess_result.Add("0");
+                show_guess_result.Add('0');
                 count_num++;
                 ShowNum();
             }
@@ -114,7 +114,7 @@ namespace GuessNumber
             }
             else if (count_num != 2 && !manguessing)
             {
-                show_guess_result.Add("1");
+                show_guess_result.Add('1');
                 count_num++;
                 ShowNum();
             }
@@ -130,7 +130,7 @@ namespace GuessNumber
             }
             else if (count_num != 2 && !manguessing)
             {
-                show_guess_result.Add("2");
+                show_guess_result.Add('2');
                 count_num++;
                 ShowNum();
             }
@@ -146,7 +146,7 @@ namespace GuessNumber
             }
             else if (count_num != 2 && !manguessing)
             {
-                show_guess_result.Add("3");
+                show_guess_result.Add('3');
                 count_num++;
                 ShowNum();
             }
@@ -162,7 +162,7 @@ namespace GuessNumber
             }
             else if (count_num != 2 && !manguessing)
             {
-                show_guess_result.Add("4");
+                show_guess_result.Add('4');
                 count_num++;
                 ShowNum();
             }
@@ -243,6 +243,7 @@ namespace GuessNumber
                     {
                         text_computer_result_box += computer.Guess[i];
                     }
+                    
                 }
                 else
                 {
@@ -329,11 +330,11 @@ namespace GuessNumber
             else
             {
                 if (count_num != 0)
-                    show_guess_result.Remove("?");
+                    show_guess_result.Remove('?');
 
                 if (count_num == 2)
                     show_guess_result.Reverse();
-                richTextBox2.Text = show_guess_result[1] + "A" + show_guess_result[0] + "B";
+                    richTextBox2.Text = show_guess_result[1] + "A" + show_guess_result[0] + "B";
             }
 
             man_result_box.Text = text_man_result_box;
@@ -383,8 +384,8 @@ namespace GuessNumber
         private void confirm_computer_guessing()
         {
             //pass in result
-            computer.A = int.Parse(show_guess_result[1]);
-            computer.B = int.Parse(show_guess_result[0]);
+            computer.A = (int)char.GetNumericValue(show_guess_result[1]);
+            computer.B = (int)char.GetNumericValue(show_guess_result[0]);
             
             text_computer_result_box += " =>" + show_guess_result[1] + "A" + show_guess_result[0] + "B\n";
 
@@ -420,7 +421,7 @@ namespace GuessNumber
             }
             else
             {
-                int a_plus_b = (int)char.GetNumericValue(char.Parse(show_guess_result[0])) + (int)char.GetNumericValue(char.Parse(show_guess_result[1]));
+                int a_plus_b = (int)char.GetNumericValue(show_guess_result[0]) + (int)char.GetNumericValue(show_guess_result[1]);
 
                 is_wrong = (a_plus_b > 4 || a_plus_b < 0);
             }
@@ -432,9 +433,9 @@ namespace GuessNumber
         private void reset()
         {
             //reset list
-            show_guess_result = new List<string>();
-            show_guess_result.Add("?");
-            show_guess_result.Add("?");
+            show_guess_result = new List<char>();
+            show_guess_result.Add('?');
+            show_guess_result.Add('?');
 
             //reset string
             show_guess_num = " ";
@@ -467,6 +468,34 @@ namespace GuessNumber
 
             result_panel.Visible = true;
         }
+
+        //control keyboard inout
+        private void richTextBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {       
+            //數字才要反應
+            if (e.KeyChar >= 48 && e.KeyChar <= 57)
+            {
+                if (manguessing && count_num <= 4)
+                {
+                    show_guess_num += e.KeyChar.ToString();
+                    count_num++;
+                }
+                else if (e.KeyChar >= 48 && e.KeyChar <= 52 && count_num <= 2)
+                {
+                    show_guess_result.Add(e.KeyChar);
+                    count_num++;
+                }
+            }
+
+            ShowNum();
+
+            //不能直接顯示打的字
+            e.Handled = true;
+            
+        }
+
+
+
         #endregion
 
 
