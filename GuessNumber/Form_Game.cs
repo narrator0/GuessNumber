@@ -555,16 +555,7 @@ namespace GuessNumber
 
         #endregion
 
+       
 
-        #region panel_setting
-
-
-        private void button_back_Click(object sender, EventArgs e)
-        {
-            panel_setting.Visible = false;
-        }
-
-
-        #endregion
     }
 }
