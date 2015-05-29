@@ -58,12 +58,23 @@
             this.button_goback = new System.Windows.Forms.Button();
             this.button_rule = new System.Windows.Forms.Button();
             this.panel_setting = new System.Windows.Forms.Panel();
+            this.radioButton_easy = new System.Windows.Forms.RadioButton();
             this.button_setting = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton_normal = new System.Windows.Forms.RadioButton();
+            this.radioButton_hard = new System.Windows.Forms.RadioButton();
+            this.Setting_Label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Setting_Label2 = new System.Windows.Forms.Label();
+            this.radioButton_on = new System.Windows.Forms.RadioButton();
+            this.radioButton_off = new System.Windows.Forms.RadioButton();
+            this.button_back = new System.Windows.Forms.Button();
             this.game_panel.SuspendLayout();
             this.result_panel.SuspendLayout();
             this.panel_rule.SuspendLayout();
             this.panel_setting.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // game_name
@@ -416,13 +427,27 @@
             // 
             // panel_setting
             // 
-            this.panel_setting.Controls.Add(this.radioButton1);
+            this.panel_setting.Controls.Add(this.button_back);
+            this.panel_setting.Controls.Add(this.groupBox2);
+            this.panel_setting.Controls.Add(this.groupBox1);
             this.panel_setting.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_setting.Location = new System.Drawing.Point(0, 0);
             this.panel_setting.Name = "panel_setting";
             this.panel_setting.Size = new System.Drawing.Size(600, 400);
             this.panel_setting.TabIndex = 4;
             this.panel_setting.Visible = false;
+            // 
+            // radioButton_easy
+            // 
+            this.radioButton_easy.AutoSize = true;
+            this.radioButton_easy.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.radioButton_easy.Location = new System.Drawing.Point(43, 50);
+            this.radioButton_easy.Name = "radioButton_easy";
+            this.radioButton_easy.Size = new System.Drawing.Size(63, 25);
+            this.radioButton_easy.TabIndex = 0;
+            this.radioButton_easy.TabStop = true;
+            this.radioButton_easy.Text = "Easy";
+            this.radioButton_easy.UseVisualStyleBackColor = true;
             // 
             // button_setting
             // 
@@ -435,16 +460,109 @@
             this.button_setting.UseVisualStyleBackColor = true;
             this.button_setting.Click += new System.EventHandler(this.button_setting_Click);
             // 
-            // radioButton1
+            // radioButton_normal
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(226, 90);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 16);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton_normal.AutoSize = true;
+            this.radioButton_normal.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.radioButton_normal.Location = new System.Drawing.Point(43, 81);
+            this.radioButton_normal.Name = "radioButton_normal";
+            this.radioButton_normal.Size = new System.Drawing.Size(85, 25);
+            this.radioButton_normal.TabIndex = 1;
+            this.radioButton_normal.TabStop = true;
+            this.radioButton_normal.Text = "Normal";
+            this.radioButton_normal.UseVisualStyleBackColor = true;
+            this.radioButton_normal.Checked = true;
+            // 
+            // radioButton_hard
+            // 
+            this.radioButton_hard.AutoSize = true;
+            this.radioButton_hard.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.radioButton_hard.Location = new System.Drawing.Point(43, 112);
+            this.radioButton_hard.Name = "radioButton_hard";
+            this.radioButton_hard.Size = new System.Drawing.Size(66, 25);
+            this.radioButton_hard.TabIndex = 2;
+            this.radioButton_hard.TabStop = true;
+            this.radioButton_hard.Text = "Hard";
+            this.radioButton_hard.UseVisualStyleBackColor = true;
+            // 
+            // Setting_Label1
+            // 
+            this.Setting_Label1.AutoSize = true;
+            this.Setting_Label1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Setting_Label1.Location = new System.Drawing.Point(15, 18);
+            this.Setting_Label1.Name = "Setting_Label1";
+            this.Setting_Label1.Size = new System.Drawing.Size(67, 24);
+            this.Setting_Label1.TabIndex = 3;
+            this.Setting_Label1.Text = "難度：";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.Setting_Label1);
+            this.groupBox1.Controls.Add(this.radioButton_easy);
+            this.groupBox1.Controls.Add(this.radioButton_hard);
+            this.groupBox1.Controls.Add(this.radioButton_normal);
+            this.groupBox1.Location = new System.Drawing.Point(25, 35);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(274, 152);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.Setting_Label2);
+            this.groupBox2.Controls.Add(this.radioButton_on);
+            this.groupBox2.Controls.Add(this.radioButton_off);
+            this.groupBox2.Location = new System.Drawing.Point(25, 201);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(274, 152);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            // 
+            // Setting_Label2
+            // 
+            this.Setting_Label2.AutoSize = true;
+            this.Setting_Label2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Setting_Label2.Location = new System.Drawing.Point(15, 18);
+            this.Setting_Label2.Name = "Setting_Label2";
+            this.Setting_Label2.Size = new System.Drawing.Size(105, 24);
+            this.Setting_Label2.TabIndex = 3;
+            this.Setting_Label2.Text = "自動回答：";
+            // 
+            // radioButton_on
+            // 
+            this.radioButton_on.AutoSize = true;
+            this.radioButton_on.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.radioButton_on.Location = new System.Drawing.Point(43, 50);
+            this.radioButton_on.Name = "radioButton_on";
+            this.radioButton_on.Size = new System.Drawing.Size(51, 25);
+            this.radioButton_on.TabIndex = 0;
+            this.radioButton_on.TabStop = true;
+            this.radioButton_on.Text = "On";
+            this.radioButton_on.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_off
+            // 
+            this.radioButton_off.AutoSize = true;
+            this.radioButton_off.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.radioButton_off.Location = new System.Drawing.Point(43, 81);
+            this.radioButton_off.Name = "radioButton_off";
+            this.radioButton_off.Size = new System.Drawing.Size(53, 25);
+            this.radioButton_off.TabIndex = 1;
+            this.radioButton_off.TabStop = true;
+            this.radioButton_off.Text = "Off";
+            this.radioButton_off.UseVisualStyleBackColor = true;
+            this.radioButton_off.Checked = true;
+            // 
+            // button_back
+            // 
+            this.button_back.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_back.Location = new System.Drawing.Point(421, 318);
+            this.button_back.Name = "button_back";
+            this.button_back.Size = new System.Drawing.Size(138, 35);
+            this.button_back.TabIndex = 6;
+            this.button_back.Text = "BACK";
+            this.button_back.UseVisualStyleBackColor = true;
+            this.button_back.Click += new System.EventHandler(this.button_back_Click);
             // 
             // Form_Game
             // 
@@ -469,7 +587,10 @@
             this.panel_rule.ResumeLayout(false);
             this.panel_rule.PerformLayout();
             this.panel_setting.ResumeLayout(false);
-            this.panel_setting.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -508,7 +629,16 @@
         private System.Windows.Forms.TextBox result_textbox;
         private System.Windows.Forms.Panel panel_setting;
         private System.Windows.Forms.Button button_setting;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton_easy;
+        private System.Windows.Forms.Label Setting_Label1;
+        private System.Windows.Forms.RadioButton radioButton_hard;
+        private System.Windows.Forms.RadioButton radioButton_normal;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label Setting_Label2;
+        private System.Windows.Forms.RadioButton radioButton_on;
+        private System.Windows.Forms.RadioButton radioButton_off;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button_back;
     }
 }
 
