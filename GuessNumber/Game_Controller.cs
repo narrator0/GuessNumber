@@ -106,5 +106,9 @@ namespace GuessNumber
         }
 
     }
+<<<<<<< HEAD
 
+=======
+    class 
+>>>>>>> origin/master
 }
