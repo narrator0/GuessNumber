@@ -106,4 +106,5 @@ namespace GuessNumber
         }
 
     }
+    class 
 }
