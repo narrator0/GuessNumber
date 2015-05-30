@@ -231,7 +231,35 @@ namespace GuessNumber
         //confirm button
         private void confirm_Click(object sender, EventArgs e)
         {
+            confirm_vs_mode();
+            
+        }
 
+        //quit button
+        private void quit_button_Click(object sender, EventArgs e)
+        {
+            state = gamestate.lose;
+            show_result_panel();
+        }
+
+        //reset button
+        private void button_reset_Click(object sender, EventArgs e)
+        {
+            reset();
+            ShowNum();
+        }
+
+        #endregion
+
+
+        #region methods and logic
+
+        ///<summary>
+        ///methods and logic
+        ///</summary>>
+        //confirm_vs_mode
+        private void confirm_vs_mode()
+        {
             if (test_input(show_guess_num))
             {
                 MessageBox.Show("輸入有誤，請重新輸入!");
@@ -249,7 +277,7 @@ namespace GuessNumber
                     {
                         text_computer_result_box += computer.Guess[i];
                     }
-                    
+
                 }
                 else
                 {
@@ -263,8 +291,8 @@ namespace GuessNumber
                         }
                     }
                 }
-               
-                if ( !computer.Guess_right && !player.Guess_right)
+
+                if (!computer.Guess_right && !player.Guess_right)
                     manguessing = !manguessing;
 
                 bool test = (computer.Guess[0] == 0 && computer.Guess[1] == 0 && computer.Guess[2] == 0 && computer.Guess[3] == 0);
@@ -300,34 +328,6 @@ namespace GuessNumber
             reset();
         }
 
-        //quit button
-        private void quit_button_Click(object sender, EventArgs e)
-        {
-            state = gamestate.lose;
-            show_result_panel();
-        }
-
-        //reset button
-        private void button_reset_Click(object sender, EventArgs e)
-        {
-            reset();
-            ShowNum();
-        }
-
-        #endregion
-
-
-        #region methods and logic
-
-        ///<summary>
-        ///methods and logic
-        ///</summary>>
-        //richtextbox2 text align = center
-        private void richTextBox2_TextChanged(object sender, EventArgs e)
-        {
-            richTextBox2.SelectionAlignment = HorizontalAlignment.Center;
-        }
-
         //show richtextbox2, man_result_box and computer_result_box
         private void ShowNum()
         {
@@ -345,6 +345,9 @@ namespace GuessNumber
 
             man_result_box.Text = text_man_result_box;
             computer_result_box.Text = text_computer_result_box;
+
+            //set richTextBox
+            richTextBox2.SelectionAlignment = HorizontalAlignment.Center;
         }
 
         //things to do when confirm in man guess mode
@@ -500,6 +503,18 @@ namespace GuessNumber
             
         }
 
+        //處理enter and delete
+        private void richTextBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                confirm_vs_mode();
+            }
+            else if (e.KeyCode == Keys.Back)
+            {
+                e.SuppressKeyPress = true;
+            }
+        }
 
 
         #endregion
