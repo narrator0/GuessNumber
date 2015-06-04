@@ -44,7 +44,7 @@ namespace GuessNumber
         }
 
         //set the search array
-        private static bool[, , ,] search = new bool[10, 10, 10, 10];
+        protected static bool[, , ,] search = new bool[10, 10, 10, 10];
 
         //set getter and setter
         public bool[, , ,] Search
@@ -68,7 +68,15 @@ namespace GuessNumber
         }
 
         //設定猜測
-        public static void setbotguess(int[] guessnum, int aresult, int bresult, ref int[] botguess)
+        virtual public void setbotguess(int[] guessnum, int aresult, int bresult, int computer_count, ref int[] botguess)
+        {}
+
+    }
+
+    //困難
+    class Hard_Game_Controller : Game_Controller
+    {
+        override public void setbotguess(int[] guessnum, int aresult, int bresult, int computer_count, ref int[] botguess)
         {
             botguess = new int[4];
             bool get_answer = false;
@@ -99,12 +107,107 @@ namespace GuessNumber
                             //排除還成立的
                             if (testa == aresult && testb == bresult)
                                 continue;
-                                
+
                             //將不可能的數字設為false
                             search[a, b, c, d] = false;
                         }
         }
+    }
 
+    //正常
+    class Nomorl_Game_Controller : Game_Controller
+    {
+        public override void setbotguess(int[] guessnum, int aresult, int bresult, int computer_count,ref int[] botguess)
+        {
+            botguess = new int[4];
+            bool get_answer = false;
+
+            //將不可能的選項設置為否
+            int a = 0, b = 0, c = 0, d = 0;
+            for (a = 0; a < 10; a++)
+                for (b = 0; b < 10; b++)
+                    for (c = 0; c < 10; c++)
+                        for (d = 0; d < 10; d++)
+                        {
+                            if (computer_count < 1)
+                            {
+                                int[] answer = new int[4];
+                                randget(ref answer);
+                                Array.Copy(answer, botguess, 4);
+                                computer_count++;
+                            }
+                            //排除已經是否的
+                            if (search[a, b, c, d] == false)
+                                continue;
+
+                            //找到所有可能的選項
+                            int[] botnum = { a, b, c, d };
+                            int testa = 0, testb = 0;
+                            get_ab(guessnum, botnum, ref testa, ref testb);
+
+                            //將第一個找到的值作為電腦猜測
+                            if (testa == aresult && testb == bresult && !get_answer)
+                            {
+                                Array.Copy(botnum, botguess, 4);
+                                get_answer = true;
+                            }
+
+                            //排除還成立的
+                            if (testa == aresult && testb == bresult)
+                                continue;
+
+                            //將不可能的數字設為false
+                            search[a, b, c, d] = false;
+                        }
+        }
+    }
+
+    //簡單
+    class Easy_Game_Controller : Game_Controller
+    {
+        public override void setbotguess(int[] guessnum, int aresult, int bresult, int computer_count, ref int[] botguess)
+        {
+            botguess = new int[4];
+            bool get_answer = false;
+
+            //將不可能的選項設置為否
+            int a = 0, b = 0, c = 0, d = 0;
+            for (a = 0; a < 10; a++)
+                for (b = 0; b < 10; b++)
+                    for (c = 0; c < 10; c++)
+                        for (d = 0; d < 10; d++)
+                        {
+                            if (computer_count < 2)
+                            {
+                                int[] answer = new int[4];
+                                randget(ref answer);
+                                Array.Copy(answer, botguess, 4);
+                                computer_count++;
+                            }
+                            //排除已經是否的
+                            if (search[a, b, c, d] == false)
+                                continue;
+
+                            //找到所有可能的選項
+                            int[] botnum = { a, b, c, d };
+                            int testa = 0, testb = 0;
+                            get_ab(guessnum, botnum, ref testa, ref testb);
+
+                            //將第一個找到的值作為電腦猜測
+                            if (testa == aresult && testb == bresult && !get_answer)
+                            {
+                                Array.Copy(botnum, botguess, 4);
+                                get_answer = true;
+                            }
+
+                            //排除還成立的
+                            if (testa == aresult && testb == bresult)
+                                continue;
+
+                            //將不可能的數字設為false
+                            search[a, b, c, d] = false;
+                        }
+        }
     }
 
 
