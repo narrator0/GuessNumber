@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +17,7 @@ namespace GuessNumber
         #region properties
 
         private Player computer = new Player(), player = new Player();
+        private Game_Controller main_control;
         private bool manguessing = true;
         private string show_guess_num;
         private List<char> show_guess_result;
@@ -29,6 +30,12 @@ namespace GuessNumber
             unknown, lose, win, same
         };
         private gamestate state = gamestate.unknown;
+
+        enum controller
+        {
+            easy, normal, hard
+        };
+        private controller control = controller.hard;
 
         #endregion
 
@@ -51,6 +58,9 @@ namespace GuessNumber
             //rich box setting
             man_result_box.Text = text_man_result_box;
             computer_result_box.Text = text_computer_result_box;
+
+            //init controller
+            main_control = new Hard_Game_Controller();
         }
 
         //initialize
@@ -86,9 +96,9 @@ namespace GuessNumber
 
         #endregion
 
-        
+
         #region game_panel
-        
+
 
         #region buttons
         /// <summary>
@@ -231,7 +241,35 @@ namespace GuessNumber
         //confirm button
         private void confirm_Click(object sender, EventArgs e)
         {
+            confirm_vs_mode();
 
+        }
+
+        //quit button
+        private void quit_button_Click(object sender, EventArgs e)
+        {
+            state = gamestate.lose;
+            show_result_panel();
+        }
+
+        //reset button
+        private void button_reset_Click(object sender, EventArgs e)
+        {
+            reset();
+            ShowNum();
+        }
+
+        #endregion
+
+
+        #region methods and logic
+
+        ///<summary>
+        ///methods and logic
+        ///</summary>>
+        //confirm_vs_mode
+        private void confirm_vs_mode()
+        {
             if (test_input(show_guess_num))
             {
                 MessageBox.Show("輸入有誤，請重新輸入!");
@@ -249,7 +287,7 @@ namespace GuessNumber
                     {
                         text_computer_result_box += computer.Guess[i];
                     }
-                    
+
                 }
                 else
                 {
@@ -263,8 +301,8 @@ namespace GuessNumber
                         }
                     }
                 }
-               
-                if ( !computer.Guess_right && !player.Guess_right)
+
+                if (!computer.Guess_right && !player.Guess_right)
                     manguessing = !manguessing;
 
                 bool test = (computer.Guess[0] == 0 && computer.Guess[1] == 0 && computer.Guess[2] == 0 && computer.Guess[3] == 0);
@@ -300,34 +338,6 @@ namespace GuessNumber
             reset();
         }
 
-        //quit button
-        private void quit_button_Click(object sender, EventArgs e)
-        {
-            state = gamestate.lose;
-            show_result_panel();
-        }
-
-        //reset button
-        private void button_reset_Click(object sender, EventArgs e)
-        {
-            reset();
-            ShowNum();
-        }
-
-        #endregion
-
-
-        #region methods and logic
-
-        ///<summary>
-        ///methods and logic
-        ///</summary>>
-        //richtextbox2 text align = center
-        private void richTextBox2_TextChanged(object sender, EventArgs e)
-        {
-            richTextBox2.SelectionAlignment = HorizontalAlignment.Center;
-        }
-
         //show richtextbox2, man_result_box and computer_result_box
         private void ShowNum()
         {
@@ -340,11 +350,14 @@ namespace GuessNumber
 
                 if (count_num == 2)
                     show_guess_result.Reverse();
-                    richTextBox2.Text = show_guess_result[1] + "A" + show_guess_result[0] + "B";
+                richTextBox2.Text = show_guess_result[1] + "A" + show_guess_result[0] + "B";
             }
 
             man_result_box.Text = text_man_result_box;
             computer_result_box.Text = text_computer_result_box;
+
+            //set richTextBox
+            richTextBox2.SelectionAlignment = HorizontalAlignment.Center;
         }
 
         //things to do when confirm in man guess mode
@@ -365,7 +378,7 @@ namespace GuessNumber
 
             if (computer.A != 4)
                 commend.Text = "電腦猜了，請回應";
-                
+
         }
 
         //creat computer guess
@@ -379,11 +392,12 @@ namespace GuessNumber
             else
             {
                 int[] bot_guess = new int[4];
-                Game_Controller.setbotguess(computer.Guess, computer.A, computer.B, ref bot_guess);
+
+                main_control.setbotguess(computer.Guess, computer.A, computer.B, computer.count, ref bot_guess);
                 Array.Copy(bot_guess, computer.Guess, 4);
             }
 
-            
+
         }
 
         //things to do when confirm in computer guess mode
@@ -392,7 +406,7 @@ namespace GuessNumber
             //pass in result
             computer.A = (int)char.GetNumericValue(show_guess_result[1]);
             computer.B = (int)char.GetNumericValue(show_guess_result[0]);
-            
+
             text_computer_result_box += " =>" + show_guess_result[1] + "A" + show_guess_result[0] + "B\n";
 
             computer.add_count();
@@ -427,6 +441,9 @@ namespace GuessNumber
             }
             else
             {
+                if (count_num != 2)
+                    return true;
+
                 int a_plus_b = (int)char.GetNumericValue(show_guess_result[0]) + (int)char.GetNumericValue(show_guess_result[1]);
 
                 is_wrong = (a_plus_b > 4 || a_plus_b < 0);
@@ -477,7 +494,7 @@ namespace GuessNumber
 
         //control keyboard inout
         private void richTextBox2_KeyPress(object sender, KeyPressEventArgs e)
-        {       
+        {
             //數字才要反應
             if (e.KeyChar >= 48 && e.KeyChar <= 57)
             {
@@ -497,9 +514,21 @@ namespace GuessNumber
 
             //不能直接顯示打的字
             e.Handled = true;
-            
+
         }
 
+        //處理enter and delete
+        private void richTextBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                confirm_vs_mode();
+            }
+            else if (e.KeyCode == Keys.Back)
+            {
+                e.SuppressKeyPress = true;
+            }
+        }
 
 
         #endregion
@@ -564,7 +593,25 @@ namespace GuessNumber
             panel_setting.Visible = false;
         }
 
+        private void radioButton_normal_CheckedChanged(object sender, EventArgs e)
+        {
+            main_control = new Normal_Game_Controller();
+        }
+
+        private void radioButton_easy_CheckedChanged(object sender, EventArgs e)
+        {
+            main_control = new Easy_Game_Controller();
+        }
+
+        private void radioButton_hard_CheckedChanged(object sender, EventArgs e)
+        {
+            main_control = new Hard_Game_Controller();
+        }
 
         #endregion
+
+
+
+
     }
 }
