@@ -17,6 +17,7 @@ namespace GuessNumber
         #region properties
 
         private Player computer = new Player(), player = new Player();
+        private Game_Controller main_control;
         private bool manguessing = true;
         private string show_guess_num;
         private List<char> show_guess_result;
@@ -29,6 +30,12 @@ namespace GuessNumber
             unknown, lose, win, same
         };
         private gamestate state = gamestate.unknown;
+
+        enum controller
+        {
+            easy, normal, hard
+        };
+        private controller control = controller.hard;
 
         #endregion
 
@@ -51,6 +58,9 @@ namespace GuessNumber
             //rich box setting
             man_result_box.Text = text_man_result_box;
             computer_result_box.Text = text_computer_result_box;
+
+            //init controller
+            main_control = new Hard_Game_Controller();
         }
 
         //initialize
@@ -382,7 +392,8 @@ namespace GuessNumber
             else
             {
                 int[] bot_guess = new int[4];
-                Game_Controller.setbotguess(computer.Guess, computer.A, computer.B, ref bot_guess);
+
+                main_control.setbotguess(computer.Guess, computer.A, computer.B, computer.count, ref bot_guess);
                 Array.Copy(bot_guess, computer.Guess, 4);
             }
 
@@ -430,6 +441,9 @@ namespace GuessNumber
             }
             else
             {
+                if (count_num != 2)
+                    return true;
+
                 int a_plus_b = (int)char.GetNumericValue(show_guess_result[0]) + (int)char.GetNumericValue(show_guess_result[1]);
 
                 is_wrong = (a_plus_b > 4 || a_plus_b < 0);
@@ -579,7 +593,25 @@ namespace GuessNumber
             panel_setting.Visible = false;
         }
 
+        private void radioButton_normal_CheckedChanged(object sender, EventArgs e)
+        {
+            main_control = new Normal_Game_Controller();
+        }
+
+        private void radioButton_easy_CheckedChanged(object sender, EventArgs e)
+        {
+            main_control = new Easy_Game_Controller();
+        }
+
+        private void radioButton_hard_CheckedChanged(object sender, EventArgs e)
+        {
+            main_control = new Hard_Game_Controller();
+        }
 
         #endregion
+
+        
+
+
     }
 }

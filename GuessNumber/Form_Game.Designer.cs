@@ -527,10 +527,12 @@
             this.radioButton_easy.TabStop = true;
             this.radioButton_easy.Text = "Easy";
             this.radioButton_easy.UseVisualStyleBackColor = true;
+            this.radioButton_easy.CheckedChanged += new System.EventHandler(this.radioButton_easy_CheckedChanged);
             // 
             // radioButton_hard
             // 
             this.radioButton_hard.AutoSize = true;
+            this.radioButton_hard.Checked = true;
             this.radioButton_hard.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.radioButton_hard.Location = new System.Drawing.Point(43, 112);
             this.radioButton_hard.Name = "radioButton_hard";
@@ -539,19 +541,19 @@
             this.radioButton_hard.TabStop = true;
             this.radioButton_hard.Text = "Hard";
             this.radioButton_hard.UseVisualStyleBackColor = true;
+            this.radioButton_hard.CheckedChanged += new System.EventHandler(this.radioButton_hard_CheckedChanged);
             // 
             // radioButton_normal
             // 
             this.radioButton_normal.AutoSize = true;
-            this.radioButton_normal.Checked = true;
             this.radioButton_normal.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.radioButton_normal.Location = new System.Drawing.Point(43, 81);
             this.radioButton_normal.Name = "radioButton_normal";
             this.radioButton_normal.Size = new System.Drawing.Size(85, 25);
             this.radioButton_normal.TabIndex = 1;
-            this.radioButton_normal.TabStop = true;
             this.radioButton_normal.Text = "Normal";
             this.radioButton_normal.UseVisualStyleBackColor = true;
+            this.radioButton_normal.CheckedChanged += new System.EventHandler(this.radioButton_normal_CheckedChanged);
             // 
             // button_setting
             // 
@@ -569,8 +571,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 400);
-            this.Controls.Add(this.game_panel);
             this.Controls.Add(this.panel_setting);
+            this.Controls.Add(this.game_panel);
             this.Controls.Add(this.panel_rule);
             this.Controls.Add(this.result_panel);
             this.Controls.Add(this.Start_Button);
