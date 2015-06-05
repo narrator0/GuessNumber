@@ -137,7 +137,7 @@ namespace GuessNumber
                     for (c = 0; c < 10; c++)
                         for (d = 0; d < 10; d++)
                         {
-                            if (computer_count < 2)
+                            if (computer_count < 1)
                             {
                                 int[] answer = new int[4];
                                 randget(ref answer);
@@ -214,7 +214,7 @@ namespace GuessNumber
                     for (c = 0; c < 10; c++)
                         for (d = 0; d < 10; d++)
                         {
-                            if (computer_count < 3)
+                            if (computer_count < 2)
                             {
                                 int[] answer = new int[4];
                                 randget(ref answer);
