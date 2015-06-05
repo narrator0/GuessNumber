@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -96,9 +96,9 @@ namespace GuessNumber
 
         #endregion
 
-
+        
         #region game_panel
-
+        
 
         #region buttons
         /// <summary>
@@ -242,11 +242,7 @@ namespace GuessNumber
         private void confirm_Click(object sender, EventArgs e)
         {
             confirm_vs_mode();
-<<<<<<< HEAD
             
-=======
-
->>>>>>> origin/Liu
         }
 
         //quit button
@@ -354,7 +350,7 @@ namespace GuessNumber
 
                 if (count_num == 2)
                     show_guess_result.Reverse();
-                richTextBox2.Text = show_guess_result[1] + "A" + show_guess_result[0] + "B";
+                    richTextBox2.Text = show_guess_result[1] + "A" + show_guess_result[0] + "B";
             }
 
             man_result_box.Text = text_man_result_box;
@@ -382,7 +378,7 @@ namespace GuessNumber
 
             if (computer.A != 4)
                 commend.Text = "電腦猜了，請回應";
-
+                
         }
 
         //creat computer guess
@@ -401,7 +397,7 @@ namespace GuessNumber
                 Array.Copy(bot_guess, computer.Guess, 4);
             }
 
-
+            
         }
 
         //things to do when confirm in computer guess mode
@@ -410,7 +406,7 @@ namespace GuessNumber
             //pass in result
             computer.A = (int)char.GetNumericValue(show_guess_result[1]);
             computer.B = (int)char.GetNumericValue(show_guess_result[0]);
-
+            
             text_computer_result_box += " =>" + show_guess_result[1] + "A" + show_guess_result[0] + "B\n";
 
             computer.add_count();
@@ -498,7 +494,7 @@ namespace GuessNumber
 
         //control keyboard inout
         private void richTextBox2_KeyPress(object sender, KeyPressEventArgs e)
-        {
+        {       
             //數字才要反應
             if (e.KeyChar >= 48 && e.KeyChar <= 57)
             {
@@ -518,7 +514,7 @@ namespace GuessNumber
 
             //不能直接顯示打的字
             e.Handled = true;
-
+            
         }
 
         //處理enter and delete
@@ -614,11 +610,7 @@ namespace GuessNumber
 
         #endregion
 
-<<<<<<< HEAD
         
-=======
-
->>>>>>> origin/Liu
 
 
     }
