@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -77,7 +77,7 @@ namespace GuessNumber
             mode_controll = mode.vs;
         }
 
-        
+
         private void button_start_guess_only_Click(object sender, EventArgs e)
         {
             game_panel.Visible = true;
@@ -283,7 +283,7 @@ namespace GuessNumber
         ///<summary>
         ///methods and logic
         ///</summary>>
-        
+
         //confirm_only_mode
         private void confirm_only_mode()
         {
