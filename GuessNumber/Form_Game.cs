@@ -22,6 +22,7 @@ namespace GuessNumber
         private string show_guess_num;
         private List<char> show_guess_result;
         private int count_num = 0;
+        private int count_down = 10;
         private int[] man_guess = new int[4];
         private string text_man_result_box = "玩家\n";
         private string text_computer_result_box = "電腦\n";
@@ -86,6 +87,7 @@ namespace GuessNumber
             //前設定
             commend.Text = "請輸入數字";
             computer_result_box.Visible = false;
+            textBox_count_down.Visible = true;
             man_result_box.Location = new System.Drawing.Point(280, 124);
         }
 
@@ -305,7 +307,21 @@ namespace GuessNumber
                 text_man_result_box += (show_guess_num + " =>" + player.A + "A" + player.B + "B\n");
 
                 player.add_count();
+                count_down--;
             }
+
+            //判斷勝負
+            if (count_down == 0)
+            {
+                state = gamestate.lose;
+                show_result_panel();
+            }
+            if (player.A == 4)
+            {
+                state = gamestate.win;
+                show_result_panel();
+            }
+            
 
             reset();
         }
@@ -401,6 +417,9 @@ namespace GuessNumber
 
             //set richTextBox
             richTextBox2.SelectionAlignment = HorizontalAlignment.Center;
+
+            //set count_down
+            textBox_count_down.Text = count_down.ToString();
         }
 
         //things to do when confirm in man guess mode
@@ -604,6 +623,7 @@ namespace GuessNumber
             computer.Guess_right = false;
             player.Guess_right = false;
             state = gamestate.unknown;
+            count_down = 10;
 
             //無法將 computer.Number 傳遞，所以只能這樣做
             int[] temp = new int[4];
@@ -615,6 +635,7 @@ namespace GuessNumber
 
             //reset view
             computer_result_box.Visible = true;
+            textBox_count_down.Visible = false;
             man_result_box.Location = new System.Drawing.Point(255, 124);
 
             reset();

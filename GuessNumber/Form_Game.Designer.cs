@@ -70,6 +70,7 @@
             this.radioButton_hard = new System.Windows.Forms.RadioButton();
             this.radioButton_normal = new System.Windows.Forms.RadioButton();
             this.button_setting = new System.Windows.Forms.Button();
+            this.textBox_count_down = new System.Windows.Forms.TextBox();
             this.game_panel.SuspendLayout();
             this.result_panel.SuspendLayout();
             this.panel_rule.SuspendLayout();
@@ -101,6 +102,7 @@
             // 
             // game_panel
             // 
+            this.game_panel.Controls.Add(this.textBox_count_down);
             this.game_panel.Controls.Add(this.quit_button);
             this.game_panel.Controls.Add(this.computer_result_box);
             this.game_panel.Controls.Add(this.button_reset);
@@ -398,8 +400,8 @@
             this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.richTextBox1.Size = new System.Drawing.Size(481, 151);
             this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "設定0~9的四個數字，且四個數字不能重複，然後互相猜測數字。若猜測的數字中有一個數字相同且位置也正確的話就回答1A，若只有數字相同則回答1B。例如如果數字是123" +
-    "4，那猜1354，就應該回答 2A1B。";
+            this.richTextBox1.Text = "設定0~9的四個數字，且四個數字不能重複，然後猜測數字。若猜測的數字中有一個數字相同且位置也正確的話就回答1A，若只有數字相同則回答1B。例如如果數字是1234，" +
+    "那猜1354，就應該回答 2A1B。";
             // 
             // rule_title
             // 
@@ -578,13 +580,26 @@
             this.button_setting.UseVisualStyleBackColor = true;
             this.button_setting.Click += new System.EventHandler(this.button_setting_Click);
             // 
+            // textBox_count_down
+            // 
+            this.textBox_count_down.Enabled = false;
+            this.textBox_count_down.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox_count_down.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox_count_down.Location = new System.Drawing.Point(508, 35);
+            this.textBox_count_down.Name = "textBox_count_down";
+            this.textBox_count_down.Size = new System.Drawing.Size(51, 29);
+            this.textBox_count_down.TabIndex = 4;
+            this.textBox_count_down.Text = "10";
+            this.textBox_count_down.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_count_down.Visible = false;
+            // 
             // Form_Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 400);
-            this.Controls.Add(this.panel_rule);
             this.Controls.Add(this.game_panel);
+            this.Controls.Add(this.panel_rule);
             this.Controls.Add(this.result_panel);
             this.Controls.Add(this.panel_setting);
             this.Controls.Add(this.Start_Button);
@@ -655,5 +670,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button_back;
         private System.Windows.Forms.Button button_start_guess_only;
+        private System.Windows.Forms.TextBox textBox_count_down;
     }
 }
