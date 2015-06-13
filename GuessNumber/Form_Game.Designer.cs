@@ -1,33 +1,33 @@
-﻿namespace GuessNumber
-{
-    partial class Form_Game
-    {
-        /// <summary>
-        /// 設計工具所需的變數。
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+﻿﻿namespace GuessNumber
+ {
+     partial class Form_Game
+     {
+         /// <summary>
+         /// 設計工具所需的變數。
+         /// </summary>
+         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// 清除任何使用中的資源。
-        /// </summary>
-        /// <param name="disposing">如果應該處置 Managed 資源則為 true，否則為 false。</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+         /// <summary>
+         /// 清除任何使用中的資源。
+         /// </summary>
+         /// <param name="disposing">如果應該處置 Managed 資源則為 true，否則為 false。</param>
+         protected override void Dispose(bool disposing)
+         {
+             if (disposing && (components != null))
+             {
+                 components.Dispose();
+             }
+             base.Dispose(disposing);
+         }
 
-        #region Windows Form 設計工具產生的程式碼
+         #region Windows Form 設計工具產生的程式碼
 
-        /// <summary>
-        /// 此為設計工具支援所需的方法 - 請勿使用程式碼編輯器
-        /// 修改這個方法的內容。
-        /// </summary>
-        private void InitializeComponent()
-        {
+         /// <summary>
+         /// 此為設計工具支援所需的方法 - 請勿使用程式碼編輯器
+         /// 修改這個方法的內容。
+         /// </summary>
+         private void InitializeComponent()
+         {
             this.game_name = new System.Windows.Forms.Label();
             this.Start_Button = new System.Windows.Forms.Button();
             this.game_panel = new System.Windows.Forms.Panel();
@@ -48,6 +48,7 @@
             this.button0 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.confirm = new System.Windows.Forms.Button();
+            this.button_start_guess_only = new System.Windows.Forms.Button();
             this.result_panel = new System.Windows.Forms.Panel();
             this.result_textbox = new System.Windows.Forms.TextBox();
             this.button_save = new System.Windows.Forms.Button();
@@ -81,7 +82,7 @@
             // 
             this.game_name.AutoSize = true;
             this.game_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.game_name.Location = new System.Drawing.Point(220, 100);
+            this.game_name.Location = new System.Drawing.Point(216, 77);
             this.game_name.Name = "game_name";
             this.game_name.Size = new System.Drawing.Size(149, 31);
             this.game_name.TabIndex = 1;
@@ -94,7 +95,7 @@
             this.Start_Button.Name = "Start_Button";
             this.Start_Button.Size = new System.Drawing.Size(102, 33);
             this.Start_Button.TabIndex = 2;
-            this.Start_Button.Text = "START";
+            this.Start_Button.Text = "VS. COM";
             this.Start_Button.UseVisualStyleBackColor = true;
             this.Start_Button.Click += new System.EventHandler(this.Start_Button_Click);
             // 
@@ -117,6 +118,7 @@
             this.game_panel.Controls.Add(this.button0);
             this.game_panel.Controls.Add(this.button1);
             this.game_panel.Controls.Add(this.confirm);
+            this.game_panel.Controls.Add(this.button_start_guess_only);
             this.game_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.game_panel.Location = new System.Drawing.Point(0, 0);
             this.game_panel.Name = "game_panel";
@@ -310,6 +312,17 @@
             this.confirm.Text = "Confirm";
             this.confirm.UseVisualStyleBackColor = true;
             this.confirm.Click += new System.EventHandler(this.confirm_Click);
+            // 
+            // button_start_guess_only
+            // 
+            this.button_start_guess_only.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_start_guess_only.Location = new System.Drawing.Point(241, 132);
+            this.button_start_guess_only.Name = "button_start_guess_only";
+            this.button_start_guess_only.Size = new System.Drawing.Size(102, 33);
+            this.button_start_guess_only.TabIndex = 5;
+            this.button_start_guess_only.Text = "Guess Only";
+            this.button_start_guess_only.UseVisualStyleBackColor = true;
+            this.button_start_guess_only.Click += new System.EventHandler(this.button_start_guess_only_Click);
             // 
             // result_panel
             // 
@@ -572,12 +585,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 400);
             this.Controls.Add(this.game_panel);
+<<<<<<< HEAD
             this.Controls.Add(this.panel_setting);
             this.Controls.Add(this.panel_rule);
             this.Controls.Add(this.result_panel);
+=======
+            this.Controls.Add(this.result_panel);
+            this.Controls.Add(this.panel_setting);
+            this.Controls.Add(this.panel_rule);
+>>>>>>> origin/Liu
             this.Controls.Add(this.Start_Button);
             this.Controls.Add(this.button_rule);
             this.Controls.Add(this.button_setting);
+            this.Controls.Add(this.button_start_guess_only);
             this.Controls.Add(this.game_name);
             this.Name = "Form_Game";
             this.Text = " Guess Number";
@@ -594,53 +614,53 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
-        }
+         }
 
-        #endregion
+         #endregion
 
-        private System.Windows.Forms.Label game_name;
-        private System.Windows.Forms.Button Start_Button;
-        private System.Windows.Forms.Panel game_panel;
-        private System.Windows.Forms.Button confirm;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button0;
-        private System.Windows.Forms.RichTextBox man_result_box;
-        private System.Windows.Forms.Label commend;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Button button_reset;
-        private System.Windows.Forms.RichTextBox computer_result_box;
-        private System.Windows.Forms.Button quit_button;
-        private System.Windows.Forms.Panel result_panel;
-        private System.Windows.Forms.Button button_save;
-        private System.Windows.Forms.Button button_restart;
-        private System.Windows.Forms.Button button_rule;
-        private System.Windows.Forms.Panel panel_rule;
-        private System.Windows.Forms.TextBox rule_title;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button_goback;
-        private System.Windows.Forms.TextBox result_textbox;
-        private System.Windows.Forms.Panel panel_setting;
-        private System.Windows.Forms.Button button_setting;
-        private System.Windows.Forms.RadioButton radioButton_easy;
-        private System.Windows.Forms.Label Setting_Label1;
-        private System.Windows.Forms.RadioButton radioButton_hard;
-        private System.Windows.Forms.RadioButton radioButton_normal;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label Setting_Label2;
-        private System.Windows.Forms.RadioButton radioButton_on;
-        private System.Windows.Forms.RadioButton radioButton_off;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button_back;
-    }
-}
+         private System.Windows.Forms.Label game_name;
+         private System.Windows.Forms.Button Start_Button;
+         private System.Windows.Forms.Panel game_panel;
+         private System.Windows.Forms.Button confirm;
+         private System.Windows.Forms.Button button1;
+         private System.Windows.Forms.Button button2;
+         private System.Windows.Forms.Button button3;
+         private System.Windows.Forms.Button button4;
+         private System.Windows.Forms.Button button5;
+         private System.Windows.Forms.Button button6;
+         private System.Windows.Forms.Button button7;
+         private System.Windows.Forms.Button button8;
+         private System.Windows.Forms.Button button9;
+         private System.Windows.Forms.Button button0;
+         private System.Windows.Forms.RichTextBox man_result_box;
+         private System.Windows.Forms.Label commend;
+         private System.Windows.Forms.RichTextBox richTextBox2;
+         private System.Windows.Forms.Button button_reset;
+         private System.Windows.Forms.RichTextBox computer_result_box;
+         private System.Windows.Forms.Button quit_button;
+         private System.Windows.Forms.Panel result_panel;
+         private System.Windows.Forms.Button button_save;
+         private System.Windows.Forms.Button button_restart;
+         private System.Windows.Forms.Button button_rule;
+         private System.Windows.Forms.Panel panel_rule;
+         private System.Windows.Forms.TextBox rule_title;
+         private System.Windows.Forms.RichTextBox richTextBox1;
+         private System.Windows.Forms.Button button_goback;
+         private System.Windows.Forms.TextBox result_textbox;
+         private System.Windows.Forms.Panel panel_setting;
+         private System.Windows.Forms.Button button_setting;
+         private System.Windows.Forms.RadioButton radioButton_easy;
+         private System.Windows.Forms.Label Setting_Label1;
+         private System.Windows.Forms.RadioButton radioButton_hard;
+         private System.Windows.Forms.RadioButton radioButton_normal;
+         private System.Windows.Forms.GroupBox groupBox2;
+         private System.Windows.Forms.Label Setting_Label2;
+         private System.Windows.Forms.RadioButton radioButton_on;
+         private System.Windows.Forms.RadioButton radioButton_off;
+         private System.Windows.Forms.GroupBox groupBox1;
+         private System.Windows.Forms.Button button_back;
+         private System.Windows.Forms.Button button_start_guess_only;
+     }
+ }
 
