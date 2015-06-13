@@ -118,7 +118,6 @@
             this.game_panel.Controls.Add(this.button0);
             this.game_panel.Controls.Add(this.button1);
             this.game_panel.Controls.Add(this.confirm);
-            this.game_panel.Controls.Add(this.button_start_guess_only);
             this.game_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.game_panel.Location = new System.Drawing.Point(0, 0);
             this.game_panel.Name = "game_panel";
@@ -399,8 +398,8 @@
             this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.richTextBox1.Size = new System.Drawing.Size(481, 151);
             this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "玩家與電腦互相在心中設定0~9的四個數字，且四個數字不能重複，然後互相猜測對方的數字。若猜測的數字中有一個數字相同且位置也正確的話就回答1A，若只有數字相同則回答" +
-    "1B。例如如果數字是1234，那猜1354，就應該回答 2A1B。最後由猜最少次的人勝出。";
+            this.richTextBox1.Text = "設定0~9的四個數字，且四個數字不能重複，然後互相猜測數字。若猜測的數字中有一個數字相同且位置也正確的話就回答1A，若只有數字相同則回答1B。例如如果數字是123" +
+    "4，那猜1354，就應該回答 2A1B。";
             // 
             // rule_title
             // 
@@ -584,10 +583,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 400);
+            this.Controls.Add(this.panel_rule);
             this.Controls.Add(this.game_panel);
             this.Controls.Add(this.result_panel);
             this.Controls.Add(this.panel_setting);
-            this.Controls.Add(this.panel_rule);
             this.Controls.Add(this.Start_Button);
             this.Controls.Add(this.button_rule);
             this.Controls.Add(this.button_setting);
@@ -608,6 +607,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
