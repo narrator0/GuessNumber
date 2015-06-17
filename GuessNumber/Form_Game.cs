@@ -22,7 +22,7 @@ namespace GuessNumber
         private string show_guess_num;
         private List<char> show_guess_result;
         private int count_num = 0;
-        private int count_down = 10;
+        private int count_down = 8;
         private int[] man_guess = new int[4];
         private string text_man_result_box = "玩家\n";
         private string text_computer_result_box = "電腦\n";
@@ -89,6 +89,7 @@ namespace GuessNumber
             computer_result_box.Visible = false;
             textBox_count_down.Visible = true;
             man_result_box.Location = new System.Drawing.Point(280, 124);
+            button_save.Visible = false;
         }
 
 
@@ -97,6 +98,13 @@ namespace GuessNumber
         {
             panel_rule.Visible = true;
         }
+
+        //see record
+        private void button_record_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         //button_goback (from panel_rule)
         private void botton_goback_Click(object sender, EventArgs e)
@@ -551,6 +559,9 @@ namespace GuessNumber
                     break;
             }
 
+            if (state == gamestate.win && mode_controll == mode.only)
+                button_save.Visible = true;
+
             result_panel.Visible = true;
         }
 
@@ -637,6 +648,7 @@ namespace GuessNumber
             computer_result_box.Visible = true;
             textBox_count_down.Visible = false;
             man_result_box.Location = new System.Drawing.Point(255, 124);
+            button_save.Visible = false;
 
             reset();
 
@@ -645,11 +657,12 @@ namespace GuessNumber
 
 
         //
-        //save record (last version)
+        //save record
         //
         private void button_save_Click(object sender, EventArgs e)
         {
-
+            Form_save save_form = new Form_save();
+            save_form.Show();
         }
 
         #endregion
@@ -680,6 +693,7 @@ namespace GuessNumber
 
         #endregion
 
+        
 
 
 

@@ -31,6 +31,7 @@
             this.game_name = new System.Windows.Forms.Label();
             this.Start_Button = new System.Windows.Forms.Button();
             this.game_panel = new System.Windows.Forms.Panel();
+            this.textBox_count_down = new System.Windows.Forms.TextBox();
             this.quit_button = new System.Windows.Forms.Button();
             this.computer_result_box = new System.Windows.Forms.RichTextBox();
             this.button_reset = new System.Windows.Forms.Button();
@@ -70,7 +71,7 @@
             this.radioButton_hard = new System.Windows.Forms.RadioButton();
             this.radioButton_normal = new System.Windows.Forms.RadioButton();
             this.button_setting = new System.Windows.Forms.Button();
-            this.textBox_count_down = new System.Windows.Forms.TextBox();
+            this.button_record = new System.Windows.Forms.Button();
             this.game_panel.SuspendLayout();
             this.result_panel.SuspendLayout();
             this.panel_rule.SuspendLayout();
@@ -127,6 +128,19 @@
             this.game_panel.TabIndex = 3;
             this.game_panel.TabStop = true;
             this.game_panel.Visible = false;
+            // 
+            // textBox_count_down
+            // 
+            this.textBox_count_down.Enabled = false;
+            this.textBox_count_down.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox_count_down.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox_count_down.Location = new System.Drawing.Point(508, 35);
+            this.textBox_count_down.Name = "textBox_count_down";
+            this.textBox_count_down.Size = new System.Drawing.Size(51, 29);
+            this.textBox_count_down.TabIndex = 1;
+            this.textBox_count_down.Text = "10";
+            this.textBox_count_down.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_count_down.Visible = false;
             // 
             // quit_button
             // 
@@ -361,6 +375,7 @@
             this.button_save.TabIndex = 0;
             this.button_save.Text = "Save";
             this.button_save.UseVisualStyleBackColor = true;
+            this.button_save.Visible = false;
             this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
             // button_restart
@@ -580,18 +595,16 @@
             this.button_setting.UseVisualStyleBackColor = true;
             this.button_setting.Click += new System.EventHandler(this.button_setting_Click);
             // 
-            // textBox_count_down
+            // button_record
             // 
-            this.textBox_count_down.Enabled = false;
-            this.textBox_count_down.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox_count_down.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox_count_down.Location = new System.Drawing.Point(508, 35);
-            this.textBox_count_down.Name = "textBox_count_down";
-            this.textBox_count_down.Size = new System.Drawing.Size(51, 29);
-            this.textBox_count_down.TabIndex = 4;
-            this.textBox_count_down.Text = "10";
-            this.textBox_count_down.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox_count_down.Visible = false;
+            this.button_record.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_record.Location = new System.Drawing.Point(241, 300);
+            this.button_record.Name = "button_record";
+            this.button_record.Size = new System.Drawing.Size(102, 33);
+            this.button_record.TabIndex = 0;
+            this.button_record.Text = "Record";
+            this.button_record.UseVisualStyleBackColor = true;
+            this.button_record.Click += new System.EventHandler(this.button_record_Click);
             // 
             // Form_Game
             // 
@@ -606,6 +619,7 @@
             this.Controls.Add(this.button_rule);
             this.Controls.Add(this.button_setting);
             this.Controls.Add(this.button_start_guess_only);
+            this.Controls.Add(this.button_record);
             this.Controls.Add(this.game_name);
             this.Name = "Form_Game";
             this.Text = " Guess Number";
@@ -671,5 +685,6 @@
         private System.Windows.Forms.Button button_back;
         private System.Windows.Forms.Button button_start_guess_only;
         private System.Windows.Forms.TextBox textBox_count_down;
+        private System.Windows.Forms.Button button_record;
     }
 }
