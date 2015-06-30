@@ -38,6 +38,11 @@ namespace GuessNumber
         {
             vs, only
         };
+        enum difficulty
+        {
+            hard, normal, easy
+        };
+        private difficulty difficult_controll;
         private mode mode_controll;
 
         #endregion
@@ -48,6 +53,10 @@ namespace GuessNumber
         //load
         private void Form1_Load(object sender, EventArgs e)
         {
+            //read the record
+            var file = new List<string>(File.ReadAllLines("record.txt"));
+            is_auto = bool.Parse(file[0]);
+
             //無法將 computer.Number 傳遞，所以只能這樣做
             int[] temp = new int[4];
             Game_Controller.randget(ref temp);
@@ -705,29 +714,52 @@ namespace GuessNumber
             panel_setting.Visible = false;
         }
 
-        private void radioButton_normal_CheckedChanged(object sender, EventArgs e)
+        private void radioButton_normal_Click(object sender, EventArgs e)
         {
             main_control = new Normal_Game_Controller();
+            difficult_controll = difficulty.normal;
+            StreamWriter save = new StreamWriter("record.txt");
+            save.WriteLine(is_auto);
+            save.WriteLine(difficult_controll);
+            save.Close();
         }
 
-        private void radioButton_easy_CheckedChanged(object sender, EventArgs e)
+        private void radioButton_easy_Click(object sender, EventArgs e)
         {
             main_control = new Easy_Game_Controller();
+            difficult_controll = difficulty.easy;
+            StreamWriter save = new StreamWriter("record.txt");
+            save.WriteLine(is_auto);
+            save.WriteLine(difficult_controll);
+            save.Close();
         }
 
-        private void radioButton_hard_CheckedChanged(object sender, EventArgs e)
+        private void radioButton_hard_Click(object sender, EventArgs e)
         {
             main_control = new Hard_Game_Controller();
+            difficult_controll = difficulty.hard;
+            StreamWriter save = new StreamWriter("record.txt");
+            save.WriteLine(is_auto);
+            save.WriteLine(difficult_controll);
+            save.Close();
         }
 
-         private void radioButton_on_CheckedChanged(object sender, EventArgs e)
+         private void radioButton_on_Click(object sender, EventArgs e)
         {
             is_auto = true;
+            StreamWriter save = new StreamWriter("record.txt");
+            save.WriteLine(is_auto);
+            save.WriteLine(difficult_controll);
+            save.Close();
         }
 
-        private void radioButton_off_CheckedChanged(object sender, EventArgs e)
+        private void radioButton_off_Click(object sender, EventArgs e)
         {
             is_auto = false;
+            StreamWriter save = new StreamWriter("record.txt");
+            save.WriteLine(is_auto);
+            save.WriteLine(difficult_controll);
+            save.Close();
         }
         #endregion
 
