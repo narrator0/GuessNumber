@@ -158,7 +158,8 @@ namespace GuessNumber
                                     continue;
 
                                 //將不可能的數字設為false
-                                search[a, b, c, d] = false;
+                                if (computer_count >= 2)
+                                    search[a, b, c, d] = false;
                             }
                         }
         }
@@ -208,7 +209,8 @@ namespace GuessNumber
                                     continue;
 
                                 //將不可能的數字設為false
-                                search[a, b, c, d] = false;
+                                if (computer_count >= 3)
+                                    search[a, b, c, d] = false;
                             }
                         }
         }
