@@ -27,6 +27,7 @@ namespace GuessNumber
         private int[] man_guess = new int[4];
         private string text_man_result_box = "玩家\n";
         private string text_computer_result_box = "電腦\n";
+        private bool is_auto = false, number_entered = false;
         enum gamestate
         {
             unknown, lose, win, same
@@ -77,6 +78,10 @@ namespace GuessNumber
             //change to game mode
             game_panel.Visible = true;
             mode_controll = mode.vs;
+
+            //set auto AB 
+            if (is_auto)
+                commend.Text = "請先輸入你的數字";
         }
 
 
@@ -338,9 +343,15 @@ namespace GuessNumber
         //confirm_vs_mode
         private void confirm_vs_mode()
         {
+           
+
             if (test_input(show_guess_num))
             {
                 MessageBox.Show("輸入有誤，請重新輸入!");
+            }
+            else if (!number_entered && is_auto)
+            {
+                enter_number();
             }
             else
             {
@@ -349,6 +360,21 @@ namespace GuessNumber
                     confirm_man_guessing();
                     if (player.count == 1)
                         creat_computer_geuss();
+
+                    if (is_auto)
+                    {
+                        int a = 0, b = 0;
+                        Game_Controller.get_ab(computer.Guess, player.Number, ref a, ref b);
+                        computer.A = a;
+                        computer.B = b;
+
+                        computer.add_count();
+
+                        text_computer_result_box += " =>" + show_guess_result[1] + "A" + show_guess_result[0] + "B\n";
+
+                        //set guess
+                        creat_computer_geuss();
+                    }
 
                     //set rich box
                     for (int i = 0; i < 4; i++)
@@ -370,7 +396,7 @@ namespace GuessNumber
                     }
                 }
 
-                if (!computer.Guess_right && !player.Guess_right)
+                if (!computer.Guess_right && !player.Guess_right && !is_auto)
                     manguessing = !manguessing;
 
                 bool test = (computer.Guess[0] == 0 && computer.Guess[1] == 0 && computer.Guess[2] == 0 && computer.Guess[3] == 0);
@@ -404,6 +430,15 @@ namespace GuessNumber
             }
 
             reset();
+        }
+
+        //enter number for autoguess
+        private void enter_number()
+        {
+            player.set_Number(show_guess_num);
+            number_entered = true;
+
+            commend.Text = "由你先猜，請輸入數字";
         }
 
         //show richtextbox2, man_result_box and computer_result_box
@@ -477,7 +512,8 @@ namespace GuessNumber
             //pass in result
             computer.A = (int)char.GetNumericValue(show_guess_result[1]);
             computer.B = (int)char.GetNumericValue(show_guess_result[0]);
-
+            
+            
             text_computer_result_box += " =>" + show_guess_result[1] + "A" + show_guess_result[0] + "B\n";
 
             computer.add_count();
@@ -643,7 +679,12 @@ namespace GuessNumber
             computer = new Player();
             text_computer_result_box = "電腦\n";
             text_man_result_box = "玩家\n";
-            commend.Text = "由你先猜，請輸入數字";
+            if (is_auto)
+            {
+                commend.Text = "請先輸入你的數字";
+            }
+            else
+                commend.Text = "由你先猜，請輸入數字";
             computer.Guess_right = false;
             player.Guess_right = false;
             state = gamestate.unknown;
@@ -666,8 +707,6 @@ namespace GuessNumber
             reset();
 
         }
-
-
 
         //
         //save record
@@ -704,11 +743,16 @@ namespace GuessNumber
             main_control = new Hard_Game_Controller();
         }
 
+         private void radioButton_on_CheckedChanged(object sender, EventArgs e)
+        {
+            is_auto = true;
+        }
+
+        private void radioButton_off_CheckedChanged(object sender, EventArgs e)
+        {
+            is_auto = false;
+        }
         #endregion
-
-        
-
-
 
     }
 }

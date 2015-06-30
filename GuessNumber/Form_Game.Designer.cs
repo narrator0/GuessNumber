@@ -65,7 +65,7 @@
             this.Setting_Label2 = new System.Windows.Forms.Label();
             this.radioButton_on = new System.Windows.Forms.RadioButton();
             this.radioButton_off = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox_easy = new System.Windows.Forms.GroupBox();
             this.Setting_Label1 = new System.Windows.Forms.Label();
             this.radioButton_easy = new System.Windows.Forms.RadioButton();
             this.radioButton_hard = new System.Windows.Forms.RadioButton();
@@ -73,15 +73,15 @@
             this.button_setting = new System.Windows.Forms.Button();
             this.button_record = new System.Windows.Forms.Button();
             this.panel_record = new System.Windows.Forms.Panel();
-            this.richTextBox_record = new System.Windows.Forms.RichTextBox();
-            this.button_back_from_record = new System.Windows.Forms.Button();
             this.button_delete_record = new System.Windows.Forms.Button();
+            this.button_back_from_record = new System.Windows.Forms.Button();
+            this.richTextBox_record = new System.Windows.Forms.RichTextBox();
             this.game_panel.SuspendLayout();
             this.result_panel.SuspendLayout();
             this.panel_rule.SuspendLayout();
             this.panel_setting.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBox_easy.SuspendLayout();
             this.panel_record.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -463,7 +463,7 @@
             // 
             this.panel_setting.Controls.Add(this.button_back);
             this.panel_setting.Controls.Add(this.groupBox2);
-            this.panel_setting.Controls.Add(this.groupBox1);
+            this.panel_setting.Controls.Add(this.groupBox_easy);
             this.panel_setting.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_setting.Location = new System.Drawing.Point(0, 0);
             this.panel_setting.Name = "panel_setting";
@@ -514,6 +514,7 @@
             this.radioButton_on.TabStop = true;
             this.radioButton_on.Text = "On";
             this.radioButton_on.UseVisualStyleBackColor = true;
+            this.radioButton_on.CheckedChanged += new System.EventHandler(this.radioButton_on_CheckedChanged);
             // 
             // radioButton_off
             // 
@@ -527,18 +528,19 @@
             this.radioButton_off.TabStop = true;
             this.radioButton_off.Text = "Off";
             this.radioButton_off.UseVisualStyleBackColor = true;
+            this.radioButton_off.CheckedChanged += new System.EventHandler(this.radioButton_off_CheckedChanged);
             // 
-            // groupBox1
+            // groupBox_easy
             // 
-            this.groupBox1.Controls.Add(this.Setting_Label1);
-            this.groupBox1.Controls.Add(this.radioButton_easy);
-            this.groupBox1.Controls.Add(this.radioButton_hard);
-            this.groupBox1.Controls.Add(this.radioButton_normal);
-            this.groupBox1.Location = new System.Drawing.Point(25, 35);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(274, 152);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
+            this.groupBox_easy.Controls.Add(this.Setting_Label1);
+            this.groupBox_easy.Controls.Add(this.radioButton_easy);
+            this.groupBox_easy.Controls.Add(this.radioButton_hard);
+            this.groupBox_easy.Controls.Add(this.radioButton_normal);
+            this.groupBox_easy.Location = new System.Drawing.Point(25, 35);
+            this.groupBox_easy.Name = "groupBox_easy";
+            this.groupBox_easy.Size = new System.Drawing.Size(274, 152);
+            this.groupBox_easy.TabIndex = 4;
+            this.groupBox_easy.TabStop = false;
             // 
             // Setting_Label1
             // 
@@ -621,24 +623,7 @@
             this.panel_record.Name = "panel_record";
             this.panel_record.Size = new System.Drawing.Size(600, 400);
             this.panel_record.TabIndex = 4;
-            // 
-            // richTextBox_record
-            // 
-            this.richTextBox_record.Location = new System.Drawing.Point(164, 147);
-            this.richTextBox_record.Name = "richTextBox_record";
-            this.richTextBox_record.Size = new System.Drawing.Size(247, 141);
-            this.richTextBox_record.TabIndex = 0;
-            this.richTextBox_record.Text = "";
-            // 
-            // button_back_from_record
-            // 
-            this.button_back_from_record.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_back_from_record.Location = new System.Drawing.Point(335, 329);
-            this.button_back_from_record.Name = "button_back_from_record";
-            this.button_back_from_record.Size = new System.Drawing.Size(75, 23);
-            this.button_back_from_record.TabIndex = 1;
-            this.button_back_from_record.Text = "Back";
-            this.button_back_from_record.UseVisualStyleBackColor = true;
+            this.panel_record.Visible = false;
             // 
             // button_delete_record
             // 
@@ -650,16 +635,34 @@
             this.button_delete_record.Text = "Delete ";
             this.button_delete_record.UseVisualStyleBackColor = true;
             // 
+            // button_back_from_record
+            // 
+            this.button_back_from_record.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_back_from_record.Location = new System.Drawing.Point(335, 329);
+            this.button_back_from_record.Name = "button_back_from_record";
+            this.button_back_from_record.Size = new System.Drawing.Size(75, 23);
+            this.button_back_from_record.TabIndex = 1;
+            this.button_back_from_record.Text = "Back";
+            this.button_back_from_record.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox_record
+            // 
+            this.richTextBox_record.Location = new System.Drawing.Point(164, 147);
+            this.richTextBox_record.Name = "richTextBox_record";
+            this.richTextBox_record.Size = new System.Drawing.Size(247, 141);
+            this.richTextBox_record.TabIndex = 0;
+            this.richTextBox_record.Text = "";
+            // 
             // Form_Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 400);
-            this.Controls.Add(this.panel_record);
             this.Controls.Add(this.game_panel);
+            this.Controls.Add(this.panel_setting);
+            this.Controls.Add(this.panel_record);
             this.Controls.Add(this.panel_rule);
             this.Controls.Add(this.result_panel);
-            this.Controls.Add(this.panel_setting);
             this.Controls.Add(this.Start_Button);
             this.Controls.Add(this.button_rule);
             this.Controls.Add(this.button_setting);
@@ -678,8 +681,8 @@
             this.panel_setting.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox_easy.ResumeLayout(false);
+            this.groupBox_easy.PerformLayout();
             this.panel_record.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -727,7 +730,7 @@
         private System.Windows.Forms.Label Setting_Label2;
         private System.Windows.Forms.RadioButton radioButton_on;
         private System.Windows.Forms.RadioButton radioButton_off;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox_easy;
         private System.Windows.Forms.Button button_back;
         private System.Windows.Forms.Button button_start_guess_only;
         private System.Windows.Forms.TextBox textBox_count_down;

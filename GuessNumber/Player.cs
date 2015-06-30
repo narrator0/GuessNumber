@@ -69,5 +69,15 @@ namespace GuessNumber
             } while (guess[0] == guess[1] || guess[0] == guess[2] || guess[0] == guess[3]
                 || guess[1] == guess[2] || guess[1] == guess[3] || guess[2] == guess[3]);
         }
+        
+        //set Number
+        public void set_Number(string number)
+        {
+            char[] n = number.ToCharArray(0, 4);
+
+            int i;
+            for (i = 0; i < 4; i++)
+                Number[i] = (int)char.GetNumericValue(n[i]);
+        }
     }
 }
