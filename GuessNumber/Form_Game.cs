@@ -56,6 +56,19 @@ namespace GuessNumber
             //read the record
             var file = new List<string>(File.ReadAllLines("record.txt"));
             is_auto = bool.Parse(file[0]);
+            string input_difficulty = file[1];
+            switch (input_difficulty)
+            {
+                case "hard":
+                    main_control = new Hard_Game_Controller();
+                    break;
+                case "normal":
+                    main_control = new Normal_Game_Controller();
+                    break;
+                case "easy":
+                    main_control = new Easy_Game_Controller();
+                    break;
+            }
 
             //無法將 computer.Number 傳遞，所以只能這樣做
             int[] temp = new int[4];
