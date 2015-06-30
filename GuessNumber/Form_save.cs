@@ -18,6 +18,16 @@ namespace GuessNumber
             InitializeComponent();
         }
 
+        private void Form_save_Load(object sender, EventArgs e)
+        {
+            StreamReader read = new StreamReader("record.txt");
+            string count = read.ReadLine();
+            read.Close();
+
+            label_record.Text += "\t";
+            label_record.Text += count;
+        }
+
         private void button_save_false_Click(object sender, EventArgs e)
         {
             this.Close();

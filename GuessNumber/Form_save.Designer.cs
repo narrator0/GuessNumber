@@ -93,6 +93,7 @@
             this.Controls.Add(this.button_save_confirm);
             this.Controls.Add(this.label_record);
             this.Controls.Add(this.label_name_input);
+            this.Load += new System.EventHandler(this.Form_save_Load);
             this.Name = "Form_save";
             this.Text = "Save";
             this.ResumeLayout(false);

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.IO;
 
 
 namespace GuessNumber
@@ -102,7 +103,7 @@ namespace GuessNumber
         //see record
         private void button_record_Click(object sender, EventArgs e)
         {
-
+            panel_record.Visible = true;
         }
 
 
@@ -560,7 +561,19 @@ namespace GuessNumber
             }
 
             if (state == gamestate.win && mode_controll == mode.only)
+            {
                 button_save.Visible = true;
+                count_down = 8 - count_down;
+
+
+                List<string> all = new List<string>(File.ReadAllLines("record.txt"));
+                all.RemoveAt(0);
+                all.Insert(0, count_down.ToString());
+
+
+                File.WriteAllLines("record.txt", all.ToArray());
+            }
+                
 
             result_panel.Visible = true;
         }
@@ -634,7 +647,7 @@ namespace GuessNumber
             computer.Guess_right = false;
             player.Guess_right = false;
             state = gamestate.unknown;
-            count_down = 10;
+            count_down = 8;
 
             //無法將 computer.Number 傳遞，所以只能這樣做
             int[] temp = new int[4];
