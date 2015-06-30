@@ -104,6 +104,13 @@ namespace GuessNumber
             panel_rule.Visible = true;
         }
 
+        //see record
+        private void button_record_Click(object sender, EventArgs e)
+        {
+            panel_record.Visible = true;
+        }
+
+
         //button_goback (from panel_rule)
         private void botton_goback_Click(object sender, EventArgs e)
         {
@@ -330,16 +337,6 @@ namespace GuessNumber
             
 
             reset();
-
-            if (is_auto)
-            {
-                if (count_num != 0)
-                    show_guess_result.Remove('?');
-
-                if (count_num == 2)
-                    show_guess_result.Reverse();
-                richTextBox2.Text = show_guess_result[1] + "A" + show_guess_result[0] + "B";
-            }
         }
 
         //confirm_vs_mode
