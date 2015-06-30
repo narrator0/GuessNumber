@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GuessNumber
 {
-    class Game_Controller
+    public class Game_Controller
     {
 
         //產生一個亂數(四個位數不能重複)
@@ -30,6 +30,8 @@ namespace GuessNumber
         //get the result of a and b
         public static void get_ab(int[] firstnum, int[] secondnum, ref int a, ref int b)
         {
+            a = 0;
+            b = 0;
             int i = 0, j = 0;
             for (i = 0; i < 4; i++)
                 for (j = 0; j < 4; j++)
@@ -74,7 +76,7 @@ namespace GuessNumber
     }
 
     //困難
-    class Hard_Game_Controller : Game_Controller
+    public class Hard_Game_Controller : Game_Controller
     {
         override public void setbotguess(int[] guessnum, int aresult, int bresult, int computer_count, ref int[] botguess)
         {

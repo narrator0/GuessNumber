@@ -157,11 +157,6 @@ namespace GuessNumber
             panel_rule.Visible = true;
         }
 
-        //see record
-        private void button_record_Click(object sender, EventArgs e)
-        {
-            panel_record.Visible = true;
-        }
 
 
         //button_goback (from panel_rule)

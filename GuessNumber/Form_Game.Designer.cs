@@ -70,18 +70,12 @@
             this.radioButton_hard = new System.Windows.Forms.RadioButton();
             this.radioButton_normal = new System.Windows.Forms.RadioButton();
             this.button_setting = new System.Windows.Forms.Button();
-            this.button_record = new System.Windows.Forms.Button();
-            this.panel_record = new System.Windows.Forms.Panel();
-            this.button_delete_record = new System.Windows.Forms.Button();
-            this.button_back_from_record = new System.Windows.Forms.Button();
-            this.richTextBox_record = new System.Windows.Forms.RichTextBox();
             this.game_panel.SuspendLayout();
             this.result_panel.SuspendLayout();
             this.panel_rule.SuspendLayout();
             this.panel_setting.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox_easy.SuspendLayout();
-            this.panel_record.SuspendLayout();
             this.SuspendLayout();
             // 
             // game_name
@@ -586,57 +580,6 @@
             this.button_setting.UseVisualStyleBackColor = true;
             this.button_setting.Click += new System.EventHandler(this.button_setting_Click);
             // 
-            // button_record
-            // 
-            this.button_record.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_record.Location = new System.Drawing.Point(241, 300);
-            this.button_record.Name = "button_record";
-            this.button_record.Size = new System.Drawing.Size(102, 33);
-            this.button_record.TabIndex = 0;
-            this.button_record.Text = "Record";
-            this.button_record.UseVisualStyleBackColor = true;
-            this.button_record.Click += new System.EventHandler(this.button_record_Click);
-            // 
-            // panel_record
-            // 
-            this.panel_record.Controls.Add(this.button_delete_record);
-            this.panel_record.Controls.Add(this.button_back_from_record);
-            this.panel_record.Controls.Add(this.richTextBox_record);
-            this.panel_record.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_record.Location = new System.Drawing.Point(0, 0);
-            this.panel_record.Name = "panel_record";
-            this.panel_record.Size = new System.Drawing.Size(600, 369);
-            this.panel_record.TabIndex = 4;
-            this.panel_record.Visible = false;
-            // 
-            // button_delete_record
-            // 
-            this.button_delete_record.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_delete_record.Location = new System.Drawing.Point(146, 328);
-            this.button_delete_record.Name = "button_delete_record";
-            this.button_delete_record.Size = new System.Drawing.Size(75, 23);
-            this.button_delete_record.TabIndex = 2;
-            this.button_delete_record.Text = "Delete ";
-            this.button_delete_record.UseVisualStyleBackColor = true;
-            // 
-            // button_back_from_record
-            // 
-            this.button_back_from_record.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_back_from_record.Location = new System.Drawing.Point(335, 329);
-            this.button_back_from_record.Name = "button_back_from_record";
-            this.button_back_from_record.Size = new System.Drawing.Size(75, 23);
-            this.button_back_from_record.TabIndex = 1;
-            this.button_back_from_record.Text = "Back";
-            this.button_back_from_record.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox_record
-            // 
-            this.richTextBox_record.Location = new System.Drawing.Point(164, 147);
-            this.richTextBox_record.Name = "richTextBox_record";
-            this.richTextBox_record.Size = new System.Drawing.Size(247, 141);
-            this.richTextBox_record.TabIndex = 0;
-            this.richTextBox_record.Text = "";
-            // 
             // Form_Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -645,13 +588,11 @@
             this.Controls.Add(this.game_panel);
             this.Controls.Add(this.panel_setting);
             this.Controls.Add(this.result_panel);
-            this.Controls.Add(this.panel_record);
             this.Controls.Add(this.panel_rule);
             this.Controls.Add(this.Start_Button);
             this.Controls.Add(this.button_rule);
             this.Controls.Add(this.button_setting);
             this.Controls.Add(this.button_start_guess_only);
-            this.Controls.Add(this.button_record);
             this.Controls.Add(this.game_name);
             this.Name = "Form_Game";
             this.Text = " Guess Number";
@@ -667,7 +608,6 @@
             this.groupBox2.PerformLayout();
             this.groupBox_easy.ResumeLayout(false);
             this.groupBox_easy.PerformLayout();
-            this.panel_record.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -717,10 +657,5 @@
         private System.Windows.Forms.Button button_back;
         private System.Windows.Forms.Button button_start_guess_only;
         private System.Windows.Forms.TextBox textBox_count_down;
-        private System.Windows.Forms.Button button_record;
-        private System.Windows.Forms.Panel panel_record;
-        private System.Windows.Forms.RichTextBox richTextBox_record;
-        private System.Windows.Forms.Button button_delete_record;
-        private System.Windows.Forms.Button button_back_from_record;
     }
 }

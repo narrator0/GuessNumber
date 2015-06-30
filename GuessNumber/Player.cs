@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GuessNumber
 {
-    class Player
+    public class Player
     {
         #region properties
 
