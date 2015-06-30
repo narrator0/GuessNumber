@@ -88,7 +88,7 @@
             // 
             this.game_name.AutoSize = true;
             this.game_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.game_name.Location = new System.Drawing.Point(216, 83);
+            this.game_name.Location = new System.Drawing.Point(216, 77);
             this.game_name.Name = "game_name";
             this.game_name.Size = new System.Drawing.Size(149, 31);
             this.game_name.TabIndex = 1;
@@ -97,9 +97,9 @@
             // Start_Button
             // 
             this.Start_Button.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Start_Button.Location = new System.Drawing.Point(241, 185);
+            this.Start_Button.Location = new System.Drawing.Point(241, 171);
             this.Start_Button.Name = "Start_Button";
-            this.Start_Button.Size = new System.Drawing.Size(102, 36);
+            this.Start_Button.Size = new System.Drawing.Size(102, 33);
             this.Start_Button.TabIndex = 2;
             this.Start_Button.Text = "VS. COM";
             this.Start_Button.UseVisualStyleBackColor = true;
@@ -128,7 +128,7 @@
             this.game_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.game_panel.Location = new System.Drawing.Point(0, 0);
             this.game_panel.Name = "game_panel";
-            this.game_panel.Size = new System.Drawing.Size(600, 433);
+            this.game_panel.Size = new System.Drawing.Size(600, 369);
             this.game_panel.TabIndex = 3;
             this.game_panel.TabStop = true;
             this.game_panel.Visible = false;
@@ -138,7 +138,7 @@
             this.textBox_count_down.Enabled = false;
             this.textBox_count_down.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox_count_down.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox_count_down.Location = new System.Drawing.Point(508, 38);
+            this.textBox_count_down.Location = new System.Drawing.Point(508, 35);
             this.textBox_count_down.Name = "textBox_count_down";
             this.textBox_count_down.Size = new System.Drawing.Size(51, 29);
             this.textBox_count_down.TabIndex = 1;
@@ -148,9 +148,9 @@
             // 
             // quit_button
             // 
-            this.quit_button.Location = new System.Drawing.Point(399, 345);
+            this.quit_button.Location = new System.Drawing.Point(399, 318);
             this.quit_button.Name = "quit_button";
-            this.quit_button.Size = new System.Drawing.Size(138, 38);
+            this.quit_button.Size = new System.Drawing.Size(138, 35);
             this.quit_button.TabIndex = 1;
             this.quit_button.Text = "QUIT";
             this.quit_button.UseVisualStyleBackColor = true;
@@ -159,18 +159,18 @@
             // computer_result_box
             // 
             this.computer_result_box.Enabled = false;
-            this.computer_result_box.Location = new System.Drawing.Point(399, 134);
+            this.computer_result_box.Location = new System.Drawing.Point(399, 124);
             this.computer_result_box.Name = "computer_result_box";
-            this.computer_result_box.Size = new System.Drawing.Size(138, 187);
+            this.computer_result_box.Size = new System.Drawing.Size(138, 173);
             this.computer_result_box.TabIndex = 2;
             this.computer_result_box.Text = "";
             // 
             // button_reset
             // 
             this.button_reset.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_reset.Location = new System.Drawing.Point(54, 329);
+            this.button_reset.Location = new System.Drawing.Point(54, 304);
             this.button_reset.Name = "button_reset";
-            this.button_reset.Size = new System.Drawing.Size(132, 25);
+            this.button_reset.Size = new System.Drawing.Size(132, 23);
             this.button_reset.TabIndex = 1;
             this.button_reset.Text = "Reset";
             this.button_reset.UseVisualStyleBackColor = true;
@@ -181,11 +181,11 @@
             this.richTextBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.richTextBox2.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.richTextBox2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.richTextBox2.Location = new System.Drawing.Point(54, 98);
+            this.richTextBox2.Location = new System.Drawing.Point(54, 90);
             this.richTextBox2.Multiline = false;
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.richTextBox2.Size = new System.Drawing.Size(132, 27);
+            this.richTextBox2.Size = new System.Drawing.Size(132, 25);
             this.richTextBox2.TabIndex = 1;
             this.richTextBox2.Text = "Guess Number";
             this.richTextBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBox2_KeyDown);
@@ -196,7 +196,7 @@
             this.commend.AutoSize = true;
             this.commend.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.commend.ForeColor = System.Drawing.Color.Red;
-            this.commend.Location = new System.Drawing.Point(305, 89);
+            this.commend.Location = new System.Drawing.Point(305, 82);
             this.commend.Name = "commend";
             this.commend.Size = new System.Drawing.Size(168, 16);
             this.commend.TabIndex = 0;
@@ -205,18 +205,18 @@
             // man_result_box
             // 
             this.man_result_box.Enabled = false;
-            this.man_result_box.Location = new System.Drawing.Point(255, 134);
+            this.man_result_box.Location = new System.Drawing.Point(255, 124);
             this.man_result_box.Name = "man_result_box";
-            this.man_result_box.Size = new System.Drawing.Size(138, 187);
+            this.man_result_box.Size = new System.Drawing.Size(138, 173);
             this.man_result_box.TabIndex = 1;
             this.man_result_box.Text = "";
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button2.Location = new System.Drawing.Point(100, 230);
+            this.button2.Location = new System.Drawing.Point(100, 212);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(40, 43);
+            this.button2.Size = new System.Drawing.Size(40, 40);
             this.button2.TabIndex = 1;
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = true;
@@ -225,9 +225,9 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button3.Location = new System.Drawing.Point(146, 230);
+            this.button3.Location = new System.Drawing.Point(146, 212);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(40, 43);
+            this.button3.Size = new System.Drawing.Size(40, 40);
             this.button3.TabIndex = 1;
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = true;
@@ -236,9 +236,9 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button4.Location = new System.Drawing.Point(54, 180);
+            this.button4.Location = new System.Drawing.Point(54, 166);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(40, 43);
+            this.button4.Size = new System.Drawing.Size(40, 40);
             this.button4.TabIndex = 1;
             this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = true;
@@ -247,9 +247,9 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button5.Location = new System.Drawing.Point(100, 180);
+            this.button5.Location = new System.Drawing.Point(100, 166);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(40, 43);
+            this.button5.Size = new System.Drawing.Size(40, 40);
             this.button5.TabIndex = 1;
             this.button5.Text = "5";
             this.button5.UseVisualStyleBackColor = true;
@@ -258,9 +258,9 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button6.Location = new System.Drawing.Point(146, 180);
+            this.button6.Location = new System.Drawing.Point(146, 166);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(40, 43);
+            this.button6.Size = new System.Drawing.Size(40, 40);
             this.button6.TabIndex = 1;
             this.button6.Text = "6";
             this.button6.UseVisualStyleBackColor = true;
@@ -269,9 +269,9 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button7.Location = new System.Drawing.Point(54, 134);
+            this.button7.Location = new System.Drawing.Point(54, 124);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(40, 43);
+            this.button7.Size = new System.Drawing.Size(40, 40);
             this.button7.TabIndex = 1;
             this.button7.Text = "7";
             this.button7.UseVisualStyleBackColor = true;
@@ -280,9 +280,9 @@
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button8.Location = new System.Drawing.Point(100, 134);
+            this.button8.Location = new System.Drawing.Point(100, 124);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(40, 43);
+            this.button8.Size = new System.Drawing.Size(40, 40);
             this.button8.TabIndex = 1;
             this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = true;
@@ -291,9 +291,9 @@
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button9.Location = new System.Drawing.Point(146, 134);
+            this.button9.Location = new System.Drawing.Point(146, 124);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(40, 43);
+            this.button9.Size = new System.Drawing.Size(40, 40);
             this.button9.TabIndex = 1;
             this.button9.Text = "9";
             this.button9.UseVisualStyleBackColor = true;
@@ -302,9 +302,9 @@
             // button0
             // 
             this.button0.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button0.Location = new System.Drawing.Point(54, 280);
+            this.button0.Location = new System.Drawing.Point(54, 258);
             this.button0.Name = "button0";
-            this.button0.Size = new System.Drawing.Size(40, 43);
+            this.button0.Size = new System.Drawing.Size(40, 40);
             this.button0.TabIndex = 1;
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = true;
@@ -313,9 +313,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(54, 230);
+            this.button1.Location = new System.Drawing.Point(54, 212);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 43);
+            this.button1.Size = new System.Drawing.Size(40, 40);
             this.button1.TabIndex = 3;
             this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = true;
@@ -324,9 +324,9 @@
             // confirm
             // 
             this.confirm.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.confirm.Location = new System.Drawing.Point(100, 280);
+            this.confirm.Location = new System.Drawing.Point(100, 258);
             this.confirm.Name = "confirm";
-            this.confirm.Size = new System.Drawing.Size(86, 43);
+            this.confirm.Size = new System.Drawing.Size(86, 40);
             this.confirm.TabIndex = 1;
             this.confirm.Text = "Confirm";
             this.confirm.UseVisualStyleBackColor = true;
@@ -335,9 +335,9 @@
             // button_start_guess_only
             // 
             this.button_start_guess_only.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_start_guess_only.Location = new System.Drawing.Point(241, 143);
+            this.button_start_guess_only.Location = new System.Drawing.Point(241, 132);
             this.button_start_guess_only.Name = "button_start_guess_only";
-            this.button_start_guess_only.Size = new System.Drawing.Size(102, 36);
+            this.button_start_guess_only.Size = new System.Drawing.Size(102, 33);
             this.button_start_guess_only.TabIndex = 5;
             this.button_start_guess_only.Text = "Guess Only";
             this.button_start_guess_only.UseVisualStyleBackColor = true;
@@ -350,7 +350,7 @@
             this.result_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.result_panel.Location = new System.Drawing.Point(0, 0);
             this.result_panel.Name = "result_panel";
-            this.result_panel.Size = new System.Drawing.Size(600, 433);
+            this.result_panel.Size = new System.Drawing.Size(600, 369);
             this.result_panel.TabIndex = 0;
             this.result_panel.TabStop = true;
             this.result_panel.Visible = false;
@@ -361,10 +361,10 @@
             this.result_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.result_textbox.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.result_textbox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.result_textbox.Location = new System.Drawing.Point(250, 113);
+            this.result_textbox.Location = new System.Drawing.Point(250, 104);
             this.result_textbox.Multiline = true;
             this.result_textbox.Name = "result_textbox";
-            this.result_textbox.Size = new System.Drawing.Size(100, 29);
+            this.result_textbox.Size = new System.Drawing.Size(100, 27);
             this.result_textbox.TabIndex = 1;
             this.result_textbox.Text = "LOSE";
             this.result_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -372,9 +372,9 @@
             // button_restart
             // 
             this.button_restart.Font = new System.Drawing.Font("微軟正黑體", 16F, System.Drawing.FontStyle.Bold);
-            this.button_restart.Location = new System.Drawing.Point(250, 161);
+            this.button_restart.Location = new System.Drawing.Point(250, 149);
             this.button_restart.Name = "button_restart";
-            this.button_restart.Size = new System.Drawing.Size(102, 41);
+            this.button_restart.Size = new System.Drawing.Size(102, 38);
             this.button_restart.TabIndex = 0;
             this.button_restart.Text = "Restart";
             this.button_restart.UseVisualStyleBackColor = true;
@@ -389,7 +389,7 @@
             this.panel_rule.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_rule.Location = new System.Drawing.Point(0, 0);
             this.panel_rule.Name = "panel_rule";
-            this.panel_rule.Size = new System.Drawing.Size(600, 433);
+            this.panel_rule.Size = new System.Drawing.Size(600, 369);
             this.panel_rule.TabIndex = 1;
             this.panel_rule.Visible = false;
             // 
@@ -400,11 +400,11 @@
             this.richTextBox1.Enabled = false;
             this.richTextBox1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.richTextBox1.ForeColor = System.Drawing.Color.Red;
-            this.richTextBox1.Location = new System.Drawing.Point(42, 109);
+            this.richTextBox1.Location = new System.Drawing.Point(42, 101);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox1.Size = new System.Drawing.Size(481, 164);
+            this.richTextBox1.Size = new System.Drawing.Size(481, 151);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "設定0~9的四個數字，且四個數字不能重複，然後猜測數字。若猜測的數字中有一個數字相同且位置也正確的話就回答1A，若只有數字相同則回答1B。例如如果數字是1234，" +
     "那猜1354，就應該回答 2A1B。";
@@ -416,7 +416,7 @@
             this.rule_title.Enabled = false;
             this.rule_title.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.rule_title.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.rule_title.Location = new System.Drawing.Point(222, 61);
+            this.rule_title.Location = new System.Drawing.Point(222, 56);
             this.rule_title.Name = "rule_title";
             this.rule_title.Size = new System.Drawing.Size(100, 26);
             this.rule_title.TabIndex = 1;
@@ -426,9 +426,9 @@
             // button_goback
             // 
             this.button_goback.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_goback.Location = new System.Drawing.Point(380, 345);
+            this.button_goback.Location = new System.Drawing.Point(380, 318);
             this.button_goback.Name = "button_goback";
-            this.button_goback.Size = new System.Drawing.Size(138, 38);
+            this.button_goback.Size = new System.Drawing.Size(138, 35);
             this.button_goback.TabIndex = 1;
             this.button_goback.Text = "BACK";
             this.button_goback.UseVisualStyleBackColor = true;
@@ -437,9 +437,9 @@
             // button_rule
             // 
             this.button_rule.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_rule.Location = new System.Drawing.Point(241, 232);
+            this.button_rule.Location = new System.Drawing.Point(241, 214);
             this.button_rule.Name = "button_rule";
-            this.button_rule.Size = new System.Drawing.Size(102, 36);
+            this.button_rule.Size = new System.Drawing.Size(102, 33);
             this.button_rule.TabIndex = 2;
             this.button_rule.Text = "Rule";
             this.button_rule.UseVisualStyleBackColor = true;
@@ -453,16 +453,16 @@
             this.panel_setting.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_setting.Location = new System.Drawing.Point(0, 0);
             this.panel_setting.Name = "panel_setting";
-            this.panel_setting.Size = new System.Drawing.Size(600, 433);
+            this.panel_setting.Size = new System.Drawing.Size(600, 369);
             this.panel_setting.TabIndex = 4;
             this.panel_setting.Visible = false;
             // 
             // button_back
             // 
             this.button_back.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_back.Location = new System.Drawing.Point(421, 345);
+            this.button_back.Location = new System.Drawing.Point(421, 318);
             this.button_back.Name = "button_back";
-            this.button_back.Size = new System.Drawing.Size(138, 38);
+            this.button_back.Size = new System.Drawing.Size(138, 35);
             this.button_back.TabIndex = 6;
             this.button_back.Text = "BACK";
             this.button_back.UseVisualStyleBackColor = true;
@@ -473,9 +473,9 @@
             this.groupBox2.Controls.Add(this.Setting_Label2);
             this.groupBox2.Controls.Add(this.radioButton_on);
             this.groupBox2.Controls.Add(this.radioButton_off);
-            this.groupBox2.Location = new System.Drawing.Point(25, 218);
+            this.groupBox2.Location = new System.Drawing.Point(25, 201);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(274, 165);
+            this.groupBox2.Size = new System.Drawing.Size(274, 152);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
@@ -483,7 +483,7 @@
             // 
             this.Setting_Label2.AutoSize = true;
             this.Setting_Label2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Setting_Label2.Location = new System.Drawing.Point(15, 20);
+            this.Setting_Label2.Location = new System.Drawing.Point(15, 18);
             this.Setting_Label2.Name = "Setting_Label2";
             this.Setting_Label2.Size = new System.Drawing.Size(105, 24);
             this.Setting_Label2.TabIndex = 3;
@@ -493,7 +493,7 @@
             // 
             this.radioButton_on.AutoSize = true;
             this.radioButton_on.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.radioButton_on.Location = new System.Drawing.Point(43, 54);
+            this.radioButton_on.Location = new System.Drawing.Point(43, 50);
             this.radioButton_on.Name = "radioButton_on";
             this.radioButton_on.Size = new System.Drawing.Size(51, 25);
             this.radioButton_on.TabIndex = 0;
@@ -506,7 +506,7 @@
             this.radioButton_off.AutoSize = true;
             this.radioButton_off.Checked = true;
             this.radioButton_off.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.radioButton_off.Location = new System.Drawing.Point(43, 88);
+            this.radioButton_off.Location = new System.Drawing.Point(43, 81);
             this.radioButton_off.Name = "radioButton_off";
             this.radioButton_off.Size = new System.Drawing.Size(53, 25);
             this.radioButton_off.TabIndex = 1;
@@ -521,9 +521,9 @@
             this.groupBox_easy.Controls.Add(this.radioButton_easy);
             this.groupBox_easy.Controls.Add(this.radioButton_hard);
             this.groupBox_easy.Controls.Add(this.radioButton_normal);
-            this.groupBox_easy.Location = new System.Drawing.Point(25, 38);
+            this.groupBox_easy.Location = new System.Drawing.Point(25, 35);
             this.groupBox_easy.Name = "groupBox_easy";
-            this.groupBox_easy.Size = new System.Drawing.Size(274, 165);
+            this.groupBox_easy.Size = new System.Drawing.Size(274, 152);
             this.groupBox_easy.TabIndex = 4;
             this.groupBox_easy.TabStop = false;
             // 
@@ -531,7 +531,7 @@
             // 
             this.Setting_Label1.AutoSize = true;
             this.Setting_Label1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Setting_Label1.Location = new System.Drawing.Point(15, 20);
+            this.Setting_Label1.Location = new System.Drawing.Point(15, 18);
             this.Setting_Label1.Name = "Setting_Label1";
             this.Setting_Label1.Size = new System.Drawing.Size(67, 24);
             this.Setting_Label1.TabIndex = 3;
@@ -541,11 +541,10 @@
             // 
             this.radioButton_easy.AutoSize = true;
             this.radioButton_easy.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.radioButton_easy.Location = new System.Drawing.Point(43, 54);
+            this.radioButton_easy.Location = new System.Drawing.Point(43, 50);
             this.radioButton_easy.Name = "radioButton_easy";
             this.radioButton_easy.Size = new System.Drawing.Size(63, 25);
             this.radioButton_easy.TabIndex = 0;
-            this.radioButton_easy.TabStop = true;
             this.radioButton_easy.Text = "Easy";
             this.radioButton_easy.UseVisualStyleBackColor = true;
             this.radioButton_easy.Click += new System.EventHandler(this.radioButton_easy_Click);
@@ -553,13 +552,11 @@
             // radioButton_hard
             // 
             this.radioButton_hard.AutoSize = true;
-            this.radioButton_hard.Checked = true;
             this.radioButton_hard.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.radioButton_hard.Location = new System.Drawing.Point(43, 121);
+            this.radioButton_hard.Location = new System.Drawing.Point(43, 112);
             this.radioButton_hard.Name = "radioButton_hard";
             this.radioButton_hard.Size = new System.Drawing.Size(66, 25);
             this.radioButton_hard.TabIndex = 2;
-            this.radioButton_hard.TabStop = true;
             this.radioButton_hard.Text = "Hard";
             this.radioButton_hard.UseVisualStyleBackColor = true;
             this.radioButton_hard.Click += new System.EventHandler(this.radioButton_hard_Click);
@@ -567,11 +564,13 @@
             // radioButton_normal
             // 
             this.radioButton_normal.AutoSize = true;
+            this.radioButton_normal.Checked = true;
             this.radioButton_normal.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.radioButton_normal.Location = new System.Drawing.Point(43, 88);
+            this.radioButton_normal.Location = new System.Drawing.Point(43, 81);
             this.radioButton_normal.Name = "radioButton_normal";
             this.radioButton_normal.Size = new System.Drawing.Size(85, 25);
             this.radioButton_normal.TabIndex = 1;
+            this.radioButton_normal.TabStop = true;
             this.radioButton_normal.Text = "Normal";
             this.radioButton_normal.UseVisualStyleBackColor = true;
             this.radioButton_normal.Click += new System.EventHandler(this.radioButton_normal_Click);
@@ -579,9 +578,9 @@
             // button_setting
             // 
             this.button_setting.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_setting.Location = new System.Drawing.Point(241, 278);
+            this.button_setting.Location = new System.Drawing.Point(241, 257);
             this.button_setting.Name = "button_setting";
-            this.button_setting.Size = new System.Drawing.Size(102, 36);
+            this.button_setting.Size = new System.Drawing.Size(102, 33);
             this.button_setting.TabIndex = 0;
             this.button_setting.Text = "Setting";
             this.button_setting.UseVisualStyleBackColor = true;
@@ -590,9 +589,9 @@
             // button_record
             // 
             this.button_record.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_record.Location = new System.Drawing.Point(241, 325);
+            this.button_record.Location = new System.Drawing.Point(241, 300);
             this.button_record.Name = "button_record";
-            this.button_record.Size = new System.Drawing.Size(102, 36);
+            this.button_record.Size = new System.Drawing.Size(102, 33);
             this.button_record.TabIndex = 0;
             this.button_record.Text = "Record";
             this.button_record.UseVisualStyleBackColor = true;
@@ -606,16 +605,16 @@
             this.panel_record.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_record.Location = new System.Drawing.Point(0, 0);
             this.panel_record.Name = "panel_record";
-            this.panel_record.Size = new System.Drawing.Size(600, 433);
+            this.panel_record.Size = new System.Drawing.Size(600, 369);
             this.panel_record.TabIndex = 4;
             this.panel_record.Visible = false;
             // 
             // button_delete_record
             // 
             this.button_delete_record.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_delete_record.Location = new System.Drawing.Point(146, 355);
+            this.button_delete_record.Location = new System.Drawing.Point(146, 328);
             this.button_delete_record.Name = "button_delete_record";
-            this.button_delete_record.Size = new System.Drawing.Size(75, 25);
+            this.button_delete_record.Size = new System.Drawing.Size(75, 23);
             this.button_delete_record.TabIndex = 2;
             this.button_delete_record.Text = "Delete ";
             this.button_delete_record.UseVisualStyleBackColor = true;
@@ -623,29 +622,29 @@
             // button_back_from_record
             // 
             this.button_back_from_record.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_back_from_record.Location = new System.Drawing.Point(335, 356);
+            this.button_back_from_record.Location = new System.Drawing.Point(335, 329);
             this.button_back_from_record.Name = "button_back_from_record";
-            this.button_back_from_record.Size = new System.Drawing.Size(75, 25);
+            this.button_back_from_record.Size = new System.Drawing.Size(75, 23);
             this.button_back_from_record.TabIndex = 1;
             this.button_back_from_record.Text = "Back";
             this.button_back_from_record.UseVisualStyleBackColor = true;
             // 
             // richTextBox_record
             // 
-            this.richTextBox_record.Location = new System.Drawing.Point(164, 159);
+            this.richTextBox_record.Location = new System.Drawing.Point(164, 147);
             this.richTextBox_record.Name = "richTextBox_record";
-            this.richTextBox_record.Size = new System.Drawing.Size(247, 152);
+            this.richTextBox_record.Size = new System.Drawing.Size(247, 141);
             this.richTextBox_record.TabIndex = 0;
             this.richTextBox_record.Text = "";
             // 
             // Form_Game
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 400);
+            this.ClientSize = new System.Drawing.Size(600, 369);
+            this.Controls.Add(this.game_panel);
             this.Controls.Add(this.panel_setting);
             this.Controls.Add(this.result_panel);
-            this.Controls.Add(this.game_panel);
             this.Controls.Add(this.panel_record);
             this.Controls.Add(this.panel_rule);
             this.Controls.Add(this.Start_Button);

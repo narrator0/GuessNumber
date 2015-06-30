@@ -23,10 +23,11 @@ namespace GuessNumber
         private string show_guess_num;
         private List<char> show_guess_result;
         private int count_num = 0;
-        private int count_down = 7;
+        private int count_down;
         private int[] man_guess = new int[4];
         private string text_man_result_box = "玩家\n";
         private string text_computer_result_box = "電腦\n";
+        private string input_difficulty;
         private bool is_auto = false, number_entered = false;
         enum gamestate
         {
@@ -53,23 +54,53 @@ namespace GuessNumber
         //load
         private void Form1_Load(object sender, EventArgs e)
         {
-            //read the record
-            var file = new List<string>(File.ReadAllLines("record.txt"));
-            is_auto = bool.Parse(file[0]);
-            string input_difficulty = file[1];
-            switch (input_difficulty)
+            try
             {
-                case "hard":
-                    main_control = new Hard_Game_Controller();
-                    break;
-                case "normal":
-                    main_control = new Normal_Game_Controller();
-                    break;
-                case "easy":
-                    main_control = new Easy_Game_Controller();
-                    break;
+                //read the record
+                var file = new List<string>(File.ReadAllLines("record.txt"));
+                is_auto = bool.Parse(file[0]);
+                input_difficulty = file[1];
+                switch (input_difficulty)
+                {
+                    case "hard":
+                        radioButton_hard.Checked = true;
+                        main_control = new Hard_Game_Controller();
+                        count_down = 6;
+                        break;
+                    case "normal":
+                        radioButton_normal.Checked = true;
+                        main_control = new Normal_Game_Controller();
+                        count_down = 7;
+                        break;
+                    case "easy":
+                        radioButton_easy.Checked = true;
+                        main_control = new Easy_Game_Controller();
+                        count_down = 8;
+                        break;
+                }
+                textBox_count_down.Text = count_down.ToString();
+                if (is_auto)
+                    radioButton_on.Checked = true;
+                else
+                    radioButton_off.Checked = true;
+            }
+            catch(FileNotFoundException g)
+            {
+                MessageBox.Show("開啟失敗!!");
+
+                this.Close();
+            }
+            catch
+            {
+                //write file if no content
+                difficult_controll = difficulty.normal;
+                StreamWriter save = new StreamWriter("record.txt");
+                save.WriteLine(is_auto);
+                save.WriteLine(difficult_controll);
+                save.Close();
             }
 
+            
             //無法將 computer.Number 傳遞，所以只能這樣做
             int[] temp = new int[4];
             Game_Controller.randget(ref temp);
@@ -491,8 +522,6 @@ namespace GuessNumber
             //set richTextBox
             richTextBox2.SelectionAlignment = HorizontalAlignment.Center;
 
-            //set count_down
-            textBox_count_down.Text = count_down.ToString();
         }
 
         //things to do when confirm in man guess mode
@@ -703,7 +732,31 @@ namespace GuessNumber
             computer.Guess_right = false;
             player.Guess_right = false;
             state = gamestate.unknown;
-            count_down = 8;
+
+            //read the record
+            var file = new List<string>(File.ReadAllLines("record.txt"));
+            is_auto = bool.Parse(file[0]);
+            input_difficulty = file[1];
+            switch (input_difficulty)
+            {
+                case "hard":
+                    radioButton_hard.Checked = true;
+                    main_control = new Hard_Game_Controller();
+                    count_down = 6;
+                    break;
+                case "normal":
+                    radioButton_normal.Checked = true;
+                    main_control = new Normal_Game_Controller();
+                    count_down = 7;
+                    break;
+                case "easy":
+                    radioButton_easy.Checked = true;
+                    main_control = new Easy_Game_Controller();
+                    count_down = 8;
+                    break;
+            }
+            textBox_count_down.Text = count_down.ToString();
+
 
             //無法將 computer.Number 傳遞，所以只能這樣做
             int[] temp = new int[4];
@@ -746,6 +799,7 @@ namespace GuessNumber
             save.Close();
 
             count_down = 7;
+            textBox_count_down.Text = count_down.ToString();
         }
 
         private void radioButton_easy_Click(object sender, EventArgs e)
@@ -758,6 +812,7 @@ namespace GuessNumber
             save.Close();
 
             count_down = 8;
+            textBox_count_down.Text = count_down.ToString();
         }
 
         private void radioButton_hard_Click(object sender, EventArgs e)
@@ -770,6 +825,7 @@ namespace GuessNumber
             save.Close();
 
             count_down = 6;
+            textBox_count_down.Text = count_down.ToString();
         }
 
          private void radioButton_on_Click(object sender, EventArgs e)
