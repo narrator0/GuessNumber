@@ -23,7 +23,7 @@ namespace GuessNumber
         private string show_guess_num;
         private List<char> show_guess_result;
         private int count_num = 0;
-        private int count_down = 7;
+        private int count_down = 8;
         private int[] man_guess = new int[4];
         private string text_man_result_box = "玩家\n";
         private string text_computer_result_box = "電腦\n";
