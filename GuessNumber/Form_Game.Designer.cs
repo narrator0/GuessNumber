@@ -497,7 +497,6 @@
             this.radioButton_on.Name = "radioButton_on";
             this.radioButton_on.Size = new System.Drawing.Size(51, 25);
             this.radioButton_on.TabIndex = 0;
-            this.radioButton_on.TabStop = true;
             this.radioButton_on.Text = "On";
             this.radioButton_on.UseVisualStyleBackColor = true;
             this.radioButton_on.CheckedChanged += new System.EventHandler(this.radioButton_on_CheckedChanged);
@@ -644,9 +643,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 400);
+            this.Controls.Add(this.panel_setting);
             this.Controls.Add(this.result_panel);
             this.Controls.Add(this.game_panel);
-            this.Controls.Add(this.panel_setting);
             this.Controls.Add(this.panel_record);
             this.Controls.Add(this.panel_rule);
             this.Controls.Add(this.Start_Button);

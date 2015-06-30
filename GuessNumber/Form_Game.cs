@@ -360,6 +360,12 @@ namespace GuessNumber
                     if (player.count == 1)
                         creat_computer_geuss();
 
+                    //set rich box
+                    for (int i = 0; i < 4; i++)
+                    {
+                        text_computer_result_box += computer.Guess[i];
+                    }
+
                     if (is_auto)
                     {
                         int a = 0, b = 0;
@@ -368,18 +374,16 @@ namespace GuessNumber
                         computer.B = b;
 
                         computer.add_count();
-
-                                
+                        
+                        show_guess_result.Remove('?');
+                        show_guess_result.Remove('?');
+                        show_guess_result.Add(Convert.ToChar(a + 48));
+                        show_guess_result.Add(Convert.ToChar(b + 48));
+                        show_guess_result.Reverse();
                         text_computer_result_box += " =>" + show_guess_result[1] + "A" + show_guess_result[0] + "B\n";
 
                         //set guess
                         creat_computer_geuss();
-                    }
-
-                    //set rich box
-                    for (int i = 0; i < 4; i++)
-                    {
-                        text_computer_result_box += computer.Guess[i];
                     }
 
                 }
@@ -393,8 +397,10 @@ namespace GuessNumber
                         {
                             text_computer_result_box += computer.Guess[i];
                         }
-                    }
+                    }          
                 }
+
+                ShowNum();
 
                 if (!computer.Guess_right && !player.Guess_right && !is_auto)
                     manguessing = !manguessing;
@@ -415,9 +421,9 @@ namespace GuessNumber
                     player.Guess_right = true;
 
                 //game over 
-                if (computer.Guess_right || (computer.Guess_right && player.Guess_right))
+                if (computer.Guess_right || (computer.Guess_right && player.Guess_right) || (player.Guess_right && is_auto))
                 {
-                    if (player.count < computer.count)
+                    if (player.count < computer.count || (player.A ==4 && is_auto))
                         state = gamestate.win;
                     else if (computer.A == 4 && player.A != 4)
                         state = gamestate.lose;
@@ -428,8 +434,9 @@ namespace GuessNumber
                 }
 
             }
-
+            
             reset();
+
         }
 
         //enter number for autoguess
@@ -444,7 +451,7 @@ namespace GuessNumber
         //show richtextbox2, man_result_box and computer_result_box
         private void ShowNum()
         {
-            if (manguessing)
+            if (manguessing || is_auto)
                 richTextBox2.Text = show_guess_num;
             else
             {
@@ -482,7 +489,7 @@ namespace GuessNumber
 
             player.add_count();
 
-            if (computer.A != 4)
+            if (computer.A != 4 && !is_auto)
                 commend.Text = "電腦猜了，請回應";
 
         }
@@ -689,6 +696,8 @@ namespace GuessNumber
             textBox_count_down.Visible = false;
             man_result_box.Location = new System.Drawing.Point(255, 124);
 
+            number_entered = false;
+
             reset();
 
         }
@@ -731,5 +740,6 @@ namespace GuessNumber
         }
         #endregion
 
+        
     }
 }

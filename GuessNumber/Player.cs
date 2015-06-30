@@ -73,7 +73,7 @@ namespace GuessNumber
         //set Number
         public void set_Number(string number)
         {
-            char[] n = number.ToCharArray(0, 4);
+            char[] n = number.ToCharArray(1, 4);
 
             int i;
             for (i = 0; i < 4; i++)
