@@ -50,21 +50,12 @@
     <Compile Include="Form_Game.Designer.cs">
       <DependentUpon>Form_Game.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_save.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_save.Designer.cs">
-      <DependentUpon>Form_save.cs</DependentUpon>
-    </Compile>
     <Compile Include="Game_Controller.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Game.resx">
       <DependentUpon>Form_Game.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_save.resx">
-      <DependentUpon>Form_save.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

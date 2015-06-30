@@ -52,7 +52,6 @@
             this.button_start_guess_only = new System.Windows.Forms.Button();
             this.result_panel = new System.Windows.Forms.Panel();
             this.result_textbox = new System.Windows.Forms.TextBox();
-            this.button_save = new System.Windows.Forms.Button();
             this.button_restart = new System.Windows.Forms.Button();
             this.panel_rule = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -347,7 +346,6 @@
             // result_panel
             // 
             this.result_panel.Controls.Add(this.result_textbox);
-            this.result_panel.Controls.Add(this.button_save);
             this.result_panel.Controls.Add(this.button_restart);
             this.result_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.result_panel.Location = new System.Drawing.Point(0, 0);
@@ -370,18 +368,6 @@
             this.result_textbox.TabIndex = 1;
             this.result_textbox.Text = "LOSE";
             this.result_textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // button_save
-            // 
-            this.button_save.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_save.Location = new System.Drawing.Point(248, 193);
-            this.button_save.Name = "button_save";
-            this.button_save.Size = new System.Drawing.Size(102, 38);
-            this.button_save.TabIndex = 0;
-            this.button_save.Text = "Save";
-            this.button_save.UseVisualStyleBackColor = true;
-            this.button_save.Visible = false;
-            this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
             // button_restart
             // 
@@ -658,11 +644,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 400);
+            this.Controls.Add(this.result_panel);
             this.Controls.Add(this.game_panel);
             this.Controls.Add(this.panel_setting);
             this.Controls.Add(this.panel_record);
             this.Controls.Add(this.panel_rule);
-            this.Controls.Add(this.result_panel);
             this.Controls.Add(this.Start_Button);
             this.Controls.Add(this.button_rule);
             this.Controls.Add(this.button_setting);
@@ -712,7 +698,6 @@
         private System.Windows.Forms.RichTextBox computer_result_box;
         private System.Windows.Forms.Button quit_button;
         private System.Windows.Forms.Panel result_panel;
-        private System.Windows.Forms.Button button_save;
         private System.Windows.Forms.Button button_restart;
         private System.Windows.Forms.Button button_rule;
         private System.Windows.Forms.Panel panel_rule;

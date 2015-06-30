@@ -95,7 +95,6 @@ namespace GuessNumber
             computer_result_box.Visible = false;
             textBox_count_down.Visible = true;
             man_result_box.Location = new System.Drawing.Point(280, 124);
-            button_save.Visible = false;
         }
 
 
@@ -370,6 +369,7 @@ namespace GuessNumber
 
                         computer.add_count();
 
+                                
                         text_computer_result_box += " =>" + show_guess_result[1] + "A" + show_guess_result[0] + "B\n";
 
                         //set guess
@@ -595,20 +595,6 @@ namespace GuessNumber
                     result_textbox.Text = "WIN";
                     break;
             }
-
-            if (state == gamestate.win && mode_controll == mode.only)
-            {
-                button_save.Visible = true;
-                count_down = 8 - count_down;
-
-
-                List<string> all = new List<string>(File.ReadAllLines("record.txt"));
-                all.RemoveAt(0);
-                all.Insert(0, count_down.ToString());
-
-
-                File.WriteAllLines("record.txt", all.ToArray());
-            }
                 
 
             result_panel.Visible = true;
@@ -702,20 +688,11 @@ namespace GuessNumber
             computer_result_box.Visible = true;
             textBox_count_down.Visible = false;
             man_result_box.Location = new System.Drawing.Point(255, 124);
-            button_save.Visible = false;
 
             reset();
 
         }
 
-        //
-        //save record
-        //
-        private void button_save_Click(object sender, EventArgs e)
-        {
-            Form_save save_form = new Form_save();
-            save_form.Show();
-        }
 
         #endregion
 
