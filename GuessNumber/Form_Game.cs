@@ -23,7 +23,7 @@ namespace GuessNumber
         private string show_guess_num;
         private List<char> show_guess_result;
         private int count_num = 0;
-        private int count_down = 8;
+        private int count_down = 7;
         private int[] man_guess = new int[4];
         private string text_man_result_box = "玩家\n";
         private string text_computer_result_box = "電腦\n";
@@ -731,6 +731,8 @@ namespace GuessNumber
             save.WriteLine(is_auto);
             save.WriteLine(difficult_controll);
             save.Close();
+
+            count_down = 7;
         }
 
         private void radioButton_easy_Click(object sender, EventArgs e)
@@ -741,6 +743,8 @@ namespace GuessNumber
             save.WriteLine(is_auto);
             save.WriteLine(difficult_controll);
             save.Close();
+
+            count_down = 8;
         }
 
         private void radioButton_hard_Click(object sender, EventArgs e)
@@ -751,6 +755,8 @@ namespace GuessNumber
             save.WriteLine(is_auto);
             save.WriteLine(difficult_controll);
             save.Close();
+
+            count_down = 6;
         }
 
          private void radioButton_on_Click(object sender, EventArgs e)
