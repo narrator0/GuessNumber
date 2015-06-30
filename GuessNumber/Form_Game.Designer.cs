@@ -553,13 +553,11 @@
             // radioButton_hard
             // 
             this.radioButton_hard.AutoSize = true;
-            this.radioButton_hard.Checked = true;
             this.radioButton_hard.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.radioButton_hard.Location = new System.Drawing.Point(43, 112);
             this.radioButton_hard.Name = "radioButton_hard";
             this.radioButton_hard.Size = new System.Drawing.Size(66, 25);
             this.radioButton_hard.TabIndex = 2;
-            this.radioButton_hard.TabStop = true;
             this.radioButton_hard.Text = "Hard";
             this.radioButton_hard.UseVisualStyleBackColor = true;
             this.radioButton_hard.CheckedChanged += new System.EventHandler(this.radioButton_hard_CheckedChanged);
@@ -567,11 +565,13 @@
             // radioButton_normal
             // 
             this.radioButton_normal.AutoSize = true;
+            this.radioButton_normal.Checked = true;
             this.radioButton_normal.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.radioButton_normal.Location = new System.Drawing.Point(43, 81);
             this.radioButton_normal.Name = "radioButton_normal";
             this.radioButton_normal.Size = new System.Drawing.Size(85, 25);
             this.radioButton_normal.TabIndex = 1;
+            this.radioButton_normal.TabStop = true;
             this.radioButton_normal.Text = "Normal";
             this.radioButton_normal.UseVisualStyleBackColor = true;
             this.radioButton_normal.CheckedChanged += new System.EventHandler(this.radioButton_normal_CheckedChanged);
