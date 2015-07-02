@@ -86,9 +86,11 @@ namespace GuessNumber
             }
             catch(FileNotFoundException g)
             {
-                MessageBox.Show("開啟失敗!!");
-
-                this.Close();
+                using (StreamWriter f = File.CreateText("record.txt"))
+                {
+                    f.WriteLine("False");
+                    f.WriteLine("normal");
+                }
             }
             catch
             {
