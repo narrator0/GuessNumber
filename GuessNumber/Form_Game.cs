@@ -115,8 +115,6 @@ namespace GuessNumber
             man_result_box.Text = text_man_result_box;
             computer_result_box.Text = text_computer_result_box;
 
-            //init controller
-            main_control = new Hard_Game_Controller();
         }
 
         //initialize
@@ -517,6 +515,7 @@ namespace GuessNumber
             //set richTextBox
             richTextBox2.SelectionAlignment = HorizontalAlignment.Center;
 
+            textBox_count_down.Text = count_down.ToString();
         }
 
         //things to do when confirm in man guess mode
