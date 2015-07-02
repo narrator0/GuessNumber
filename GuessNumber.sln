@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessNumber", "GuessNumber\GuessNumber.csproj", "{4361B5C1-B1E2-41AD-AB4C-70703EDAD947}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest_GuessNumber", "UnitTest_GuessNumber\UnitTest_GuessNumber.csproj", "{1BAC93F8-BA3E-44CB-938B-2CA45CBDB1BA}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject", "ModelingProject\ModelingProject.modelproj", "{257ECB5C-252E-4C8A-B1EE-C0CB39568CD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1BAC93F8-BA3E-44CB-938B-2CA45CBDB1BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BAC93F8-BA3E-44CB-938B-2CA45CBDB1BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BAC93F8-BA3E-44CB-938B-2CA45CBDB1BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{257ECB5C-252E-4C8A-B1EE-C0CB39568CD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{257ECB5C-252E-4C8A-B1EE-C0CB39568CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{257ECB5C-252E-4C8A-B1EE-C0CB39568CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{257ECB5C-252E-4C8A-B1EE-C0CB39568CD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

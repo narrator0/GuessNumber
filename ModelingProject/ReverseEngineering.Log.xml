@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2015-07-02T20:43:47" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'bfb9a67f-ebb1-4b36-9c5e-441112832d8d' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber' -  (Package)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::difficulty' -  (Enumeration)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game' -  (Class)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::botton_goback_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::botton_goback_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::botton_goback_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_back' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_back_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_back_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_back_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_goback' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_reset' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_reset_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_reset_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_reset_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_restart' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_restart_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_restart_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_restart_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_rule' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_rule_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_rule_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_rule_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_setting' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_setting_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_setting_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_setting_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_start_guess_only' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_start_guess_only_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_start_guess_only_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button_start_guess_only_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button0' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button0_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button0_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button0_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button1' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button1_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button1_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button1_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button2' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button2_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button2_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button2_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button3' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button3_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button3_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button3_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button4' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button4_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button4_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button4_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button5' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button5_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button5_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button5_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button6' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button6_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button6_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button6_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button7' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button7_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button7_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button7_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button8' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button8_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button8_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button8_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button9' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button9_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button9_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::button9_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::commend' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::components' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::computer' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::computer_result_box' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::confirm' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::confirm_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::confirm_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::confirm_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::confirm_computer_guessing' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::confirm_man_guessing' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::confirm_only_mode' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::confirm_vs_mode' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::count_down' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::count_num' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::creat_computer_geuss' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::difficult_controll' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::Dispose' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::Dispose::disposing' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::enter_number' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::Form_Game' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::Form1_Load' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::Form1_Load::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::Form1_Load::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::game_name' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::game_panel' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::groupBox_easy' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::groupBox2' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::InitializeComponent' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::input_difficulty' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::is_auto' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::main_control' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::man_guess' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::man_result_box' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::manguessing' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::mode_controll' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::number_entered' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::panel_rule' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::panel_setting' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::player' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::quit_button' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::quit_button_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::quit_button_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::quit_button_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_easy' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_easy_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_easy_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_easy_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_hard' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_hard_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_hard_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_hard_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_normal' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_normal_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_normal_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_normal_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_off' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_off_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_off_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_off_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_on' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_on_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_on_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::radioButton_on_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::reset' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::reset_all' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::result_panel' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::result_textbox' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::richTextBox1' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::richTextBox2' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::richTextBox2_KeyDown' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::richTextBox2_KeyDown::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::richTextBox2_KeyDown::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::richTextBox2_KeyPress' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::richTextBox2_KeyPress::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::richTextBox2_KeyPress::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::rule_title' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::Setting_Label1' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::Setting_Label2' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::show_guess_num' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::show_guess_result' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::show_result_panel' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::ShowNum' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::Start_Button' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::Start_Button_Click' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::Start_Button_Click::e' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::Start_Button_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::state' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::test_input' -  (Operation)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::test_input::origin' -  (Parameter)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::text_computer_result_box' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::text_man_result_box' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Form_Game::textBox_count_down' -  (Property)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Game_Controller' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::gamestate' -  (Enumeration)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::mode' -  (Enumeration)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::GuessNumber::Player' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System' -  (Package)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Char' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Collections' -  (Package)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Collections::Generic::List&lt;Char‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::ComponentModel' -  (Package)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::ComponentModel::IContainer' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::EventArgs' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Object' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Windows' -  (Package)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Windows::Forms' -  (Package)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Windows::Forms::Button' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Windows::Forms::Form' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Windows::Forms::GroupBox' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Windows::Forms::KeyEventArgs' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Windows::Forms::KeyPressEventArgs' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Windows::Forms::Label' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Windows::Forms::Panel' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Windows::Forms::RadioButton' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Windows::Forms::RichTextBox' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Windows::Forms::TextBox' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject::GuessNumber::Form_Game to ModelingProject::System::Windows::Forms::Form (Generalization)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject::System::Windows::Forms::KeyPressEventArgs to ModelingProject::System::EventArgs (Generalization)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject::System::Windows::Forms::KeyEventArgs to ModelingProject::System::EventArgs (Generalization)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject::GuessNumber::Hard_Game_Controller to ModelingProject::GuessNumber::Game_Controller (Generalization)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject::GuessNumber::Normal_Game_Controller to ModelingProject::GuessNumber::Game_Controller (Generalization)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject::GuessNumber::Easy_Game_Controller to ModelingProject::GuessNumber::Game_Controller (Generalization)" />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="High" Text="(21) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2015-07-02T20:43:52" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>
